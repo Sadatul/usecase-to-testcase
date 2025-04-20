@@ -1,0 +1,106 @@
+Scenario,Next Precondition,Similarity,Result
+A user enters patient notes in an Automated AI-based Clinical Coding App for medical coding.,Patient notes are successfully entered in the App.,0.6803,False
+The patient notes entered by the user in an Automated AI-based Clinical Coding App for medical coding are added in the Data Service for further processing.,Patient notes are available in the Data Service for processing.,0.7188,False
+ICD codes are assigned to the patient notes using a language classification model from the AI center.,ICD codes have been assigned to the patient notes and are available for review in the Action Center of the app.,0.8028,False
+The assigned ICD codes are reviewed by a medical coder in the UiPath Action Center.,The assigned ICD codes have been approved by the medical coder in the Action Center.,0.8792,False
+"A user enters patient notes in an Automated AI-based Clinical Coding App for medical coding. After it is assgined ICD code by AI, it is approved or rejected by the medical coder. If the assigned codes are approved by the medical coder, the data is entered in the legacy application by a robot.",Lab reports are available in a format readable by the RPA robot and the UiPath Document Understanding is able to classify the reports.,0.321,False
+Automated extraction of required fields from the lab report for a specific type of blood test.,"Automatically extracted data from the lab report is available in the global database, and ML models for different types of blood tests are available in the UiPath AI Center.",0.6247,False
+Analysis of blood test reports using ML models hosted in the UiPath AI Center to derive prescriptive observations.,Data on similar cases is available in the database and is accessible by the RPA robot.,0.3674,False
+Highlighting similar cases of a test report found in the database for the specific hospital or laboratory to the lab clinician.,Past blood test reports of the same patient are available in the database and accessible by the RPA robot.,0.5273,False
+Provide additional recommendations based on a test report on changes observed over time by reviewing past blood test reports of the same patient.,Customer does not have an existing account on the platform.,0.012,True
+A new customer registers an account on the online grocery store platform.,Vendor does not have an existing account on the platform.,0.438,False
+A new vendor registers an account on the online grocery store platform.,Customer is logged in.,0.4075,False
+A customer submits a grocery order on the online store platform using an image of their handwritten list.,Vendor is logged in and has received a new order notification.,0.2942,False
+A vendor receives and fulfills a customer's grocery order on the online store platform.,Handwritten grocery list image is uploaded by the customer or received by the vendor.,0.5601,False
+The system automatically translates the handwritten grocery list image into the preferred language for both customers and vendors.,Customer places an order or requires assistance.,0.3853,False
+The system provides customer support and order notifications using Twilio API.,An input Excel file containing currency conversion data is available.,0.0371,True
+The currency conversion team receives an input Excel file containing currency conversion data.,The system is connected to the internet and has access to Google's live data.,0.1043,True
+The system retrieves live currency conversion data from Google.,Input Excel file and live currency conversion data from Google are available.,0.8099,False
+The system automatically processes the currency conversion based on the retrieved live data (specified by user by an Excel file).,Automated currency conversion tasks have been completed.,0.7113,False
+The system validates the results of the automated currency conversion.,User has access to the system and defined websites for journal search and download.,0.1323,True
+A user searches defined websites for specific topics and downloads journals and white papers.,Journals and white papers are downloaded and accessible for extraction.,0.5594,False
+The system extracts specific details from downloaded journals and white papers (provided by user).,The email containing business travel information must be sent to the specified email address or system.,0.1554,True
+The 'Easy Business Tour' system receives business travel information of an employee or group of employees via email.,The travel information must be successfully received and validated.,0.508,False
+"A system named 'Easy Business Tour' receives travel information (source, destination, people count, date range) through email, parses the info. Now the system displays available flights for the specified date, time range, source, and destination.",Available flights must be displayed and a specific flight must be selected by the employee/group of employees.,0.401,False
+"The 'Easy Business Tour' system reserves the flight ticket for the customer(s) based on the selected flight from the options provided by the system after it was provided the source, destination, and date range.",The flight ticket must be successfully reserved for the customer(s).,0.4442,False
+The 'Easy Business Tour' system sends the reserved flight ticket to the concerned email-id from where the booking request was sent.,The system must encounter an issue while processing the booking request.,0.4128,False
+"If the booking request cannot be processed successfully by 'Easy Business Tour' system (automated flight ticket booking based on passanger info), the system requests a new proposal of date/time from the requesting team.",User intends to enroll in the facial recognition system.,0.1639,True
+A user enrolls in the facial recognition system for the first time.,User is registered in the facial recognition system.,0.8488,False
+A registered user is authenticated using facial recognition.,System is operational and actively monitoring for individuals.,0.2947,False
+The facial recognition system identifies individuals in real-time.,System is available for verification purposes.,0.2955,False
+The facial recognition system verifies individuals swiftly and securely.,HR has received and validated the results shared from the managers for the salary hike cycle.,0.0963,True
+HR initiates the process of generating offer letters for the salary hike cycle.,Offer letters for the salary hike cycle have been generated.,0.8119,False
+Updating employee details and mailing all candidates about the salary hike.,Results for the salary hike cycle are shared by the managers.,0.5638,False
+The bot performs validation checks on the salary hike parameters and employee details.,All required validations and employee details are updated and verified.,0.4663,False
+The bot initiates multi-architecture processing for completing the salary hike process.,There should be a source of resumes available for collection.,0.0871,True
+Human resources collect resumes from various sources.,Resumes must be available in the company's database or designated location.,0.5759,False
+The system determines potential candidates from a set of resumes collected from several job portals.,The assistant software must be developed and integrated into the hiring process.,0.466,False
+The company implements an assistant software to enhance the hiring process.,User must be logged in and have selected a vehicle of interest.,0.1644,True
+User negotiates the price of a vehicle through the Trusted Wheels application.,User must have purchased a vehicle after negotiating with the seller through the Trusted Wheels application.,0.8319,False
+User validates all documents related to the purchased vehicle using the Trusted Wheels application.,User must have agreed to purchase a vehicle and be ready to make the payment.,0.4706,False
+User makes a payment for a vehicle through the Trusted Wheels application.,User must have selected a vehicle for potential purchase.,0.6646,False
+User validates the condition of a vehicle using the Trusted Wheels application.,User must have agreed to purchase a vehicle and be ready to engage in the trade.,0.4912,False
+User engages in a trade for a vehicle through the Trusted Wheels application.,Availability of source files in the specified locations,0.0752,True
+"Downloading source files from multiple locations like shared location, email, etc. of predetermined types",Availability of downloaded source files,0.6024,False
+Cleaning the supplied/downloaded data and filtering rows based on predefined conditions to exclude rows that are not to be billed,Availability of the intermediate file with filtered data,0.4162,False
+Calculating Quantity and Amount based on given charge rate from the intermediate files (after preprocessing initial files based on preconditions),Availability of calculated Quantity and Amount for each entity,0.3587,False
+Creating invoices for each entity in the source file and inserting data into pre-defined invoice templates,Availability of validated invoices,0.4104,False
+Uploading the created invoices into the database using excel add-ins and generating a transaction number,Completion of the entire invoicing process,0.4187,False
+Sending a summary file containing details of the submitted invoices to the department,The system has access to the finance emails and the Document Understanding and AI Centre.,0.3,False
+The system monitors finance emails for vendor bills and validates them using Document Understanding and AI Centre.,The system has access to historical expense data and is integrated with the finance dashboard.,0.4549,False
+The system uses historical expense data to track and monitor the expenses incurred by the company.,The system has access to the received monthly bills and is integrated with the payment processing capabilities.,0.4746,False
+The system processes the monthly bills received from vendors to avoid late fee fines.,The shop uses a specific billing system that can be integrated with the UiPath inventory manager bot.,0.3905,False
+Integration of the UiPath inventory manager bot with the shop's billing system to trigger the bot in orchestrator upon completion of a billing transaction at the counter.,A centralized repository system exists to store the count for all the products in the retail shop.,0.365,False
+Maintenance of a centralized repository containing the count for all products in the retail shop.,The UiPath inventory manager bot has access to vendor information and can place automated purchase orders.,0.3717,False
+Automatic placement of a purchase order for a specific item when its count in the repository reaches a pre-defined threshold value.,CCTV footage of the area is available and accessible to the system.,0.0591,True
+The system detects and analyzes accidents in real-time using CCTV footage.,The system has access to the CCTV database and coordinates of accident locations.,0.6983,False
+The system integrates with the CCTV database to retrieve the precise location of the accident for accurate reporting and response.,The system has detected and confirmed an accident through CCTV footage analysis.,0.7273,False
+"The system automatically generates detailed accident reports, including relevant data, for aiding the investigation.","The system has detected and confirmed an accident, and the required data for alerting authorities is available.",0.6188,False
+The system triggers automated calls to local authorities for real-time alerts and emergency response.,The system has generated a detailed accident report and captured relevant images.,0.3753,False
+The system integrates with fax services to send detailed accident reports and images to designated police stations for quick response and dispatch of emergency services.,Availability of diverse datasets for training the ML model.,0.0591,True
+Training the machine learning model with different existing datasets from hospitals and other sources.,Availability of the patient's lab report data and lifestyle information.,0.2609,False
+Using the trained ML model to predict the likelihood of chronic diseases for a patient based on their lab report data and lifestyle information.,Detection of an alarming prediction from the ML model.,0.3791,False
+Sending the lab report data to the doctor for validation in case of any alarming prediction.,Confirmation from the doctor regarding the patient's susceptibility to a chronic disease.,0.4067,False
+Informing the patient immediately if the doctor confirms their susceptibility to a chronic disease based on the AI prediction.,"User has access to the Crop Recommendation system and has the required soil and environmental parameter values (N, P, K, temperature, humidity, pH, rainfall) available.",0.0622,True
+A user accesses the Crop Recommendation system to get suggestions for suitable crops to grow based on soil and environmental parameters.,User has accessed the Crop Recommendation system and has previously entered the soil and environmental parameter values.,0.8631,False
+A user updates the soil and environmental parameter values to get updated recommendations for suitable crops to grow.,User has entered the soil and environmental parameter values and has accessed the Crop Recommendation system.,0.7979,False
+A user views the list of recommended crops/fruits generated by the Crop Recommendation system based on the entered soil and environmental parameters.,UiPath robots are operational and have access to the required data sources.,0.0739,True
+UiPath robots collect sales data from various sources for demand forecasting.,Collected sales data is available and accessible to UiPath Studio.,0.595,False
+Preprocessing of collected sales data to prepare it for demand forecasting model development.,Preprocessed sales data is available within UiPath AI Center for model development.,0.6032,False
+Utilizing UiPath AI Center to build and train a demand forecasting model using machine learning algorithms.,Trained demand forecasting model is available and validated for deployment.,0.6513,False
+Deployment of the trained demand forecasting model to UiPath AI Center for integration with automation processes.,UiPath Apps are installed and accessible to stock managers.,0.4268,False
+Activation of UiPath Apps for stock managers to monitor and manage stock levels.,The admin has the necessary permissions to register new input channels.,0.2176,False
+A new input channel is registered in the system.,The input is available in the system and the AI engine is active.,0.5739,False
+An input is classified into predefined categories using AI.,There are incoming inputs and the peak detection module is active.,0.2844,False
+The system detects peaks in the incoming inputs,Inputs are classified and peaks are detected.,0.8175,False
+The system assigns priorities to the employee base based on input classification and peak detection.,Email containing purchase orders is received and accessible by the system. Purchase orders are named using a code as PO_xxx in the attchment,0.1425,True
+The system automatically downloads purchase orders from email attachments.,Purchase orders are successfully downloaded and accessible by the system.,0.6806,False
+The system extracts purchase order details through Document understanding and training the PO ML model.,Purchase order details are extracted and processed by the system.,0.7588,False
+"The system detects any accuracy or business validation issues and creates a task in the action center for business validation, modification, and submission.",PO details are validated and finalized by the business users.,0.4964,False
+The system creates the purchase order in the SAP application to notify the respective stakeholders and initiate necessary actions.,Motion is detected within the camera's coverage area,0.0773,True
+CCTV cameras detect motion and take screenshots in the coverage area.,Image is uploaded to the specified OneDrive location,0.152,True
+"An image is uploaded to the specified OneDrive location, triggering the UiPath bot integration","UiPath bot is triggered, and an image is available in the specified OneDrive location",0.9427,False
+UiPath bot moves the image from OneDrive to local storage for processing,The image is successfully moved to the local storage,0.5235,False
+UiPath Object Detection Model AI Centre processes the image from the local storage,"The image has been successfully processed, and the AI model has detected a person's face",0.4967,False
+"The system detects whether a person is wearing a mask, and if not, triggers an alert","The image has been successfully processed, and the AI model has detected persons",0.4008,False
+The system triggers alerts if the number of persons detected in the image exceeds the predefined threshold,"The image has been successfully processed, and the AI model has detected relevant patterns",0.4658,False
+The system is able to prevent suicides and intrusion cases based on image analysis,Customer provides handwritten feedback on paper or a form,0.0644,True
+Automated capturing of handwritten feedback from customers at the automobile service center.,Digital feedback is available for processing,0.4831,False
+Automated classification of customer feedback as positive or negative using machine learning integration.,Feedback has been classified as positive or negative,0.5094,False
+Automated upload of classified feedback to the automobile service center's social media platforms.,Feedback has been processed and classified,0.5296,False
+Automated email sent to customers as a follow-up based on their feedback.,Customers have received automated follow-up emails,0.8114,False
+Customer service executive reaches out to customers with negative feedback in person.,Availability of resumes and/or LinkedIn profiles for screening,-0.0046,True
+Setup Automated screening of resumes and LinkedIn profiles to identify potential candidates for a job opening.,Completed screening process with identified potential candidates,0.5566,False
+Automated shortlisting of candidates based on the screening results for further evaluation.,Shortlisted candidates identified from the screening process,0.7046,False
+Automatic sending of emails to potential candidates to inquire about their interest in job opportunities.,Shortlisted candidates available for interview,0.4433,False
+Automated scheduling of interviews for the shortlisted candidates based on technical panel availability.,Finance data and order creation data must be accessible and available for comparison.,0.1379,True
+Validate that the order is created in the EBS application and cross-verify the information with the finance data spreadsheet.,Test suite must contain the relevant order scenarios and the required finance data for revenue calculation.,0.5028,False
+Automate revenue calculations for the order scenarios uploaded in the test suite.,Frontend and backend data must be accessible for comparison and validation.,0.1224,True
+Automate the validation process to ensure consistency between frontend and backend data.,User has downloaded the documents from the internal application to the local folder.,0.0208,True
+User triggers the Attended Bot to initiate the extraction and validation process for background verification documents.,Bot has received an Excel document for processing.,0.595,False
+Bot processes the Excel document for extracting required education and employment information.,Bot has received a PDF document for processing.,0.6296,False
+Bot processes the PDF document for extracting required education and employment details.,Bot has extracted and processed the required information from the documents.,0.7497,False
+Bot moves the processed documents to a specific completed folder.,Bot has the required information extracted and stored for data entry.,0.4713,False
+"Bot logs in to the web application, navigates to the required screen, and performs data entry.",Bot has completed the data entry process on the web application.,0.7935,False
+Bot logs out of the web application and captures the success/failure details into an excel file.,Bot has captured all the success/failure details and exceptions in an excel file.,0.8528,False
+Bot sends the final report with success and exception details for each candidate to a specific mail ID.,The UiPath App is installed and accessible to the user.,0.0172,True
