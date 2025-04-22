@@ -1,0 +1,862 @@
+[
+  {
+    "usecases": [
+      {
+        "name": "User Enters Patient Notes",
+        "scenario": "A user enters patient notes in an Automated AI-based Clinical Coding App for medical coding.",
+        "actors": "['User']",
+        "preconditions": "User has access to the Clinical Coding App and patient notes are available for coding.",
+        "steps": "1: User navigates to the patient notes section in the App. 2: User enters the patient notes including relevant medical information. 3: User saves the entered patient notes."
+      },
+      {
+        "name": "Patient Notes Added in Data Service",
+        "scenario": "The patient notes entered by the user in an Automated AI-based Clinical Coding App for medical coding are added in the Data Service for further processing.",
+        "actors": "['System']",
+        "preconditions": "Patient notes are successfully entered in the App.",
+        "steps": "1: The entered patient notes are automatically sent to the Data Service for processing. 2: Data Service processes and stores the patient notes for further analysis."
+      },
+      {
+        "name": "Assignment of ICD Codes to patient notes using Language Classification Model for an Automated AI-based Clinical Coding App",
+        "scenario": "ICD codes are assigned to the patient notes using a language classification model from the AI center.",
+        "actors": "['AI Center']",
+        "preconditions": "Patient notes are available in the Data Service for processing.",
+        "steps": "1: The AI center's language classification model processes the patient notes. 2: The model assigns ICD codes based on the information extracted from the patient notes."
+      },
+      {
+        "name": "Review of Assigned ICD Codes to Patient Notes in An Automated AI-based Clinical Coding App by Medical Coder",
+        "scenario": "The assigned ICD codes are reviewed by a medical coder in the UiPath Action Center.",
+        "actors": "['Medical Coder']",
+        "preconditions": "ICD codes have been assigned to the patient notes and are available for review in the Action Center of the app.",
+        "steps": "1: Medical coder accesses the assigned ICD codes in the Action Center. 2: Medical coder reviews the assigned codes and verifies their accuracy and relevance. 3: Medical coder either approves or rejects the assigned ICD codes."
+      },
+      {
+        "name": "Data Entry in Legacy Application by Robot",
+        "scenario": "A user enters patient notes in an Automated AI-based Clinical Coding App for medical coding. After it is assgined ICD code by AI, it is approved or rejected by the medical coder. If the assigned codes are approved by the medical coder, the data is entered in the legacy application by a robot.",
+        "actors": "['Robot']",
+        "preconditions": "The assigned ICD codes have been approved by the medical coder in the Action Center.",
+        "steps": "1: Robot fetches the approved ICD codes and associated patient notes from the Data Service. 2: Robot enters the data including the approved ICD codes into the legacy application for further processing."
+      }
+    ],
+    "description": "As a medical coder, I want to enter patient notes in the Automated AI-based Clinical Coding App, have the notes processed and assigned ICD codes using a language classification model, review and approve or reject the assigned codes, and then have the approved codes and associated patient notes automatically entered into the legacy application by a robot, so that I can efficiently and accurately complete the medical coding process."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Blood Test Report Extraction (ai-enabled-blood-test-report-analysis project)",
+        "scenario": "Automated extraction of required fields from the lab report for a specific type of blood test.",
+        "actors": "['RPA Robot', 'Lab Clinician', 'Doctor']",
+        "preconditions": "Lab reports are available in a format readable by the RPA robot and the UiPath Document Understanding is able to classify the reports.",
+        "steps": "1: RPA robot fetches the lab report for a specific type of blood test. 2: RPA robot uses UiPath Document Understanding to classify the lab report for the type of test. 3: RPA robot extracts the required fields from the report. 4: RPA robot saves the extracted data in a global database without any Personally Identifiable Information (PII)."
+      },
+      {
+        "name": "Blood Test Report Analysis using ML Models (ai-enabled-blood-test-report-analysis project)",
+        "scenario": "Analysis of blood test reports using ML models hosted in the UiPath AI Center to derive prescriptive observations.",
+        "actors": "['RPA Robot', 'ML Model', 'Lab Clinician', 'Doctor']",
+        "preconditions": "Automatically extracted data from the lab report is available in the global database, and ML models for different types of blood tests are available in the UiPath AI Center.",
+        "steps": "1: RPA robot sends the report parameters to the ML models hosted in the UiPath AI Center. 2: ML models analyze the report parameters and derive prescriptive observations. 3: Prescriptive observations are attached to the test report and sent to the lab clinician."
+      },
+      {
+        "name": "Highlight Similar Cases (ai-enabled-blood-test-report-analysis project)",
+        "scenario": "Highlighting similar cases of a test report found in the database for the specific hospital or laboratory to the lab clinician.",
+        "actors": "['RPA Robot', 'Lab Clinician', 'Doctor']",
+        "preconditions": "Data on similar cases is available in the database and is accessible by the RPA robot.",
+        "steps": "1: RPA robot identifies similar cases for the specific hospital or laboratory based on the test report. 2: Lab clinician or doctor receives information on similar cases found in the database."
+      },
+      {
+        "name": "Review Past Blood Test Reports (ai-enabled-blood-test-report-analysis project)",
+        "scenario": "Provide additional recommendations based on a test report on changes observed over time by reviewing past blood test reports of the same patient.",
+        "actors": "['RPA Robot', 'Lab Clinician', 'Doctor']",
+        "preconditions": "Past blood test reports of the same patient are available in the database and accessible by the RPA robot.",
+        "steps": "1: RPA robot retrieves past blood test reports of the same patient. 2: Lab clinician or doctor receives additional recommendations based on changes observed over time."
+      }
+    ],
+    "description": "As a lab clinician or doctor, I want the system to automatically extract required fields from blood test reports, analyze the reports using machine learning models, highlight similar cases, and provide additional recommendations based on past reports, so that I can make informed decisions and provide better patient care."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Customer Registration in Online AI Assisted Grocery Store for Elderly",
+        "scenario": "A new customer registers an account on the online grocery store platform.",
+        "actors": "['New Customer']",
+        "preconditions": "Customer does not have an existing account on the platform.",
+        "steps": "1: New Customer navigates to the registration page of the online grocery store platform. 2: New Customer fills in the required registration details such as name, contact details, and preferred language. 3: The system validates the provided details and creates a new customer account."
+      },
+      {
+        "name": "Vendor Registration to Online AI Assisted Grocery Store for Elderly",
+        "scenario": "A new vendor registers an account on the online grocery store platform.",
+        "actors": "['New Vendor']",
+        "preconditions": "Vendor does not have an existing account on the platform.",
+        "steps": "1: New Vendor navigates to the registration page of the online grocery store platform. 2: New Vendor fills in the required registration details such as business name, contact details, and preferred language for communication. 3: New Vendor submits any required licenses or certifications for verification. 4: The system validates the provided details, creates a new vendor account, and enables the vendor to receive and process orders."
+      },
+      {
+        "name": "Customer Places an Order on the Online AI Assisted Grocery Store for Elderly",
+        "scenario": "A customer submits a grocery order on the online store platform using an image of their handwritten list.",
+        "actors": "['Customer']",
+        "preconditions": "Customer is logged in.",
+        "steps": "1: Customer uploads an image of the grocery list or selects a previously uploaded list from their profile. 2: The system generates a list from the image. 3: Customer reviews and confirms the items listed based on the translated content. 4: Customer proceeds to checkout. 5: The system triggers the checkout process and notifies the vendor about the new order using Twilio API."
+      },
+      {
+        "name": "Vendor Processes an Order",
+        "scenario": "A vendor receives and fulfills a customer's grocery order on the online store platform.",
+        "actors": "Vendor",
+        "preconditions": "Vendor is logged in and has received a new order notification.",
+        "steps": "1: Vendor reviews the details of the customer's order including the translated content. 2: Vendor confirms the availability of the listed items and determines the delivery or pickup options. 3: Vendor marks the order as processed and ready for delivery or pickup."
+      },
+      {
+        "name": "Automated Language Translation in Online AI Assisted Grocery Store for Elderly",
+        "scenario": "The system automatically translates the handwritten grocery list image into the preferred language for both customers and vendors.",
+        "actors": "System",
+        "preconditions": "Handwritten grocery list image is uploaded by the customer or received by the vendor.",
+        "steps": "1: The system processes the uploaded image using Google Cloud Vision API to extract the text content. 2: The system translates the extracted text into the preferred language selected by the customer or vendor. 3: The translated content is displayed for review and confirmation by the respective user."
+      },
+      {
+        "name": "Customer Support via Twilio on Online AI Assisted Grocery Store for Elderly",
+        "scenario": "The system provides customer support and order notifications using Twilio API.",
+        "actors": "System, Customer",
+        "preconditions": "Customer places an order or requires assistance.",
+        "steps": "1: The system sends order confirmation and updates to the customer via SMS using Twilio API. 2: The system notifies the customer about the order status, delivery details, and other relevant updates through automated messages."
+      }
+    ],
+    "description": "As a customer or vendor of an online AI assisted grocery store for the elderly, I want to be able to register for an account, place and fulfill orders, and receive support through automated language translation and Twilio notifications, so that I can easily and efficiently manage my grocery shopping experience."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Receive Input Excel File (Module: Currency Conversion in Banking Backend using Google Live Data)",
+        "scenario": "The currency conversion team receives an input Excel file containing currency conversion data.",
+        "actors": "['Currency Conversion Team']",
+        "preconditions": "An input Excel file containing currency conversion data is available.",
+        "steps": "1: The currency conversion team obtains the input Excel file from the source. 2: The team verifies the integrity and correctness of the data within the Excel file."
+      },
+      {
+        "name": "Retrieve Live Data from Google (Module: Currency Conversion in Banking Backend using Google Live Data)",
+        "scenario": "The system retrieves live currency conversion data from Google.",
+        "actors": "['System']",
+        "preconditions": "The system is connected to the internet and has access to Google's live data.",
+        "steps": "1: The system triggers a request to Google for live currency conversion data. 2: Google's live data is fetched and validated for accuracy and reliability."
+      },
+      {
+        "name": "Automatic Currency Conversion in a Currency Conversion Module in Banking Backend using Google Live Data",
+        "scenario": "The system automatically processes the currency conversion based on the retrieved live data (specified by user by an Excel file).",
+        "actors": "System",
+        "preconditions": "Input Excel file and live currency conversion data from Google are available.",
+        "steps": "1: The system reads the currency conversion data from the input Excel file. 2: Using the live data from Google, the system performs the currency conversion for each entry in the Excel file. 3: The converted currency values are recorded and validated by the system."
+      },
+      {
+        "name": "Validate Currency Conversion Results (Module: Currency Conversion in Banking Backend using Google Live Data)",
+        "scenario": "The system validates the results of the automated currency conversion.",
+        "actors": "System",
+        "preconditions": "Automated currency conversion tasks have been completed.",
+        "steps": "1: The system performs a validation check on the converted currency values. 2: Any discrepancies or potential errors are flagged for review. 3: Validated currency conversion results are ready for further processing."
+      }
+    ],
+    "description": "As a member of the currency conversion team, I want the system to automatically process currency conversions using live data from Google, based on input from an Excel file, so that I can efficiently and accurately obtain converted currency values, validated by the system, to facilitate further banking operations."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Search and Download Journals",
+        "scenario": "A user searches defined websites for specific topics and downloads journals and white papers.",
+        "actors": "['User', 'System']",
+        "preconditions": "User has access to the system and defined websites for journal search and download.",
+        "steps": "1: User enters the specified search topics or keywords for journals and white papers. 2: The system retrieves the relevant journals and white papers from the defined websites. 3: User selects the journals and white papers to download."
+      },
+      {
+        "name": "Extract Journal Publication Details",
+        "scenario": "The system extracts specific details from downloaded journals and white papers (provided by user).",
+        "actors": "['System']",
+        "preconditions": "Journals and white papers are downloaded and accessible for extraction.",
+        "steps": "1: The system extracts the Date of Publication, Author, Heading/Topic, and Year of Publish from the downloaded journals. 2: The system identifies the Country of Publish for each journal. 3: The system summarizes the content of the entire journal or paper. 4: The system organizes the extracted details into an excel file."
+      }
+    ],
+    "description": "As a user, I want to be able to search for and download journals and white papers from defined websites, and then have the system extract and organize the publication details such as date, author, topic, year, and country, and summarize the content, so that I can easily access and analyze the information in an excel file."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Receive Business Travel Information",
+        "scenario": "The 'Easy Business Tour' system receives business travel information of an employee or group of employees via email.",
+        "actors": "System, Employee/Group of Employees",
+        "preconditions": "The email containing business travel information must be sent to the specified email address or system.",
+        "steps": "1: System monitors the specified email address for incoming travel information emails. 2: System parses the email content to extract date, time range, source, destination, and number of passengers for the travel. 3: System validates the received travel information data."
+      },
+      {
+        "name": "Display Available Flights",
+        "scenario": "A system named 'Easy Business Tour' receives travel information (source, destination, people count, date range) through email, parses the info. Now the system displays available flights for the specified date, time range, source, and destination.",
+        "actors": "System, Employee/Group of Employees",
+        "preconditions": "The travel information must be successfully received and validated.",
+        "steps": "1: System processes the received travel information to search for available flights matching the criteria. 2: System retrieves and displays a list of available flights with relevant details such as airlines, departure/arrival times, and seat availability."
+      },
+      {
+        "name": "Reserve Ticket for Customer(s)",
+        "scenario": "The 'Easy Business Tour' system reserves the flight ticket for the customer(s) based on the selected flight from the options provided by the system after it was provided the source, destination, and date range.",
+        "actors": "System, Employee/Group of Employees",
+        "preconditions": "Available flights must be displayed and a specific flight must be selected by the employee/group of employees.",
+        "steps": "1: Employee/Group of Employees selects a flight from the displayed available options. 2: System processes the reservation request and updates the seat availability for the selected flight. 3: System completes the ticket reservation for the customer(s) based on the provided details."
+      },
+      {
+        "name": "Send Flight Ticket",
+        "scenario": "The 'Easy Business Tour' system sends the reserved flight ticket to the concerned email-id from where the booking request was sent.",
+        "actors": "System, Employee/Group of Employees",
+        "preconditions": "The flight ticket must be successfully reserved for the customer(s).",
+        "steps": "1: System generates the flight ticket with all necessary details for the reserved booking. 2: System sends the flight ticket to the email address from which the initial booking request was received."
+      },
+      {
+        "name": "Request New Proposal of Date/Time",
+        "scenario": "If the booking request cannot be processed successfully by 'Easy Business Tour' system (automated flight ticket booking based on passanger info), the system requests a new proposal of date/time from the requesting team.",
+        "actors": "System, Employee/Group of Employees",
+        "preconditions": "The system must encounter an issue while processing the booking request.",
+        "steps": "1: System identifies the issue in the received travel information or reservation process. 2: System sends a request to the employee/group of employees for a new proposal of date/time due to the encountered issue."
+      }
+    ],
+    "description": "As an employee or group of employees, I want to receive business travel information, have the system display available flights, reserve a ticket, and send the flight ticket to my email, or request a new proposal of date/time if the booking cannot be processed, so that I can easily manage and book business travel arrangements."
+  },
+  {
+    "usecases": [
+      {
+        "name": "User Enrollment in Facial Recognition System",
+        "scenario": "A user enrolls in the facial recognition system for the first time.",
+        "actors": "User",
+        "preconditions": "User intends to enroll in the facial recognition system.",
+        "steps": "1: User initiates enrollment process in the system. 2: User provides personal biometric data (e.g., facial scan, iris scan). 3: System validates and stores the biometric data associated with the user's identity."
+      },
+      {
+        "name": "User Authentication using Facial Recognition System",
+        "scenario": "A registered user is authenticated using facial recognition.",
+        "actors": "User",
+        "preconditions": "User is registered in the facial recognition system.",
+        "steps": "1: User stands before the facial recognition device for authentication. 2: Facial recognition system captures and processes user's facial features. 3: System compares the captured features with the stored biometric data of the user. 4: System grants access if the features match within a certain threshold."
+      },
+      {
+        "name": "Real-Time Identification of Individual Using Facial Recognition",
+        "scenario": "The facial recognition system identifies individuals in real-time.",
+        "actors": "Facial Recognition System",
+        "preconditions": "System is operational and actively monitoring for individuals.",
+        "steps": "1: Facial recognition system continuously scans the environment for faces. 2: Upon detection of a face, the system captures facial features and processes them. 3: System matches the captured features against the stored biometric data of enrolled users. 4: If a match is found, the system identifies the individual in real-time."
+      },
+      {
+        "name": "Secure and Swift Verification using Facial Recognition",
+        "scenario": "The facial recognition system verifies individuals swiftly and securely.",
+        "actors": "Facial Recognition System",
+        "preconditions": "System is available for verification purposes.",
+        "steps": "1: Individual presents themselves before the facial recognition device for verification. 2: Facial recognition system swiftly captures and processes the facial features. 3: System compares the features with the stored biometric data of the individual. 4: If the features match within the defined threshold, the system securely verifies the individual."
+      }
+    ],
+    "description": "As a user, I want to be able to enroll in a facial recognition system, have my identity authenticated, and be identified in real-time, so that I can securely and swiftly verify my identity and access authorized areas or services."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Automated Offer Letter Generation (Automated Salary Hike Handling Software)",
+        "scenario": "HR initiates the process of generating offer letters for the salary hike cycle.",
+        "actors": "['HR']",
+        "preconditions": "HR has received and validated the results shared from the managers for the salary hike cycle.",
+        "steps": "1: HR triggers the bot to generate offer letters for the salary hike. 2: The bot accepts the results shared from the managers. 3: The bot checks all pre-defined validations, such as years of experience, allowed percentage hike, and any missed employees for appraisal. 4: The bot creates action tickets for HR to follow up on highlighted cases and requests responses from the managers. 5: All evidence and communication are stored in the bot's system. 6: The bot processes the generation of offer letters in a multi-architecture-based approach to ensure completion within a day."
+      },
+      {
+        "name": "Employee Detail Update using Automated Salary Hike Handling Software",
+        "scenario": "Updating employee details and mailing all candidates about the salary hike.",
+        "actors": "HR",
+        "preconditions": "Offer letters for the salary hike cycle have been generated.",
+        "steps": "1: HR initiates the update of employee details in the system with the new salary and designation. 2: HR triggers the bot to send out emails to all the candidates about the salary hike process. 3: The bot updates the employee details in the system with the new salary and designation. 4: The bot sends out emails to all the candidates about the salary hike."
+      },
+      {
+        "name": "Validation Checks in Automated Salary Hike Handling Software",
+        "scenario": "The bot performs validation checks on the salary hike parameters and employee details.",
+        "actors": "['Bot']",
+        "preconditions": "Results for the salary hike cycle are shared by the managers.",
+        "steps": "1: The bot checks all the validation rules set for the salary hike process, including years of experience, allowed percentage hike, and any missed employees for appraisal. 2: The bot highlights cases that do not meet the pre-defined validations and creates action tickets for HR to follow up. 3: The bot requests responses from the managers for the highlighted cases. 4: All evidence and communication related to the validation checks are stored in the bot's system."
+      },
+      {
+        "name": "Multi-Architecture Processing in Automated Salary Hike Handling Software",
+        "scenario": "The bot initiates multi-architecture processing for completing the salary hike process.",
+        "actors": "Bot",
+        "preconditions": "All required validations and employee details are updated and verified.",
+        "steps": "1: The bot starts the multi-architecture based processing to ensure completion of the salary hike process within a day's time."
+      }
+    ],
+    "description": "As an HR, I want to automate the salary hike process using a software that can generate offer letters, update employee details, perform validation checks, and process the salary hike in a multi-architecture-based approach, so that I can efficiently manage the salary hike cycle and ensure timely completion of the process."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Collect Resumes",
+        "scenario": "Human resources collect resumes from various sources.",
+        "actors": "['Human Resources']",
+        "preconditions": "There should be a source of resumes available for collection.",
+        "steps": "1: Human Resources access various sources such as job portals, career fairs, and online submissions to collect resumes. 2: Resumes are gathered and stored in the company's database or a designated location."
+      },
+      {
+        "name": "Determine Candidates from a list of resumes",
+        "scenario": "The system determines potential candidates from a set of resumes collected from several job portals.",
+        "actors": "['System']",
+        "preconditions": "Resumes must be available in the company's database or designated location.",
+        "steps": "1: The system uses OCR (Optical Character Recognition) and UiPath to extract relevant information from the resumes. 2: ChatGPT is employed to analyze the extracted information and identify potential candidates based on predefined criteria. 3: The system utilizes Amazon Web Services to assist in processing and analyzing the candidate data. 4: A list of potential candidates is generated based on the analysis and presented to the human resources team for review."
+      },
+      {
+        "name": "Improve Hiring Process of Company",
+        "scenario": "The company implements an assistant software to enhance the hiring process.",
+        "actors": "['Company']",
+        "preconditions": "The assistant software must be developed and integrated into the hiring process.",
+        "steps": "1: The company utilizes UiPath, OCR, ChatGPT, and Amazon Web Services to create an assistant software. 2: The assistant software streamlines the hiring process by automating repetitive tasks such as resume parsing, candidate evaluation, and initial communications. 3: The software assists in scheduling interviews, sending automated updates to candidates, and maintaining candidate engagement throughout the hiring process. 4: Human resources team leverages the assistant software to efficiently manage the workflow and improve overall hiring effectiveness."
+      }
+    ],
+    "description": "As a human resources team, I want to automate the hiring process by collecting resumes from various sources, determining potential candidates using a system that analyzes resume information, and improving the overall hiring process with an assistant software, so that I can efficiently manage the workflow and improve hiring effectiveness."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Negotiation Facilitation in Online Second-hand Car-Buying System",
+        "scenario": "User negotiates the price of a vehicle through the Trusted Wheels application.",
+        "actors": "['User', 'Seller']",
+        "preconditions": "User must be logged in and have selected a vehicle of interest.",
+        "steps": "1: User selects a vehicle for purchase 2: User initiates negotiation for the price of the vehicle 3: The system facilitates the negotiation process by providing a platform for communication between the user and the seller 4: Seller responds with a counteroffer or acceptance of the user's proposal 5: User and seller reach an agreement on the price"
+      },
+      {
+        "name": "Document Verification in Online Second-hand Car-Buying System",
+        "scenario": "User validates all documents related to the purchased vehicle using the Trusted Wheels application.",
+        "actors": "['User']",
+        "preconditions": "User must have purchased a vehicle after negotiating with the seller through the Trusted Wheels application.",
+        "steps": "1: User navigates to the purchased vehicle's profile 2: User accesses the documents section 3: The system displays the list of documents associated with the vehicle, including invoices, warranty, and claims 4: User verifies the authenticity of each document"
+      },
+      {
+        "name": "Secure Payment in Online Second-hand Car-Buying System",
+        "scenario": "User makes a payment for a vehicle through the Trusted Wheels application.",
+        "actors": "['User', 'Payment Gateway']",
+        "preconditions": "User must have agreed to purchase a vehicle and be ready to make the payment.",
+        "steps": "1: User selects the payment option 2: User enters the payment details 3: The system redirects the user to a secure payment gateway 4: User completes the payment using a secure channel 5: Payment gateway confirms the transaction"
+      },
+      {
+        "name": "Vehicle Condition Validation in Online Second-hand Car-Buying System",
+        "scenario": "User validates the condition of a vehicle using the Trusted Wheels application.",
+        "actors": "['User']",
+        "preconditions": "User must have selected a vehicle for potential purchase.",
+        "steps": "1: User accesses the vehicle's profile 2: The system utilizes AI Object Detection to present an analysis of the vehicle's condition 3: User examines the AI analysis to understand the vehicle's condition 4: User makes an informed decision based on the analysis"
+      },
+      {
+        "name": "Transparency in Trade in Online Second-hand Car-Buying System",
+        "scenario": "User engages in a trade for a vehicle through the Trusted Wheels application.",
+        "actors": "['User', 'Seller']",
+        "preconditions": "User must have agreed to purchase a vehicle and be ready to engage in the trade.",
+        "steps": "1: User and seller agree on the terms of the trade 2: The system facilitates the trade process, ensuring transparency in the transaction 3: User and seller complete the trade as agreed 4: The system updates the status of the transaction"
+      }
+    ],
+    "description": "As a user, I want to be able to purchase a second-hand car through the Trusted Wheels application, where I can negotiate the price, verify the vehicle's documents, validate its condition, make a secure payment, and engage in a transparent trade, so that I can have a trustworthy and hassle-free car-buying experience."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Download Source Files",
+        "scenario": "Downloading source files from multiple locations like shared location, email, etc. of predetermined types",
+        "actors": "['System']",
+        "preconditions": "Availability of source files in the specified locations",
+        "steps": "1: System accesses the shared location and downloads the source files 2: System retrieves source files from emails and downloads them 3: System verifies the integrity of the downloaded files"
+      },
+      {
+        "name": "Data Cleaning and Filtering for Automated Invoice Generation",
+        "scenario": "Cleaning the supplied/downloaded data and filtering rows based on predefined conditions to exclude rows that are not to be billed",
+        "actors": "['System']",
+        "preconditions": "Availability of downloaded source files",
+        "steps": "1: System cleans the data from the downloaded files 2: System applies predefined conditions to filter out rows that are not to be billed 3: System creates an intermediate file with the filtered data"
+      },
+      {
+        "name": "Calculate Quantity and Amount for Billing from a List of Filterd Billing Files/Sheets",
+        "scenario": "Calculating Quantity and Amount based on given charge rate from the intermediate files (after preprocessing initial files based on preconditions)",
+        "actors": "['System']",
+        "preconditions": "Availability of the intermediate file with filtered data",
+        "steps": "1: System retrieves the filtered data from the intermediate file 2: System calculates the Quantity and Amount based on the provided charge rates 3: System records the calculated Quantity and Amount for each entity"
+      },
+      {
+        "name": "Create Invoices from Source Files Containing Quantity and Amount",
+        "scenario": "Creating invoices for each entity in the source file and inserting data into pre-defined invoice templates",
+        "actors": "['System']",
+        "preconditions": "Availability of calculated Quantity and Amount for each entity",
+        "steps": "1: System generates individual invoices for each entity using pre-defined templates 2: System inserts the calculated Quantity and Amount data into the respective invoice templates 3: System validates the created invoices"
+      },
+      {
+        "name": "Upload Automatically Generated Invoices to Database",
+        "scenario": "Uploading the created invoices into the database using excel add-ins and generating a transaction number",
+        "actors": "['System']",
+        "preconditions": "Availability of validated invoices",
+        "steps": "1: System utilizes excel add-ins to upload the invoices to the database 2: System ensures the successful upload of the invoices 3: System generates a unique transaction number for each uploaded invoice"
+      },
+      {
+        "name": "Send Summary File to the Department",
+        "scenario": "Sending a summary file containing details of the submitted invoices to the department",
+        "actors": "['System']",
+        "preconditions": "Completion of the entire invoicing process",
+        "steps": "1: System compiles a summary file with details of the submitted invoices 2: System sends the summary file to the respective department for reconciliation"
+      }
+    ],
+    "description": "As a system, I want to automate the invoicing process by downloading source files, cleaning and filtering the data, calculating quantity and amount, creating invoices, uploading them to the database, and sending a summary file to the department, so that the invoicing process is efficient and accurate."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Automated Email Monitoring",
+        "scenario": "The system monitors finance emails for vendor bills and validates them using Document Understanding and AI Centre.",
+        "actors": "['Bot']",
+        "preconditions": "The system has access to the finance emails and the Document Understanding and AI Centre.",
+        "steps": "1: The bot checks all the emails received for vendor bills. 2: Whitelisted vendors' bills are processed automatically, while other bills are moved to the action center for processing. 3: In the action center, the end user can choose to pay the bill or neglect it based on their understanding of the situation. 4: If the bot notices a spike in expense from a whitelisted vendor, it moves the expense to the action center for further review."
+      },
+      {
+        "name": "Expense Tracking and Monitoring in a Monthly Payment Automation System",
+        "scenario": "The system uses historical expense data to track and monitor the expenses incurred by the company.",
+        "actors": "['Bot']",
+        "preconditions": "The system has access to historical expense data and is integrated with the finance dashboard.",
+        "steps": "1: The bot utilizes historical expense data to track and monitor the expenses incurred by the company during the financial years. 2: The data is stored in a database and made visible on a dashboard for the finance team for real-time monitoring. 3: Real-time monitoring allows the finance team to minutely watch the expenses and avoid late payments."
+      },
+      {
+        "name": "Monthly Bill Payment Processing in a Monthly Payment Automation System",
+        "scenario": "The system processes the monthly bills received from vendors to avoid late fee fines.",
+        "actors": "['Bot', 'End User']",
+        "preconditions": "The system has access to the received monthly bills and is integrated with the payment processing capabilities.",
+        "steps": "1: The bot processes the bills received from vendors to ensure timely payments. 2: Whitelisted vendors' bills are processed automatically, while others are moved to the action center for processing by the end user. 3: The end user in the action center can pay the bill or neglect it based on their understanding. 4: If any spike in expense from a whitelisted vendor is noticed, the bot moves the expense to the action center for further review."
+      }
+    ],
+    "description": "As a finance team member, I want the system to automatically monitor and process finance emails, track and monitor expenses, and handle monthly bill payments, so that I can ensure timely payments, avoid late fees, and have real-time visibility into the company's expenses."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Integration with Billing System for Automated Retail Inventory Manager System",
+        "scenario": "Integration of the UiPath inventory manager bot with the shop's billing system to trigger the bot in orchestrator upon completion of a billing transaction at the counter.",
+        "actors": "['UiPath Inventory Manager Bot', 'Billing System']",
+        "preconditions": "The shop uses a specific billing system that can be integrated with the UiPath inventory manager bot.",
+        "steps": "1: The billing system completes a transaction at the counter. 2: Upon transaction completion, the billing system triggers the UiPath inventory manager bot in orchestrator."
+      },
+      {
+        "name": "Maintain Centralized Product Repository for an Automated Retail Inventory Manager System with Help from UiPath Inventory Manager Bot",
+        "scenario": "Maintenance of a centralized repository containing the count for all products in the retail shop.",
+        "actors": "['UiPath Inventory Manager Bot']",
+        "preconditions": "A centralized repository system exists to store the count for all the products in the retail shop.",
+        "steps": "1: The UiPath inventory manager bot updates the count of items in the centralized repository. 2: The repository is regularly synchronized with the actual inventory count in the shop."
+      },
+      {
+        "name": "Automated Purchase Order Placement in an Automated Retail Inventory Manager System",
+        "scenario": "Automatic placement of a purchase order for a specific item when its count in the repository reaches a pre-defined threshold value.",
+        "actors": "['UiPath Inventory Manager Bot', 'Vendor']",
+        "preconditions": "The UiPath inventory manager bot has access to vendor information and can place automated purchase orders.",
+        "steps": "1: The UiPath inventory manager bot monitors the item counts in the repository. 2: When the count of a specific item reaches the pre-defined threshold value, the bot automatically places a purchase order for that item with the specific vendor."
+      }
+    ],
+    "description": "As a retail shop owner, I want the UiPath inventory manager bot to integrate with our billing system, maintain a centralized product repository, and automatically place purchase orders when item counts reach a threshold, so that I can efficiently manage my inventory and minimize manual errors."
+  },
+  {
+    "usecases": [
+      {
+        "name": "CCTV Footage Analysis",
+        "scenario": "The system detects and analyzes accidents in real-time using CCTV footage.",
+        "actors": "['System']",
+        "preconditions": "CCTV footage of the area is available and accessible to the system.",
+        "steps": "1: The system continuously monitors the CCTV footage for any signs of accidents. 2: Upon identifying a potential accident, the system captures relevant footage for analysis. 3: The system employs computer vision and image processing algorithms, utilizing AI models for efficient accident detection."
+      },
+      {
+        "name": "Location Mapping",
+        "scenario": "The system integrates with the CCTV database to retrieve the precise location of the accident for accurate reporting and response.",
+        "actors": "['System']",
+        "preconditions": "The system has access to the CCTV database and coordinates of accident locations.",
+        "steps": "1: The system retrieves the geographic coordinates of the accident from the CCTV database. 2: The system utilizes the obtained coordinates for accurate reporting and emergency response purposes."
+      },
+      {
+        "name": "Automated Reporting",
+        "scenario": "The system automatically generates detailed accident reports, including relevant data, for aiding the investigation.",
+        "actors": "['System']",
+        "preconditions": "The system has detected and confirmed an accident through CCTV footage analysis.",
+        "steps": "1: The system compiles relevant data such as date, time, and location of the accident. 2: The system generates a detailed accident report based on the compiled data."
+      },
+      {
+        "name": "Automated Calls",
+        "scenario": "The system triggers automated calls to local authorities for real-time alerts and emergency response.",
+        "actors": "['System']",
+        "preconditions": "The system has detected and confirmed an accident, and the required data for alerting authorities is available.",
+        "steps": "1: The system initiates automated calls to the designated local police stations or emergency services. 2: The system delivers real-time alerts with relevant accident details to the authorities."
+      },
+      {
+        "name": "Fax Notification",
+        "scenario": "The system integrates with fax services to send detailed accident reports and images to designated police stations for quick response and dispatch of emergency services.",
+        "actors": "['System']",
+        "preconditions": "The system has generated a detailed accident report and captured relevant images.",
+        "steps": "1: The system sends the comprehensive accident report and images to the designated police stations via fax services. 2: The system ensures that map coordinates are included in the report for quick response and dispatch of emergency services."
+      }
+    ],
+    "description": "As a system administrator, I want the system to automatically detect accidents from CCTV footage, analyze the footage, map the location of the accident, generate detailed accident reports, and send real-time alerts and reports to local authorities via automated calls and fax notifications, so that emergency services can respond quickly and effectively to accidents."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Train ML Model",
+        "scenario": "Training the machine learning model with different existing datasets from hospitals and other sources.",
+        "actors": "['AI System']",
+        "preconditions": "Availability of diverse datasets for training the ML model.",
+        "steps": "1: Collecting diverse lab report datasets from hospitals and other sources. 2: Preprocessing and cleaning the collected datasets. 3: Training the machine learning model using the preprocessed datasets."
+      },
+      {
+        "name": "Predict Disease Likelihood",
+        "scenario": "Using the trained ML model to predict the likelihood of chronic diseases for a patient based on their lab report data and lifestyle information.",
+        "actors": "['AI System']",
+        "preconditions": "Availability of the patient's lab report data and lifestyle information.",
+        "steps": "1: Receiving the lab report data and lifestyle information of the patient. 2: Pushing the data to the ML model to predict the likelihood of chronic diseases. 3: Comparing the results with lifestyle data and making the prediction."
+      },
+      {
+        "name": "Send Report for Doctor Validation",
+        "scenario": "Sending the lab report data to the doctor for validation in case of any alarming prediction.",
+        "actors": "['AI System', 'Doctor']",
+        "preconditions": "Detection of an alarming prediction from the ML model.",
+        "steps": "1: Sending the report data to the doctor via an automated email for validation. 2: Doctor accessing the UiPath App to approve or disapprove the reading. 3: Doctor's input sent to the ML model for refining future predictions."
+      },
+      {
+        "name": "Inform Patient about Susceptibility",
+        "scenario": "Informing the patient immediately if the doctor confirms their susceptibility to a chronic disease based on the AI prediction.",
+        "actors": "['AI System', 'Doctor', 'Patient']",
+        "preconditions": "Confirmation from the doctor regarding the patient's susceptibility to a chronic disease.",
+        "steps": "1: Sending an immediate notification to the patient about their susceptibility to a chronic disease. 2: Providing the patient with information to take corrective actions as soon as possible."
+      }
+    ],
+    "description": "As a healthcare provider, I want the AI system to train a machine learning model using diverse datasets, predict disease likelihood for patients, send reports to doctors for validation in case of alarming predictions, and inform patients about their susceptibility to chronic diseases, so that patients can take corrective actions promptly and doctors can refine the model for more accurate future predictions."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Accessing Crop Recommendation System",
+        "scenario": "A user accesses the Crop Recommendation system to get suggestions for suitable crops to grow based on soil and environmental parameters.",
+        "actors": "['User']",
+        "preconditions": "User has access to the Crop Recommendation system and has the required soil and environmental parameter values (N, P, K, temperature, humidity, pH, rainfall) available.",
+        "steps": "1: User navigates to the Predict section of the UiPath Apps 2: User enters the corresponding nutrient values of the soil, i.e., N, P, K ratios 3: User enters the temperature in degrees Celsius, relative humidity in percentage, pH value of the soil, and the rainfall in mm 4: The system processes the entered values 5: The Crop Recommender system suggests the type of crop/fruit to grow in order to increase production based on the entered parameters"
+      },
+      {
+        "name": "Updating Soil and Environmental Parameter Values",
+        "scenario": "A user updates the soil and environmental parameter values to get updated recommendations for suitable crops to grow.",
+        "actors": "['User']",
+        "preconditions": "User has accessed the Crop Recommendation system and has previously entered the soil and environmental parameter values.",
+        "steps": "1: User navigates to the section for updating soil and environmental parameter values in the Crop Recommendation system 2: User modifies the existing values of N, P, K ratios, temperature, humidity, pH, and rainfall 3: User submits the updated values 4: The system processes the updated values 5: The Crop Recommender system provides new crop recommendations based on the modified parameters"
+      },
+      {
+        "name": "Viewing Recommended Crops",
+        "scenario": "A user views the list of recommended crops/fruits generated by the Crop Recommendation system based on the entered soil and environmental parameters.",
+        "actors": "['User']",
+        "preconditions": "User has entered the soil and environmental parameter values and has accessed the Crop Recommendation system.",
+        "steps": "1: User navigates to the section for viewing recommended crops/fruits in the Crop Recommendation system 2: The system displays the list of recommended crops/fruits along with relevant details such as expected yield or suitability for the specified conditions"
+      }
+    ],
+    "description": "As a user, I want to access the Crop Recommendation system, update soil and environmental parameter values, and view recommended crops, so that I can get personalized suggestions for suitable crops to grow and increase production based on the specific conditions of my land."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Data Collection",
+        "scenario": "UiPath robots collect sales data from various sources for demand forecasting.",
+        "actors": "UiPath robots",
+        "preconditions": "UiPath robots are operational and have access to the required data sources.",
+        "steps": "1: UiPath robots initiate data collection from POS systems, e-commerce platforms, and social media. 2: Data collection process captures historical sales data and relevant factors. 3: Collected data is stored in a designated repository for further processing."
+      },
+      {
+        "name": "Data Preprocessing",
+        "scenario": "Preprocessing of collected sales data to prepare it for demand forecasting model development.",
+        "actors": "UiPath Studio",
+        "preconditions": "Collected sales data is available and accessible to UiPath Studio.",
+        "steps": "1: UiPath Studio performs data cleaning to handle missing or inconsistent data. 2: Normalization of data and feature engineering is carried out using UiPath Studio's data manipulation activities. 3: Preprocessed data is stored for model development."
+      },
+      {
+        "name": "Model Development",
+        "scenario": "Utilizing UiPath AI Center to build and train a demand forecasting model using machine learning algorithms.",
+        "actors": "UiPath AI Center",
+        "preconditions": "Preprocessed sales data is available within UiPath AI Center for model development.",
+        "steps": "1: Selection of appropriate machine learning algorithms, such as regression, time series analysis, or deep learning, for model development. 2: Training the demand forecasting model using historical sales data and relevant factors. 3: Validation of the model's performance and accuracy for demand forecasting."
+      },
+      {
+        "name": "Model Deployment",
+        "scenario": "Deployment of the trained demand forecasting model to UiPath AI Center for integration with automation processes.",
+        "actors": "UiPath AI Center",
+        "preconditions": "Trained demand forecasting model is available and validated for deployment.",
+        "steps": "1: Integration of the trained model with automation processes within UiPath AI Center. 2: Testing the integrated model's functionality and compatibility with other automated tasks. 3: Deployment of the model for real-time demand forecasting and inventory management."
+      }
+    ],
+    "description": "As a business analyst, I want the system to automatically collect sales data from various sources, preprocess it, develop a demand forecasting model using machine learning algorithms, and deploy the model for real-time forecasting and inventory management, so that I can make informed decisions and optimize business operations."
+  },
+  {
+    "usecases": [
+      {
+        "name": "UiPath Apps Activation",
+        "scenario": "Activation of UiPath Apps for stock managers to monitor and manage stock levels.",
+        "actors": "Stock Managers, UiPath Apps",
+        "preconditions": "UiPath Apps are installed and accessible to stock managers.",
+        "steps": "1: Stock managers access the UiPath Apps dashboard for real-time stock monitoring. 2: The dashboard displays a list of best-selling products at risk of going out of stock. 3: Stock managers initiate orders by clicking on 'place the order' triggering automated order placement by UiPath robots."
+      }
+    ],
+    "description": "As a stock manager, I want to activate and utilize UiPath Apps to monitor and manage stock levels in real-time, so that I can efficiently initiate orders for best-selling products at risk of going out of stock, and have UiPath robots automatically place those orders."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Input Channel Registration",
+        "scenario": "A new input channel is registered in the system.",
+        "actors": "Admin",
+        "preconditions": "The admin has the necessary permissions to register new input channels.",
+        "steps": "1: Admin navigates to the input channel registration page 2: Admin fills in the details of the new input channel (e.g., channel name, description, contact information) 3: Admin submits the registration form 4: The system validates the provided details 5: The system registers the new input channel"
+      },
+      {
+        "name": "Input Classification",
+        "scenario": "An input is classified into predefined categories using AI.",
+        "actors": "AI Engine",
+        "preconditions": "The input is available in the system and the AI engine is active.",
+        "steps": "1: AI Engine receives the input 2: AI Engine processes the input using predefined classification algorithms 3: The system verifies the classification results 4: The system assigns the input to the respective category (e.g., customer complaints, service requests, information requests)"
+      },
+      {
+        "name": "Peak Detection",
+        "scenario": "The system detects peaks in the incoming inputs",
+        "actors": "System",
+        "preconditions": "There are incoming inputs and the peak detection module is active.",
+        "steps": "1: The system continuously monitors the volume of incoming inputs 2: The system compares the current input volume with historical data to identify peaks 3: When a peak is detected, the system triggers an alert or notification for the relevant personnel"
+      },
+      {
+        "name": "Priority Setting for Employee Base",
+        "scenario": "The system assigns priorities to the employee base based on input classification and peak detection.",
+        "actors": "System",
+        "preconditions": "Inputs are classified and peaks are detected.",
+        "steps": "1: The system evaluates the nature of classified inputs and the detected peaks 2: The system assigns priorities to different departments or personnel based on the evaluation 3: The priorities are communicated to the respective departments or personnel"
+      }
+    ],
+    "description": "As an admin, I want to register new input channels, classify inputs into predefined categories using AI, detect peaks in incoming inputs, and assign priorities to the employee base based on input classification and peak detection, so that the system can efficiently manage and respond to incoming inputs."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Download Purchase Orders",
+        "scenario": "The system automatically downloads purchase orders from email attachments.",
+        "actors": "['System']",
+        "preconditions": "Email containing purchase orders is received and accessible by the system. Purchase orders are named using a code as PO_xxx in the attchment",
+        "steps": "1: System accesses the email server to retrieve new emails with purchase order attachments 2: System downloads the purchase order attachments from the received emails"
+      },
+      {
+        "name": "Extract PO Details and train PO ML Model",
+        "scenario": "The system extracts purchase order details through Document understanding and training the PO ML model.",
+        "actors": "['System']",
+        "preconditions": "Purchase orders are successfully downloaded and accessible by the system.",
+        "steps": "1: System processes the purchase orders using Document understanding phases 2: System trains the PO ML model to extract relevant details from the purchase orders"
+      },
+      {
+        "name": "Validate PO Details",
+        "scenario": "The system detects any accuracy or business validation issues and creates a task in the action center for business validation, modification, and submission.",
+        "actors": "['System', 'Business Users']",
+        "preconditions": "Purchase order details are extracted and processed by the system.",
+        "steps": "1: System checks for accuracy and business validation issues in the extracted PO details 2: If issues are found, system creates a task in the action center for business users to validate, modify, and submit the details"
+      },
+      {
+        "name": "Create Order in SAP",
+        "scenario": "The system creates the purchase order in the SAP application to notify the respective stakeholders and initiate necessary actions.",
+        "actors": "['System', 'SAP Application']",
+        "preconditions": "PO details are validated and finalized by the business users.",
+        "steps": "1: System initiates the creation of the purchase order in the SAP application 2: SAP application processes the received order and notifies the respective stakeholders for further actions"
+      }
+    ],
+    "description": "As a business user, I want the system to automatically download purchase orders from email attachments, extract and validate the purchase order details using machine learning, and create the order in the SAP application, so that I can efficiently process and manage purchase orders with minimal manual intervention."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Upload Image from CCTV Camera",
+        "scenario": "CCTV cameras detect motion and take screenshots in the coverage area.",
+        "actors": "CCTV System, Motion Detection Software",
+        "preconditions": "Motion is detected within the camera's coverage area",
+        "steps": "1: CCTV system detects motion in the coverage area 2: The camera takes a screenshot when motion is detected 3: The image is saved in a specified OneDrive location"
+      },
+      {
+        "name": "Trigger UiPath Bot",
+        "scenario": "An image is uploaded to the specified OneDrive location, triggering the UiPath bot integration",
+        "actors": "OneDrive, UiPath Integration Service",
+        "preconditions": "Image is uploaded to the specified OneDrive location",
+        "steps": "1: An image is uploaded to the specified OneDrive location 2: UiPath Integration Service detects the new image 3: UiPath bot is triggered upon detection of the new image"
+      },
+      {
+        "name": "Move Image to Local Storage",
+        "scenario": "UiPath bot moves the image from OneDrive to local storage for processing",
+        "actors": "UiPath Bot, Local Storage System",
+        "preconditions": "UiPath bot is triggered, and an image is available in the specified OneDrive location",
+        "steps": "1: UiPath bot identifies the new image in the specified OneDrive location 2: The bot initiates the process to move the image to the local storage for further analysis"
+      },
+      {
+        "name": "Process Image Using Object Detection Model",
+        "scenario": "UiPath Object Detection Model AI Centre processes the image from the local storage",
+        "actors": "UiPath Object Detection Model AI Centre, Local Storage System",
+        "preconditions": "The image is successfully moved to the local storage",
+        "steps": "1: UiPath Object Detection Model AI Centre receives the image from the local storage 2: The AI model processes the image to identify objects and patterns"
+      },
+      {
+        "name": "Alert Generation for Mask Detection",
+        "scenario": "The system detects whether a person is wearing a mask, and if not, triggers an alert",
+        "actors": "UiPath Object Detection Model AI Centre",
+        "preconditions": "The image has been successfully processed, and the AI model has detected a person's face",
+        "steps": "1: The AI model analyzes the image to determine if a person is not wearing a mask 2: If no mask is detected, the system triggers an alert for mask non-compliance"
+      },
+      {
+        "name": "Alert Generation for Person Count Threshold",
+        "scenario": "The system triggers alerts if the number of persons detected in the image exceeds the predefined threshold",
+        "actors": "UiPath Object Detection Model AI Centre",
+        "preconditions": "The image has been successfully processed, and the AI model has detected persons",
+        "steps": "1: The AI model determines the number of persons in the image 2: If the person count exceeds the predefined threshold, the system triggers an alert for overcrowding"
+      },
+      {
+        "name": "Prevention of Suicides and Intrusions",
+        "scenario": "The system is able to prevent suicides and intrusion cases based on image analysis",
+        "actors": "UiPath Object Detection Model AI Centre",
+        "preconditions": "The image has been successfully processed, and the AI model has detected relevant patterns",
+        "steps": "1: The AI model analyzes the image to detect patterns associated with suicides or intrusions 2: If such patterns are detected, the system takes preventive actions or triggers appropriate alerts"
+      }
+    ],
+    "description": "As a security administrator, I want the system to automatically detect and respond to security threats and compliance issues in real-time, by uploading images from CCTV cameras to OneDrive, triggering a UiPath bot to move the image to local storage for processing using an object detection model, and generating alerts for mask non-compliance, overcrowding, and potential suicide or intrusion cases, so that I can ensure a safe and secure environment."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Capture Handwritten Feedback",
+        "scenario": "Automated capturing of handwritten feedback from customers at the automobile service center.",
+        "actors": "['System', 'Customer']",
+        "preconditions": "Customer provides handwritten feedback on paper or a form",
+        "steps": "1: System processes the handwritten feedback using image recognition technology 2: System converts the handwritten feedback into digital text 3: System stores the digital feedback for further processing"
+      },
+      {
+        "name": "Classify Feedback as Positive or Negative",
+        "scenario": "Automated classification of customer feedback as positive or negative using machine learning integration.",
+        "actors": "['System']",
+        "preconditions": "Digital feedback is available for processing",
+        "steps": "1: System applies machine learning algorithms to analyze the content of the feedback 2: System categorizes the feedback as positive or negative based on predefined criteria 3: System stores the classified feedback for further actions"
+      },
+      {
+        "name": "Upload Feedback to Social Media",
+        "scenario": "Automated upload of classified feedback to the automobile service center's social media platforms.",
+        "actors": "['System']",
+        "preconditions": "Feedback has been classified as positive or negative",
+        "steps": "1: System identifies the positive feedback 2: System creates social media posts based on the positive feedback 3: System uploads the posts to the service center's social media accounts"
+      },
+      {
+        "name": "Automated Email Follow-Up",
+        "scenario": "Automated email sent to customers as a follow-up based on their feedback.",
+        "actors": "['System', 'Customer']",
+        "preconditions": "Feedback has been processed and classified",
+        "steps": "1: System identifies customers with negative feedback 2: System triggers automated emails to customers with negative feedback 3: Email includes a message acknowledging the feedback and providing contact information for further assistance"
+      },
+      {
+        "name": "Customer Service Executive Follow-Up",
+        "scenario": "Customer service executive reaches out to customers with negative feedback in person.",
+        "actors": "['Customer Service Executive', 'Customer']",
+        "preconditions": "Customers have received automated follow-up emails",
+        "steps": "1: Customer service executive is provided with the list of customers who gave negative feedback 2: Executive contacts the customers to address their concerns in person 3: Executive works on resolving the issues to improve customer satisfaction"
+      }
+    ],
+    "description": "As a customer service manager at an automobile service center, I want the system to automatically capture and process handwritten customer feedback, classify it as positive or negative, upload positive feedback to social media, and trigger follow-up emails and in-person visits from customer service executives for negative feedback, so that I can improve customer satisfaction and increase the service center's online reputation."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Setup Screening process for Resumes/Profiles",
+        "scenario": "Setup Automated screening of resumes and LinkedIn profiles to identify potential candidates for a job opening.",
+        "actors": "['HR Manager', 'Machine Learning Model']",
+        "preconditions": "Availability of resumes and/or LinkedIn profiles for screening",
+        "steps": "1: HR Manager initiates the screening process by providing job requirements and keywords. 2: Machine Learning Model processes the resumes/profiles and filters based on job requirements and other contributing factors. 3: The model performs trend analysis and considers candidate history (e.g., social presence, posts, paper presentations) to assess cultural fit."
+      },
+      {
+        "name": "Shortlist Candidates",
+        "scenario": "Automated shortlisting of candidates based on the screening results for further evaluation.",
+        "actors": "['HR Manager', 'Machine Learning Model']",
+        "preconditions": "Completed screening process with identified potential candidates",
+        "steps": "1: HR Manager reviews the shortlisted candidates from the screening results. 2: Machine Learning Model assists in identifying the candidates who are likely to be a good fit based on the job requirements and cultural fit assessment. 3: The model provides a ranked list of potential candidates for the next stage of the hiring process."
+      },
+      {
+        "name": "Automated Email Outreach",
+        "scenario": "Automatic sending of emails to potential candidates to inquire about their interest in job opportunities.",
+        "actors": "['HR Manager', 'Bot']",
+        "preconditions": "Shortlisted candidates identified from the screening process",
+        "steps": "1: Bot sends personalized emails to the shortlisted candidates to gauge their interest in job opportunities. 2: HR Manager monitors the responses and proceeds with further communication based on candidate responses."
+      },
+      {
+        "name": "Automated Interview Scheduling",
+        "scenario": "Automated scheduling of interviews for the shortlisted candidates based on technical panel availability.",
+        "actors": "['HR Manager', 'Bot', 'Technical Panel']",
+        "preconditions": "Shortlisted candidates available for interview",
+        "steps": "1: Bot schedules interviews for the shortlisted candidates based on the calendar availability of the technical panel members. 2: HR Manager oversees the interview scheduling process and makes necessary adjustments if required."
+      }
+    ],
+    "description": "As an HR Manager, I want to automate the hiring process from resume screening to interview scheduling, so that I can efficiently identify and contact potential candidates, and schedule interviews with them, in order to find the best fit for the job opening."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Verify Order Creation in EBS Application",
+        "scenario": "Validate that the order is created in the EBS application and cross-verify the information with the finance data spreadsheet.",
+        "actors": "['Tester', 'EBS Application']",
+        "preconditions": "Finance data and order creation data must be accessible and available for comparison.",
+        "steps": "1: Tester initiates the order creation process in the EBS application. 2: EBS Application processes the order creation request and generates the relevant order information. 3: Tester retrieves the finance data pertaining to the created order. 4: Tester compares the order information from the EBS application with the finance data spreadsheet. 5: The order information is validated for accuracy and correctness."
+      },
+      {
+        "name": "Perform Revenue Calculation",
+        "scenario": "Automate revenue calculations for the order scenarios uploaded in the test suite.",
+        "actors": "['UiPath', 'Test Suite']",
+        "preconditions": "Test suite must contain the relevant order scenarios and the required finance data for revenue calculation.",
+        "steps": "1: UiPath accesses the test suite and retrieves the order scenarios for revenue calculation. 2: UiPath performs automated calculations using the finance data for each scenario. 3: UiPath generates the calculated revenue for each scenario. 4: The calculated revenue is cross-verified for accuracy."
+      },
+      {
+        "name": "Validate Frontend to Backend Data",
+        "scenario": "Automate the validation process to ensure consistency between frontend and backend data.",
+        "actors": "['UiPath', 'Frontend', 'Backend']",
+        "preconditions": "Frontend and backend data must be accessible for comparison and validation.",
+        "steps": "1: UiPath retrieves frontend data from the UI components. 2: UiPath accesses and retrieves corresponding backend data. 3: UiPath compares the frontend data with the backend data to validate consistency. 4: Any inconsistencies or disparities are flagged for further investigation."
+      }
+    ],
+    "description": "As a tester, I want to automate the order creation process in the EBS application, perform revenue calculations, and validate frontend to backend data consistency, so that I can ensure accuracy and correctness of order information, revenue calculations, and data consistency across the application, and flag any inconsistencies for further investigation."
+  },
+  {
+    "usecases": [
+      {
+        "name": "Trigger Attended Bot",
+        "scenario": "User triggers the Attended Bot to initiate the extraction and validation process for background verification documents.",
+        "actors": "['User']",
+        "preconditions": "User has downloaded the documents from the internal application to the local folder.",
+        "steps": "1: User triggers the Attended Bot for the background verification process. 2: Bot fetches all the folders and documents from the specified local folder. 3: Bot segregates PDF and Excel documents separately for processing."
+      },
+      {
+        "name": "Process Excel Document",
+        "scenario": "Bot processes the Excel document for extracting required education and employment information.",
+        "actors": "['Bot']",
+        "preconditions": "Bot has received an Excel document for processing.",
+        "steps": "1: Bot reads and extracts required education and employment information from the Excel document. 2: Bot stores the extracted information into a collection for data entry."
+      },
+      {
+        "name": "Process PDF Document",
+        "scenario": "Bot processes the PDF document for extracting required education and employment details.",
+        "actors": "['Bot']",
+        "preconditions": "Bot has received a PDF document for processing.",
+        "steps": "1: Bot extracts required education and employment details from each PDF document. 2: Bot stores the extracted details into a collection for data entry."
+      },
+      {
+        "name": "Move Documents",
+        "scenario": "Bot moves the processed documents to a specific completed folder.",
+        "actors": "['Bot']",
+        "preconditions": "Bot has extracted and processed the required information from the documents.",
+        "steps": "1: Bot moves the processed documents from the current folder to a designated completed folder."
+      },
+      {
+        "name": "Data Entry on Web Application",
+        "scenario": "Bot logs in to the web application, navigates to the required screen, and performs data entry.",
+        "actors": "['Bot']",
+        "preconditions": "Bot has the required information extracted and stored for data entry.",
+        "steps": "1: Bot logs in to the web application. 2: Bot navigates to the designated screen for data entry. 3: Bot uploads education, employment, and personal documents and information into the required fields. 4: Bot submits the record if there are no errors on the screen."
+      },
+      {
+        "name": "Logout and Reporting",
+        "scenario": "Bot logs out of the web application and captures the success/failure details into an excel file.",
+        "actors": "['Bot']",
+        "preconditions": "Bot has completed the data entry process on the web application.",
+        "steps": "1: Bot performs the logout step on the web application. 2: Bot captures all the success/failure details and exceptions into an excel file."
+      },
+      {
+        "name": "Send Final Report",
+        "scenario": "Bot sends the final report with success and exception details for each candidate to a specific mail ID.",
+        "actors": "['Bot']",
+        "preconditions": "Bot has captured all the success/failure details and exceptions in an excel file.",
+        "steps": "1: Bot sends the final report via email to the specified mail ID."
+      }
+    ],
+    "description": "As a user, I want to trigger an attended bot that automates the extraction and validation of background verification documents, processes Excel and PDF documents, moves processed documents to a completed folder, performs data entry on a web application, logs out and captures success/failure details, and sends a final report to a specified email address, so that I can efficiently initiate and track the verification process for candidates."
+  }
+]

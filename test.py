@@ -8,7 +8,7 @@ def compute_similarity(text1, text2, model):
 
 def compare_scenario_to_next_precondition(csv_path, num_rows=None, model_name="sentence-transformers/all-MiniLM-L6-v2"):
     # Load model
-    model = SentenceTransformer(model_name)
+    model = SentenceTransformer(model_name, trust_remote_code=True)
     
     # Load data
     df = pd.read_csv(csv_path)
@@ -43,7 +43,7 @@ def compare_scenario_to_next_precondition(csv_path, num_rows=None, model_name="s
 
 # Example usage:
 csv_file_path = "usecase2brd-dataset/testset.csv"  # Replace with your actual CSV path
-result = compare_scenario_to_next_precondition(csv_file_path, num_rows=107)
+result = compare_scenario_to_next_precondition(csv_file_path, num_rows=107, model_name="sentence-transformers/all-MiniLM-L6-v2")
 print(result)
 result.to_csv("scenario_similarity_results.csv", index=False)
 
