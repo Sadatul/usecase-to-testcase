@@ -15,8 +15,10 @@ def isSameProject(usecase_list, usecase):
          you will reply whether the usecase fall under the same project or not. The format
          of usecases is as follows:{
             "name": "usecase name",
-            "description": "usecase description",
-            "precondition": "usecase precondition",
+            "scenario": "usecase description",
+            "actors": "usecase actors",
+            "preconditions": "usecase preconditions",
+            "steps": "usecase steps"
          }
 
          output format should be as follows. Remember: Only output the JSON, with no explanation or extra text.:
@@ -46,7 +48,7 @@ def generateUserStoryFromUsecaseList(usecase_list):
             "scenario": "usecase description",
             "actors": "usecase actors",
             "preconditions": "usecase preconditions",
-            "steps": "usecase steps",
+            "steps": "usecase steps"
          }
 
          output format should be as follows. Remember: Only output the JSON, with no explanation or extra text.:
@@ -73,21 +75,21 @@ usecases = df.to_dict(orient='records')
 # Initialize the usecase_list with the first usecase
 usecase_list = [{
     "name": usecases[0]["name"],
-    "description": usecases[0]["scenario"],
-    "precondition": usecases[0]["preconditions"]
+    "scenario": usecases[0]["scenario"],
+    "precondition": usecases[0]["preconditions"],
+    "actors": usecases[0]["actors"],
+    "steps": usecases[0]["steps"]
 }]
-
-row_list = [
-    usecases[0]
-]
 
 results = []
 # Process the remaining usecases
 for idx, row in enumerate(usecases[1:], start=1):
     usecase = {
         "name": row["name"],
-        "description": row["scenario"],
-        "precondition": row["preconditions"]
+        "scenario": row["scenario"],
+        "precondition": row["preconditions"],
+        "actors": row["actors"],
+        "steps": row["steps"]
     }
     res = isSameProject(usecase_list, usecase)
     # print(usecase_list)
@@ -95,15 +97,13 @@ for idx, row in enumerate(usecases[1:], start=1):
     print(f"res = {res}")
     if res:
         usecase_list.append(usecase)
-        row_list.append(row)
     else:
-        description = generateUserStoryFromUsecaseList(row_list)
+        description = generateUserStoryFromUsecaseList(usecase_list)
         results.append({
-            "usecases": row_list,
+            "usecases": usecase_list,
             "user_story": description
         })
         usecase_list = [usecase]
-        row_list = [row]
         print(f"Description: {description}")
         print("-" * 50)
 
