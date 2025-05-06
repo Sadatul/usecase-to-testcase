@@ -81,15 +81,6 @@ def isSameProject(usecase_list, usecase):
     )
     return eval(json.loads(response.choices[0].message.content).get("verdict"))
 
-# Updated function to use OpenAI GPT-4
-def generateUserStoryFromUsecaseList(usecase_list, model="gpt-4"):
-    if model == LLAMA_MODEL:
-        return generateUserStoryFromUsecaseLLAMA(usecase_list)
-    elif model == GPT4_MODEL:
-        return generateUserStoryFromUsecaseGPT(usecase_list)
-    else:
-        raise ValueError("Unsupported model. Use 'llama' or 'gpt'.")
-
 def generateUserStoryFromUsecaseGPT(usecase_list):
     response = openAIClient.responses.parse(
         model=GPT4_MODEL,
@@ -118,7 +109,7 @@ def generateUserStoryFromUsecaseLLAMA(usecase_list):
         model=LLAMA_MODEL,
         messages=[
             {"role": "system", "content": """
-            You will be given a set of usecase and you will generate a user story for the usecase list. The format
+            You are a helpful assistant that generates a user story from a list of structured use cases. The format
             of usecases is as follows:{
                 "name": "usecase name",
                 "scenario": "usecase description",
@@ -126,7 +117,8 @@ def generateUserStoryFromUsecaseLLAMA(usecase_list):
                 "preconditions": "usecase preconditions",
                 "steps": "usecase steps"
             }
-            """},
+            Use the style and structure of the provided examples to generate a coherent, high-level user story summarizing the goals and interactions in a single paragraph
+            """ + "\n" + f"Example: \n{sample_usecase_1}" + "\n"},
             {"role": "user", 
              "content": f"usecase_list: {usecase_list}. Generate a user story based on the usecase list."
             }
@@ -139,12 +131,8 @@ def generateUserStoryFromUsecaseLLAMA(usecase_list):
     return json.loads(response.choices[0].message.content).get("story")
 
 def main():
-    model = LLAMA_MODEL if len(sys.argv) <= 1 or sys.argv[1] == "llama" else GPT4_MODEL
-    print(f"Using model: {model}")
-
     # Load CSV file
-    df = pd.read_csv('usecase2brd-dataset/testset.csv')
-    df = df.drop(columns=["result"])
+    df = pd.read_csv('usecase2brd-dataset/cleaned_usecases.csv')
     usecases = df.to_dict(orient='records')
 
     # Initialize the usecase_list with the first usecase
@@ -172,25 +160,31 @@ def main():
         if res:
             usecase_list.append(usecase)
         else:
-            description = generateUserStoryFromUsecaseList(usecase_list, model=model)
+            descriptionGPT = generateUserStoryFromUsecaseGPT(usecase_list)
+            descriptionLLAMA = generateUserStoryFromUsecaseLLAMA(usecase_list)
             results.append({
                 "usecases": usecase_list,
-                "user_story": description
+                "user_story_gpt": descriptionGPT,
+                "user_story_llama": descriptionLLAMA,
+                "length": len(usecase_list)
             })
             usecase_list = [usecase]
-            print(f"Description: {description}")
+            print(f"Story generated: {len(results)}")
             print("-" * 50)
 
     # Final flush
     if usecase_list:
-        description = generateUserStoryFromUsecaseList(usecase_list, model=model)
+        descriptionGPT = generateUserStoryFromUsecaseGPT(usecase_list)
+        descriptionLLAMA = generateUserStoryFromUsecaseLLAMA(usecase_list)
         results.append({
             "usecases": usecase_list,
-            "user_story": description
+            "user_story_gpt": descriptionGPT,
+            "user_story_llama": descriptionLLAMA,
+            "length": len(usecase_list)
         })
 
     print("Total number of projects: ", len(results))
-    file_name = f"test_usecase2brd_dataset_{"llama" if model == LLAMA_MODEL else "gpt"}.json"
+    file_name = f"userstory2usecase.json"
     with open(file_name, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
