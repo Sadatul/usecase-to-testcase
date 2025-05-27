@@ -1,0 +1,186 @@
+[
+  {
+    "usecases": [
+      {
+        "name": "Client Authentication Using PIN",
+        "scenario": "A client accesses the bank application by verifying their identity with a personal identification number (PIN).",
+        "precondition": "The client must have a registered account and associated PIN code.",
+        "actors": "['Client', 'Bank Application']",
+        "steps": "1: Client launches the bank application. 2: Client enters the account number and PIN code. 3: Bank application verifies the PIN. 4: If the PIN is correct, access is granted. If not, access is denied."
+      },
+      {
+        "name": "Deposit to Bank Account",
+        "scenario": "The client deposits an amount into their checking or saving account.",
+        "precondition": "Client must be authenticated and have a valid account.",
+        "actors": "['Client', 'Bank Application']",
+        "steps": "1: Client selects the account (checking or saving). 2: Client enters the deposit amount. 3: Bank application adds the amount to the selected account balance. 4: A transaction record is created with date, time, type (deposit), amount, and new balance."
+      },
+      {
+        "name": "Withdraw from Bank Account",
+        "scenario": "The client withdraws an amount from their account, with overdraft protection from a linked saving account.",
+        "precondition": "Client must be authenticated and have sufficient funds across checking and saving accounts.",
+        "actors": "['Client', 'Bank Application']",
+        "steps": "1: Client selects the checking account and enters a withdrawal amount. 2: Application checks if the amount ≤ checking balance: If yes, deducts the amount from checking. If no, checks linked saving account for overdraft protection. 3: If combined balance is sufficient, deducts the excess from saving account. 4: If not sufficient, transaction is terminated and the client is notified. 5: A transaction record is created with date, time, type (withdrawal), amount, and resulting balances."
+      },
+      {
+        "name": "Review Account Transactions",
+        "scenario": "The client reviews all past transactions performed on a specific account.",
+        "precondition": "Client must be authenticated and select a valid account.",
+        "actors": "['Client', 'Bank Application']",
+        "steps": "1: Client selects an account (checking or saving). 2: Bank application retrieves all transaction records for that account. 3: Each record includes: date, time, transaction type, amount, and resulting balance. 4: The records are displayed to the client for review."
+      }
+    ],
+    "user_story": "As a bank client, I want to deposit and withdraw money from my accounts using a bank application. All transactions must be recorded with complete details including date, time, transaction type, amount, and balance. I also want to view a history of these transactions. The system must authenticate access using a PIN. If I try to withdraw more than what's in my checking account, the system should automatically withdraw from my linked saving account. If neither account has enough funds, the transaction should be terminated and I should be notified.",
+    "length": 4
+  },
+  {
+    "usecases": [
+      {
+        "name": "Place Meal Order",
+        "scenario": "A Patron who is logged into the Cafeteria Ordering System (COS) places an order for one or more meals.",
+        "precondition": "Patron is logged into COS.",
+        "actors": "['Patron', 'COS System']",
+        "steps": "1: Patron selects the option to place a meal order. 2: Patron adds one or more meals to the order. 3: System confirms that the Patron is registered for payroll deduction. 4: If registered, system proceeds with the order flow. 5: If not registered, system presents three options: (a) register for payroll deduction and continue ordering, (b) place order for pickup, or (c) exit from the COS."
+      },
+      {
+        "name": "Handle Meal Date Input and Cutoff Time Validation",
+        "scenario": "The system prompts the Patron to select a meal date and checks if it's valid based on the current time and order cutoff.",
+        "precondition": "Patron has chosen to place an order and proceeded past the payroll deduction step.",
+        "actors": "['Patron', 'COS System']",
+        "steps": "1: System prompts Patron to enter the desired meal date. 2: System checks if the meal date is today and if the current time is past the cutoff time. 3: If too late, system informs the Patron that it's too late to place an order for today. 4: Patron may choose to enter a new date or cancel the order."
+      },
+      {
+        "name": "Specify Order Fulfillment Method",
+        "scenario": "The Patron specifies whether the meal order should be picked up or delivered.",
+        "precondition": "Valid meal date has been provided.",
+        "actors": "['Patron', 'COS System']",
+        "steps": "1: System prompts Patron to choose between pickup or delivery. 2: Patron selects the fulfillment method. 3: If delivery is selected, system checks if delivery slots are available for the selected meal date. 4: If delivery is available, Patron provides a valid delivery location."
+      }
+    ],
+    "user_story": "As a Patron logged into the COS, I want to place an order for one or more meals, provided I am registered for payroll deduction. If I'm not registered, the system should offer me options to register, place a pickup order, or exit. I must enter a meal date, and if I try to order for today after the cutoff time, the system should inform me and let me change the date or cancel. I should also be able to choose pickup or delivery. If I choose delivery and it's available for that date, I need to provide a valid location.",
+    "length": 3
+  },
+  {
+    "usecases": [
+      {
+        "name": "Register Library Member",
+        "scenario": "A new customer is registered as a library member and issued a unique membership card.",
+        "precondition": "The customer is not already a member.",
+        "actors": "['Librarian', 'System']",
+        "steps": "1: Librarian collects customer details including name, address, and date-of-birth. 2: System generates a unique membership number. 3: A membership card is issued to the customer with the member number. 4: The member information is stored in the library database."
+      },
+      {
+        "name": "Search for Loan Item",
+        "scenario": "A library user or staff searches for an item in the library system.",
+        "precondition": "The item exists in the library catalog.",
+        "actors": "['Member', 'Librarian', 'System']",
+        "steps": "1: User enters search criteria such as title, author, language, or classification-mark. 2: System searches the database for matching items. 3: System returns results with availability status (available, reserved, loaned)."
+      },
+      {
+        "name": "Issue Loan Item to Member",
+        "scenario": "An item is issued to a valid member who has borrowed fewer than 8 items.",
+        "precondition": "Member is registered, and has 7 or fewer items currently on loan.",
+        "actors": "['Member', 'Librarian', 'System']",
+        "steps": "1: Librarian scans or enters the member’s barcode. 2: System verifies the membership is valid and under the item limit. 3: Librarian scans or enters the item's barcode. 4: System checks the item’s availability. 5: If eligible, item is stamped and marked as issued. 6: Record of the loan is updated in the system."
+      },
+      {
+        "name": "Reserve Loan Item",
+        "scenario": "A member reserves a loan item that is currently unavailable.",
+        "precondition": "Member is valid and the item is currently issued to another member.",
+        "actors": "['Member', 'System']",
+        "steps": "1: Member searches and selects an unavailable item. 2: System places a reservation on the item for the member. 3: The reservation is recorded and will trigger a notification when the item becomes available."
+      },
+      {
+        "name": "Renew Loan Item",
+        "scenario": "A member renews an item they currently have on loan to extend the due date.",
+        "precondition": "Member has the item on loan and it is eligible for renewal.",
+        "actors": "['Member', 'System']",
+        "steps": "1: Member selects an item currently on loan. 2: System verifies the item is eligible for renewal. 3: Due date is extended and renewal recorded in the system."
+      },
+      {
+        "name": "Daily Records Update",
+        "scenario": "The system performs daily updates to maintain accurate records of all transactions.",
+        "precondition": "System is operational and contains transactional data.",
+        "actors": "['System']",
+        "steps": "1: System performs a scheduled job to update loan statuses. 2: System archives outdated records, updates due dates, and sends notifications for returns. 3: The system generates a report of daily activity logs."
+      }
+    ],
+    "user_story": "As a library system administrator, I want to manage library members with unique membership numbers and retain their personal information. Members can borrow, reserve, or renew up to 8 loan items, including books and language tapes. Items can be searched and identified by barcodes. Items are issued only if the member is valid and within borrowing limits. The system must support barcode/manual entry for both members and items. It should also allow daily updates of all records to ensure timely and accurate tracking of all library transactions.",
+    "length": 6
+  },
+  {
+    "usecases": [
+      {
+        "name": "Place Parts on Belt",
+        "scenario": "The user places parts (dish and cup) onto the conveyor belt for assembly.",
+        "precondition": "User has access to the assembly unit and parts are available.",
+        "actors": "['User']",
+        "steps": "1: User picks up a part (dish or cup). 2: User places the part on the conveyor belt. 3: User repeats the process for additional parts."
+      },
+      {
+        "name": "Detect Part with Vision System",
+        "scenario": "A part enters the sensor zone and the vision system detects it.",
+        "precondition": "Part is moving on the belt and enters the sensor zone.",
+        "actors": "['Belt', 'Vision System']",
+        "steps": "1: Part moves on the belt towards the sensor zone. 2: Vision system detects the part. 3: Vision system sends a signal to the belt to stop."
+      },
+      {
+        "name": "Recognize and Classify Part",
+        "scenario": "The vision system identifies the type of part (dish or cup) on the belt.",
+        "precondition": "Belt is stopped and part is within sensor zone.",
+        "actors": "['Vision System']",
+        "steps": "1: Vision system analyzes the part. 2: Vision system classifies the part as either dish or cup. 3: Vision system sends part classification to the robot."
+      },
+      {
+        "name": "Pick Up Part with Robot",
+        "scenario": "The robot picks up the detected part from the belt using its arms.",
+        "precondition": "Robot has received part type information from the vision system.",
+        "actors": "['Robot', 'Belt']",
+        "steps": "1: Robot receives signal with part type and location. 2: Robot picks up the part using the appropriate arm. 3: Robot moves the part to the tray. 4: Robot signals the belt to resume motion."
+      },
+      {
+        "name": "Complete Assembly on Tray",
+        "scenario": "An assembly is completed when both a dish and a cup are placed on the tray by the robot.",
+        "precondition": "Robot has placed at least one dish and one cup onto the tray.",
+        "actors": "['Robot', 'Tray']",
+        "steps": "1: Robot places a dish onto the tray. 2: Robot places a cup onto the tray. 3: System identifies the tray as containing a complete assembly."
+      }
+    ],
+    "user_story": "As an operator of the assembly unit, I want to place dishes and cups on a moving belt so that the vision system can detect and classify the parts when they enter the sensor zone. The belt must stop when a part is detected. The vision system informs the robot about the part type so the robot can pick it up using the correct arm. After placing the part on the tray, the belt resumes. A complete assembly is achieved when one dish and one cup are both placed on the tray by the robot arms.",
+    "length": 5
+  },
+  {
+    "usecases": [
+      {
+        "name": "Store Timestamp Record",
+        "scenario": "A developer uses a web browser to store a timestamp record for a specific activity in the database.",
+        "precondition": "Developer is logged into the Time Monitor Software System.",
+        "actors": "['Developer', 'Web Browser', 'System']",
+        "steps": "1: Developer selects or enters the project, user ID, and date. 2: Developer inputs the task name, activity, and artefact to describe the activity. 3: Developer enters the time duration spent on the activity. 4: System stores the timestamp record in the database with the associated metadata."
+      },
+      {
+        "name": "Analyze Timestamp Records",
+        "scenario": "A manager analyzes stored timestamp records to understand time spent on various activities.",
+        "precondition": "Timestamp records exist in the database and the manager is logged in.",
+        "actors": "['Manager', 'System']",
+        "steps": "1: Manager logs into the system and accesses the analysis dashboard. 2: Manager filters records by project, user, date, task, or artefact. 3: System displays relevant timestamp records and aggregates by current week or selected date range. 4: Manager reviews duration, activity types, and associated tasks for evaluation."
+      },
+      {
+        "name": "Define and Assign Task",
+        "scenario": "A manager defines tasks and assigns them to one or more developers.",
+        "precondition": "Manager is logged in and projects exist in the system.",
+        "actors": "['Manager', 'System']",
+        "steps": "1: Manager creates a new task with a name, start date, and end date. 2: Manager assigns the task to one or more developers. 3: System updates the schedule and notifies assigned developers."
+      },
+      {
+        "name": "Calculate Current Week",
+        "scenario": "The system determines the current week range for filtering timestamp records.",
+        "precondition": "System clock is active.",
+        "actors": "['System']",
+        "steps": "1: System determines the current date. 2: System calculates the Monday preceding and Sunday following the current day. 3: System defines the range as the current week and uses it for queries and reports."
+      }
+    ],
+    "user_story": "As a developer, I want to use a web browser to store timestamp records of my activities, including time spent, associated task, activity, and artefact, so that my work can be tracked. Each record must uniquely identify the project, user, and date. As a manager, I want to analyze these records filtered by project, user, task, and the current week to monitor progress and accountability. The system should support defining and assigning tasks with start and end dates to multiple developers, and determine the current week as Monday to Sunday around today's date.",
+    "length": 4
+  }
+]
