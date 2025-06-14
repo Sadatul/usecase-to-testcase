@@ -179,7 +179,7 @@ def load_from_json(filename="userstory2usecase_dataset.json"):
 
 def main():
     # Set output filename
-    output_file = "testset.json"
+    output_file = "gpt.json"
     
     # Load the CSV data
     df = pd.read_csv("TestStories.csv")
