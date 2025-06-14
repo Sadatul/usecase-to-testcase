@@ -8895,5 +8895,1949 @@
     "user_story_gpt": "As a user, I want to easily manage my personal account by updating my current class details and personal information. I need the ability to log in and navigate to my dashboard to change my current class by confirming necessary details such as class updates, group, and batch. Additionally, I want to access my profile settings to update my personal details, including name, gender, and guardian information, ensuring my account reflects my current status accurately.",
     "user_story_llama": "As a user, I want to be able to change my current class and update my personal information through my account, so that I can ensure my details are accurate and up-to-date. This should involve logging in to my account, navigating to my dashboard to change my current class, and answering confirmation questions to verify the changes. Additionally, I should be able to navigate to my profile settings to edit my personal information, including details such as name, gender, birthday, and contact information, allowing me to maintain control over my account and information.",
     "length": 2
+  },
+  {
+    "user_story": "As a student, I want to merge several scanned assignments into one PDF, so I can submit a single, clean document to my professor. Often, I scan handwritten pages separately or receive different parts of a group project from classmates. Having a tool that allows me to combine all those files into one organized PDF ensures that my submission looks professional and is easy for my instructor to review.",
+    "usecases": [
+      {
+        "name": "Combine Scanned Assignments into One PDF",
+        "scenario": "A tool that merges multiple scanned assignments into a single PDF document for submission.",
+        "actors": "['Student']",
+        "preconditions": "Multiple scanned assignments or file parts are available in digital format.",
+        "steps": "1: Student selects multiple scanned files to be combined. 2: The tool processes these files and merges them into one PDF document. 3: The student reviews the combined PDF for completeness and order. 4: The finalized PDF document is saved for submission."
+      },
+      {
+        "name": "Handle Multiple File Formats",
+        "scenario": "Support for merging files of different formats into one organized PDF document.",
+        "actors": "['Student']",
+        "preconditions": "Files are in different formats such as JPEG, PNG, PDF.",
+        "steps": "1: Student selects files in different formats to be combined. 2: The tool converts all files to an appropriate format for merging. 3: Files are combined into a single PDF document. 4: The PDF is organized according to user preference and saved."
+      },
+      {
+        "name": "Organize Group Project Parts into a Single PDF",
+        "scenario": "Combine and organize different parts of a group project into a cohesive PDF document.",
+        "actors": "['Student', 'Group Member']",
+        "preconditions": "Different parts of the project are available from various group members.",
+        "steps": "1: Student collects files from group members. 2: Files are uploaded or selected for merging. 3: The tool allows for reordering and organizing of pages before merging. 4: A single, organized PDF document is generated for submission."
+      }
+    ]
+  },
+  {
+    "user_story": "As a job applicant, I want to compress my resume PDF without compromising its design or readability, so I can meet the strict upload requirements on job application portals. Many sites limit file sizes to 1\u20132 MB, and if my resume includes high-quality images or graphics, it can easily exceed that. A reliable compression tool helps me maintain visual quality while staying within the limits.",
+    "usecases": [
+      {
+        "name": "PDF Resume Compression",
+        "scenario": "Compress the applicant's resume PDF without compromising design or readability to meet job portal file size requirements.",
+        "actors": "['Job Applicant', 'Compression Tool']",
+        "preconditions": "A resume PDF is available for compression and the compression tool is accessible to the applicant.",
+        "steps": "1: The applicant uploads the resume PDF to the compression tool. 2: The compression tool analyzes the PDF for elements that can be reduced in size. 3: The tool compresses the PDF while maintaining visual quality. 4: The compressed PDF is provided to the applicant for download."
+      },
+      {
+        "name": "Check File Size Compliance",
+        "scenario": "Ensure that the compressed resume PDF meets the file size requirements of job application portals.",
+        "actors": "['Job Applicant', 'Compression Tool']",
+        "preconditions": "The resume PDF is compressed and ready to be checked for file size.",
+        "steps": "1: The compression tool checks the size of the compressed PDF. 2: The tool verifies if the file size is within the 1\u20132 MB limit. 3: The applicant is notified if the file size is compliant or if further compression is needed."
+      },
+      {
+        "name": "Preserve Design and Readability",
+        "scenario": "Ensure the compressed resume PDF retains its design elements and readability after compression.",
+        "actors": "['Compression Tool']",
+        "preconditions": "A resume PDF is ready for compression and has design elements such as images or graphics.",
+        "steps": "1: The compression tool identifies the design elements in the PDF. 2: The tool applies compression algorithms tailored to maintain quality. 3: The tool previews the compressed PDF to check if design and readability are preserved. 4: The finalized PDF is made available to the applicant."
+      }
+    ]
+  },
+  {
+    "user_story": "As a researcher, I want to convert PDF documents\u2014often downloaded from journals or institutional archives\u2014into editable Word files, so I can make inline annotations, extract sections for reference, and restructure the document for literature reviews or meta-analyses. Manual retyping is time-consuming, so an accurate and fast conversion tool is essential for my workflow.",
+    "usecases": [
+      {
+        "name": "Convert PDF to Word Document",
+        "scenario": "Automated conversion of PDF documents into editable Word files for further annotation or restructuring.",
+        "actors": "['Researcher', 'Conversion Tool']",
+        "preconditions": "PDF document is available and can be opened by the conversion tool.",
+        "steps": "1: Researcher uploads the PDF document to the conversion tool. 2: Conversion tool processes the PDF document. 3: Conversion tool outputs an editable Word file."
+      },
+      {
+        "name": "Annotate Converted Word Document",
+        "scenario": "Enable inline annotations on the converted Word documents for research purposes.",
+        "actors": "['Researcher']",
+        "preconditions": "Word document is successfully converted and accessible.",
+        "steps": "1: Open the converted Word document. 2: Researcher adds inline annotations and highlights important sections."
+      },
+      {
+        "name": "Extract Sections for Reference",
+        "scenario": "Facilitate extraction of specific sections from the Word document for citations and references.",
+        "actors": "['Researcher']",
+        "preconditions": "Word document is open and sections for extraction are identified.",
+        "steps": "1: Identify sections required for reference. 2: Copy and save the sections into researcher\u2019s database or note-taking app."
+      },
+      {
+        "name": "Restructure Document for Literature Reviews",
+        "scenario": "Enable restructuring of document content for comprehensive literature reviews or meta-analyses.",
+        "actors": "['Researcher']",
+        "preconditions": "Word document is ready and the researcher has determined a new structure for the content.",
+        "steps": "1: Researcher rearranges document sections according to the new structure needed. 2: Save the restructured document for future use."
+      }
+    ]
+  },
+  {
+    "user_story": "As a content creator, I want to add watermarks to my eBooks, templates, and downloadable PDFs before sharing them publicly, so I can prevent unauthorized redistribution and ensure that my brand identity is visible. The watermark should be customizable and placed discreetly so it doesn't interfere with the readability but still offers a level of copyright protection.",
+    "usecases": [
+      {
+        "name": "Add Watermark to eBooks",
+        "scenario": "Automatically apply customizable watermarks to eBooks before they are shared.",
+        "actors": "['Content Creator']",
+        "preconditions": "The eBook file is available for editing and a watermark template is ready for use.",
+        "steps": "1: Content creator selects the eBook to be watermarked. 2: Content creator customizes the watermark (text, logo, transparency, position). 3: The system applies the watermark to the selected eBook. 4: The watermarked eBook is saved and ready for distribution."
+      },
+      {
+        "name": "Add Watermark to Templates",
+        "scenario": "Automatically apply customizable watermarks to templates before they are distributed.",
+        "actors": "['Content Creator']",
+        "preconditions": "The template file is available for editing and a watermark template is ready for use.",
+        "steps": "1: Content creator selects the template to be watermarked. 2: Content creator customizes the watermark (text, logo, transparency, position). 3: The system applies the watermark to the selected template. 4: The watermarked template is saved and ready for distribution."
+      },
+      {
+        "name": "Add Watermark to PDFs",
+        "scenario": "Automatically apply customizable watermarks to downloadable PDFs before they are shared.",
+        "actors": "['Content Creator']",
+        "preconditions": "The PDF file is available for editing and a watermark template is ready for use.",
+        "steps": "1: Content creator selects the PDF to be watermarked. 2: Content creator customizes the watermark (text, logo, transparency, position). 3: The system applies the watermark to the selected PDF. 4: The watermarked PDF is saved and ready for distribution."
+      },
+      {
+        "name": "Customize Watermark Design",
+        "scenario": "Content creator designs and customizes the watermark appearance for different types of documents.",
+        "actors": "['Content Creator']",
+        "preconditions": "Content creator has access to watermark customization tools.",
+        "steps": "1: Content creator accesses the watermark customization tool. 2: Content creator designs the watermark (text, logo, size, transparency, position). 3: The system saves the customized watermark design for future use."
+      }
+    ]
+  },
+  {
+    "user_story": "As an administrator, I want to rearrange and sort pages within a PDF document, so I can prepare formal reports, presentations, and documents in the correct logical sequence. Sometimes the pages I receive from different departments are out of order or contain duplicates, and being able to visually reorder or delete pages helps me finalize the document before distribution.",
+    "usecases": [
+      {
+        "name": "Rearrange PDF Pages",
+        "scenario": "Allow the administrator to rearrange the pages of a PDF document to correct the sequence.",
+        "actors": "['Administrator']",
+        "preconditions": "PDF document with pages that need rearrangement is available.",
+        "steps": "1: Administrator opens the PDF document in the application. 2: Administrator selects the 'Rearrange Pages' option. 3: Administrator visually moves pages into the desired order. 4: Administrator saves the updated PDF document."
+      },
+      {
+        "name": "Sort PDF Pages",
+        "scenario": "Enable sorting of PDF pages based on predefined criteria to automate reordering.",
+        "actors": "['Administrator']",
+        "preconditions": "PDF document is available for sorting, and sorting criteria are defined.",
+        "steps": "1: Administrator opens the PDF document in the application. 2: Administrator selects the 'Sort Pages' option and defines sorting criteria. 3: System automatically sorts pages based on the criteria. 4: Administrator reviews and saves the sorted document."
+      },
+      {
+        "name": "Delete Duplicate Pages",
+        "scenario": "Facilitate the identification and deletion of duplicate pages from a PDF document.",
+        "actors": "['Administrator']",
+        "preconditions": "PDF document contains duplicate pages that need removal.",
+        "steps": "1: Administrator opens PDF document in the application. 2: Administrator selects 'Detect Duplicates' option. 3: System identifies duplicate pages. 4: Administrator reviews and deletes duplicate pages. 5: Administrator saves the updated PDF document."
+      }
+    ]
+  },
+  {
+    "user_story": "As a teacher, I want to protect sensitive PDF documents\u2014such as exam question papers, answer keys, or internal guidelines\u2014using password protection, so that only my intended students or faculty members can access them. This is crucial in maintaining the integrity of assessments and avoiding information leaks before official release.",
+    "usecases": [
+      {
+        "name": "Password Protect PDF Document",
+        "scenario": "Apply password protection to sensitive PDF documents to ensure only authorized individuals can access them.",
+        "actors": "['Teacher', 'PDF Security System']",
+        "preconditions": "Sensitive PDF documents such as exam papers or answer keys are available and need to be protected.",
+        "steps": "1. Teacher selects the PDF document to protect. 2. Teacher accesses the PDF Security System interface. 3. Teacher enters a secure password for the document. 4. PDF Security System encrypts the document with the entered password. 5. Teacher confirms the document is now password-protected."
+      },
+      {
+        "name": "Distribute Protected PDF Document",
+        "scenario": "Distribute the password-protected PDF document to intended students or faculty members securely.",
+        "actors": "['Teacher', 'Students', 'Faculty Members']",
+        "preconditions": "The PDF document is password-protected and ready for distribution.",
+        "steps": "1. Teacher selects the distribution platform (e.g., email, learning management system) for the protected document. 2. Teacher sends the document to intended recipients. 3. Teacher securely communicates the access password to the recipients. 4. Recipients receive the document and use the password to access its contents."
+      },
+      {
+        "name": "Access Protected PDF Document",
+        "scenario": "Allow authorized students or faculty members to access content of password-protected PDF documents securely.",
+        "actors": "['Students', 'Faculty Members']",
+        "preconditions": "Recipients have received the password-protected PDF document and the access password from the teacher.",
+        "steps": "1. Student or faculty member opens the received PDF document. 2. System prompts for a password. 3. Recipient enters the correct password. 4. System decrypts the document, allowing access to its contents."
+      }
+    ]
+  },
+  {
+    "user_story": "As an editor, I want to compare two versions of a PDF document\u2014typically a draft and a revision\u2014so I can quickly identify what changes were made, including additions, deletions, and rewordings. Manually scanning for differences across large documents is inefficient and error-prone, so having an automated comparison tool saves time and ensures editorial accuracy.",
+    "usecases": [
+      {
+        "name": "PDF Document Comparison",
+        "scenario": "Automated comparison of two versions of a PDF document to identify changes.",
+        "actors": "['Editor', 'Comparison Tool']",
+        "preconditions": "Both versions of the PDF document (draft and revision) are accessible for comparison.",
+        "steps": "1: Editor selects the draft version of the PDF document. 2: Editor selects the revised version of the PDF document. 3: Comparison tool analyzes the two documents to identify changes (additions, deletions, rewordings). 4: Comparison tool highlights differences and generates a summary report for the editor."
+      },
+      {
+        "name": "Change Highlighting",
+        "scenario": "Highlighting specific changes between two PDF documents for easy identification.",
+        "actors": "['Editor', 'Comparison Tool']",
+        "preconditions": "Comparison tool has successfully identified changes between the PDF documents.",
+        "steps": "1: Comparison tool highlights additions in one color. 2: Comparison tool highlights deletions in another color. 3: Comparison tool highlights rewordings distinctly. 4: Editor reviews the highlighted changes in the document."
+      },
+      {
+        "name": "Summary of Changes Report",
+        "scenario": "Generate a summary report of changes between two PDF documents.",
+        "actors": "['Editor', 'Comparison Tool']",
+        "preconditions": "Changes have been identified and highlighted by the comparison tool.",
+        "steps": "1: Comparison tool generates a detailed summary report of all changes. 2: Report includes statistics on types and quantities of changes. 3: Editor accesses the summary report to understand the scope of changes."
+      },
+      {
+        "name": "Error Prevention and Efficiency Improvement",
+        "scenario": "Enhancing editorial accuracy and efficiency by reducing manual scanning of documents.",
+        "actors": "['Editor', 'Comparison Tool']",
+        "preconditions": "Editor relies on automated tool for comparing documents to avoid manual errors.",
+        "steps": "1: Comparison tool automatically processes the documents for differences. 2: Errors due to manual oversight are minimized. 3: Editor receives a reliable overview of changes quickly."
+      }
+    ]
+  },
+  {
+    "user_story": "As a developer, I want to choose tags like #react, #ai, and #webdev, so that I get a personalized feed that matches my interests. Having a customizable tagging system helps me cut through irrelevant noise and focus only on the content that aligns with the technologies I\u2019m currently working with or planning to learn. It ensures that my feed remains dynamic, relevant, and tailored to my goals.",
+    "usecases": [
+      {
+        "name": "Tag Selection for Personalized Feed",
+        "scenario": "Developers select specific tags to personalize their content feed according to their interests.",
+        "actors": "['Developer']",
+        "preconditions": "The tagging system is available and accessible to the developer.",
+        "steps": "1: Developer accesses the tag selection interface. 2: Developer chooses tags such as #react, #ai, and #webdev. 3: The system saves the selected tags to the developer's profile for feed customization."
+      },
+      {
+        "name": "Dynamic Feed Generation",
+        "scenario": "A personalized content feed is generated based on the selected tags to ensure relevance to the developer's interests.",
+        "actors": "['Developer', 'Feed System']",
+        "preconditions": "Developer has selected tags to personalize their feed.",
+        "steps": "1: Feed system accesses the tags associated with the developer's profile. 2: Feed system filters and prioritizes content based on selected tags. 3: Developer receives a dynamic, relevant feed tailored to their interests."
+      },
+      {
+        "name": "Tag Management and Customization",
+        "scenario": "Developers can manage and customize their selected tags to adjust the focus and relevance of their content feed.",
+        "actors": "['Developer']",
+        "preconditions": "Developer has an existing profile with selected tags in the system.",
+        "steps": "1: Developer accesses their tag management interface. 2: Developer adds or removes tags based on changing interests or goals. 3: System updates the developer's profile with the new tag configuration."
+      }
+    ]
+  },
+  {
+    "user_story": "As a tech company looking to reach developers, I want to run a targeted ad campaign on daily.dev, monitor its performance in real time, and optimize it based on engagement metrics, so that I can effectively promote my product, job openings, or event to a high-quality developer audi",
+    "usecases": [
+      {
+        "name": "Create Targeted Ad Campaign",
+        "scenario": "Set up a targeted ad campaign on daily.dev to promote products, job openings, or events to developers.",
+        "actors": "['Marketing Manager', 'Ad Platform']",
+        "preconditions": "Access to the daily.dev ad platform and defined campaign objectives and target audience.",
+        "steps": "1: Log in to the daily.dev ad platform. 2: Define campaign objectives and target audience. 3: Design creative content for the ad. 4: Launch the ad campaign."
+      },
+      {
+        "name": "Monitor Ad Campaign Performance in Real Time",
+        "scenario": "Track and monitor the performance of the ad campaign in real time to gather insights and metrics.",
+        "actors": "['Marketing Manager', 'Ad Platform']",
+        "preconditions": "The ad campaign is live and the ad platform provides real-time analytics.",
+        "steps": "1: Access the analytics dashboard on the daily.dev platform. 2: Monitor key performance metrics such as impressions, clicks, and engagement rates. 3: Identify trends and potential issues in campaign performance."
+      },
+      {
+        "name": "Optimize Ad Campaign Based on Engagement Metrics",
+        "scenario": "Adjust and optimize the ad campaign based on real-time engagement metrics to improve effectiveness.",
+        "actors": "['Marketing Manager', 'Ad Platform']",
+        "preconditions": "Availability of real-time performance data and the ability to make changes to the campaign configuration.",
+        "steps": "1: Analyze engagement metrics and identify areas for improvement. 2: Adjust targeting, creative content, or budget allocation based on insights. 3: Implement changes and continue monitoring performance."
+      }
+    ]
+  },
+  {
+    "user_story": "As a content creator, I want to submit blog posts to daily.dev, so I can share my knowledge with the developer community. Publishing on a platform geared toward developers helps me build credibility, engage with like-minded professionals, and contribute to the collective growth of the tech ecosystem.",
+    "usecases": [
+      {
+        "name": "Submit Blog Post",
+        "scenario": "A content creator submits a blog post to the daily.dev platform for publication.",
+        "actors": "['Content Creator', 'daily.dev Platform']",
+        "preconditions": "The content creator has an account on the daily.dev platform and a blog post ready for submission.",
+        "steps": "1: Content creator logs into their daily.dev account. 2: Content creator navigates to the submission section. 3: Content creator fills out the submission form with the blog post details and content. 4: Content creator submits the blog post for review."
+      },
+      {
+        "name": "Review and Approval of Blog Post",
+        "scenario": "The submitted blog post is reviewed and approved by the daily.dev editorial team.",
+        "actors": "['Editorial Team', 'Content Creator']",
+        "preconditions": "A blog post has been submitted by the content creator and is awaiting review.",
+        "steps": "1: Editorial team receives a notification of a new blog post submission. 2: Editorial team reviews the blog post for quality and relevance. 3: Editorial team approves or rejects the blog post. 4: Content creator is notified of the decision."
+      },
+      {
+        "name": "Publish Blog Post",
+        "scenario": "An approved blog post is published on the daily.dev platform.",
+        "actors": "['Editorial Team', 'Content Creator', 'daily.dev Users']",
+        "preconditions": "The blog post has been approved by the editorial team.",
+        "steps": "1: Approved blog post is scheduled for publishing. 2: Blog post is published on daily.dev and made visible to the community. 3: Content creator receives a notification about the publication. 4: daily.dev users can view and engage with the blog post."
+      },
+      {
+        "name": "Engage with Readers",
+        "scenario": "The content creator engages with users who comment on their blog post.",
+        "actors": "['Content Creator', 'daily.dev Users']",
+        "preconditions": "Blog post has been published and is receiving user comments.",
+        "steps": "1: Users comment on the published blog post. 2: Content creator receives notifications of new comments. 3: Content creator responds to comments to engage with the community."
+      }
+    ]
+  },
+  {
+    "user_story": "As a daily.dev admin, I want to monitor user engagement with the browser extension, manage content sources, oversee the scoring system based on user interactions, and facilitate advertiser campaign management, so that I can ensure the platform delivers relevant content, maintains high-quality sources, fosters user engagement, and provides effective advertising solutions.",
+    "usecases": [
+      {
+        "name": "Monitor User Engagement",
+        "scenario": "Tracking user interactions with the browser extension to assess engagement levels.",
+        "actors": "['Daily.dev Admin', 'User']",
+        "preconditions": "The browser extension is installed and actively used by users.",
+        "steps": "1: Admin accesses user engagement dashboard.\n2: Dashboard displays metrics such as click rates, session duration, and frequency of use.\n3: Admin reviews data to assess current engagement levels."
+      },
+      {
+        "name": "Manage Content Sources",
+        "scenario": "Oversee and curate the sources of content displayed on the platform.",
+        "actors": "['Daily.dev Admin', 'Content Provider']",
+        "preconditions": "A list of active content sources is available; admin has necessary permissions to modify sources.",
+        "steps": "1: Admin logs into the content management system.\n2: Admin reviews current content sources.\n3: Admin adds, edits, or removes sources as needed to maintain quality.\n4: Changes are saved and reflected on the platform."
+      },
+      {
+        "name": "Oversee Scoring System",
+        "scenario": "Manage scoring algorithms based on user interactions to ensure relevant content delivery.",
+        "actors": "['Daily.dev Admin', 'System']",
+        "preconditions": "Scoring system is active and collects interaction data from users.",
+        "steps": "1: Admin reviews current scoring rules and algorithms.\n2: Interaction data is monitored to ensure scoring criteria are met.\n3: Admin updates scoring parameters to align with desired engagement outcomes.\n4: Adjustments are tested and deployed."
+      },
+      {
+        "name": "Facilitate Advertiser Campaign Management",
+        "scenario": "Manage advertising campaigns and ensure they align with platform standards.",
+        "actors": "['Daily.dev Admin', 'Advertiser']",
+        "preconditions": "Advertising contracts are in place; system supports ad campaign management.",
+        "steps": "1: Admin sets up new advertiser accounts and campaigns.\n2: Admin oversees campaign configurations, including targeting and budgeting.\n3: Campaign performance metrics are monitored to ensure effectiveness.\n4: Admin liaises with advertisers to optimize campaigns."
+      }
+    ]
+  },
+  {
+    "user_story": "As a developer seeking to stay updated with the latest in technology, I want my browser's new tab to display a personalized feed of tech articles, allow me to add my favorite sites, and provide engagement scores based on my interactions, so that I can efficiently access relevant content, customize my reading experience, and track my learning progress.",
+    "usecases": [
+      {
+        "name": "Display Personalized Tech Feed",
+        "scenario": "Automatically shows a personalized feed of technology articles on opening a new tab in the browser.",
+        "actors": "['Browser User', 'Content Aggregator']",
+        "preconditions": "User has predefined preferences for technology topics.",
+        "steps": "1: User opens a new tab in the browser. 2: The browser fetches the latest tech articles based on the user's preferences. 3: The personalized feed is displayed on the new tab."
+      },
+      {
+        "name": "Add Favorite Sites",
+        "scenario": "Allows the user to add their favorite tech sites for quick access and content aggregation.",
+        "actors": "['Browser User']",
+        "preconditions": "User has a list of favorite tech sites they want to add.",
+        "steps": "1: User accesses the 'Add Favorite Sites' feature. 2: User inputs URLs of favorite tech sites. 3: The browser stores and displays quick links to these sites."
+      },
+      {
+        "name": "Engagement Score Tracking",
+        "scenario": "Calculates and displays engagement scores based on the user's interactions with the articles.",
+        "actors": "['Browser User', 'Engagement Tracker System']",
+        "preconditions": "The system tracks interactions such as time spent reading articles and the frequency of article access.",
+        "steps": "1: User interacts with articles by reading or bookmarking them. 2: Engagement Tracker System logs these interactions. 3: System calculates an engagement score. 4: Engagement score is displayed to the user to track learning progress."
+      },
+      {
+        "name": "Customizable Reading Experience",
+        "scenario": "Offers customization options for the appearance and organization of the tech articles feed.",
+        "actors": "['Browser User']",
+        "preconditions": "Custom options for feed layout and appearance are available.",
+        "steps": "1: User accesses the customization settings for the feed. 2: User selects desired layout and appearance options. 3: The feed updates to reflect the user's customizations."
+      }
+    ]
+  },
+  {
+    "user_story": "As a startup founder, I want a platform that lets me rapidly create a functional web app by simply providing a prompt, image, or Figma design, so I can validate my idea with minimal development time. The system should automatically interpret these inputs and generate a production-ready codebase that I can instantly connect to Supabase for backend services and deploy via GitHub for version control. I also want the ability to collaborate in real-time with my design and development team, which should be available through a premium plan, so we can iterate quickly and efficiently without switching tools.",
+    "usecases": [
+      {
+        "name": "Web App Creation from Prompt",
+        "scenario": "Automatically generate a functional web app from a user's textual prompt.",
+        "actors": "['Startup Founder', 'AI System']",
+        "preconditions": "A textual prompt is provided by the user.",
+        "steps": "1: User enters a descriptive prompt. 2: AI system interprets the prompt. 3: AI system generates a production-ready codebase. 4: User receives the generated codebase ready for deployment."
+      },
+      {
+        "name": "Web App Creation from Image",
+        "scenario": "Automatically generate a functional web app from an image input.",
+        "actors": "['Startup Founder', 'AI System']",
+        "preconditions": "A valid image input is provided by the user.",
+        "steps": "1: User uploads an image. 2: AI system analyzes the image to extract UI elements. 3: AI system generates a production-ready codebase. 4: User receives the generated codebase ready for deployment."
+      },
+      {
+        "name": "Web App Creation from Figma Design",
+        "scenario": "Automatically generate a functional web app from a Figma design.",
+        "actors": "['Startup Founder', 'AI System']",
+        "preconditions": "Figma design file is accessible by the system.",
+        "steps": "1: User provides access to the Figma design. 2: AI system translates Figma design into a codebase. 3: User receives the generated codebase ready for deployment."
+      },
+      {
+        "name": "Instant Backend Connection with Supabase",
+        "scenario": "Integrate the generated web app with Supabase for backend services.",
+        "actors": "['Startup Founder', 'AI System']",
+        "preconditions": "Generated web app codebase is ready.",
+        "steps": "1: AI system provides configuration to connect to Supabase. 2: User connects web app with Supabase for backend services."
+      },
+      {
+        "name": "Deployment via GitHub",
+        "scenario": "Enable deployment of the generated web app through GitHub for version control.",
+        "actors": "['Startup Founder', 'AI System']",
+        "preconditions": "GitHub repository is available for deployment.",
+        "steps": "1: User initiates deployment setup. 2: AI system configures the connection to GitHub. 3: Web app is deployed and version-controlled via GitHub."
+      },
+      {
+        "name": "Real-time Collaboration for Premium Plan",
+        "scenario": "Facilitate real-time collaboration among design and development team members for premium users.",
+        "actors": "['Startup Founder', 'Design Team', 'Development Team']",
+        "preconditions": "Users are subscribed to the premium plan.",
+        "steps": "1: Team members access the collaboration platform. 2: Members collaborate on design and code in real-time. 3: Changes are updated instantly across all users."
+      }
+    ]
+  },
+  {
+    "user_story": "As a content creator, I want to transform AI-generated text into natural, human-like writing using WriteHuman, so that my content is undetectable by AI detectors and resonates better with my audience. I need a tool that can instantly refine outputs from platforms like ChatGPT or Claude without requiring technical skills, while protecting my privacy and eliminating detectable AI patterns. It should let me paste in AI text, process it for tone and depth, and produce polished writing that works seamlessly with tools like Turnitin, GPTZero, and others. I also want the option to create undetectable content, paraphrase intelligently, and benefit from built-in AI detection if I need to retry flagged content.",
+    "usecases": [
+      {
+        "name": "AI Text Transformation",
+        "scenario": "Transform AI-generated text into natural, human-like writing.",
+        "actors": "['Content Creator']",
+        "preconditions": "Content Creator has AI-generated text from platforms like ChatGPT or Claude.",
+        "steps": "1: Content Creator pastes AI-generated text into WriteHuman. 2: WriteHuman processes the text to refine tone and depth. 3: Processed text is provided as polished human-like writing."
+      },
+      {
+        "name": "Instant Text Refinement",
+        "scenario": "Instantly refine AI text without requiring technical skills.",
+        "actors": "['Content Creator']",
+        "preconditions": "Content Creator has access to WriteHuman and AI-generated text.",
+        "steps": "1: Content Creator inputs AI-generated text into WriteHuman. 2: WriteHuman automatically refines the text for natural language patterns. 3: Text is outputted in a polished form without detectable AI patterns."
+      },
+      {
+        "name": "Privacy Protection",
+        "scenario": "Protect user privacy while using the text transformation tool.",
+        "actors": "['Content Creator']",
+        "preconditions": "Content Creator is using WriteHuman for transforming text.",
+        "steps": "1: Content Creator initiates text processing with WriteHuman. 2: WriteHuman processes text locally without storing any input data. 3: Privacy of the content creator is maintained throughout the process."
+      },
+      {
+        "name": "AI Detection Compatibility",
+        "scenario": "Ensure transformed content is compatible with AI detection tools like Turnitin and GPTZero.",
+        "actors": "['Content Creator']",
+        "preconditions": "Content Creator has processed text with WriteHuman.",
+        "steps": "1: Transformed text is generated by WriteHuman. 2: Content Creator uses various AI detection tools. 3: Transformed text successfully passes AI detection checks."
+      },
+      {
+        "name": "Undetectable Content Creation",
+        "scenario": "Provide the option to create content that is undetectable by AI detectors.",
+        "actors": "['Content Creator']",
+        "preconditions": "Content Creator uses WriteHuman to transform AI-generated text.",
+        "steps": "1: Content Creator selects the option to make text undetectable. 2: WriteHuman processes the text to eliminate detectable AI patterns. 3: Undetectable, polished text is provided to the content creator."
+      },
+      {
+        "name": "Intelligent Paraphrasing",
+        "scenario": "Offer intelligent paraphrasing of AI-generated text.",
+        "actors": "['Content Creator']",
+        "preconditions": "AI-generated text is available for paraphrasing in WriteHuman.",
+        "steps": "1: Content Creator inputs text for paraphrasing. 2: WriteHuman intelligently paraphrases the text while maintaining meaning. 3: Paraphrased, natural-sounding text is outputted."
+      },
+      {
+        "name": "Built-in AI Detection and Retry",
+        "scenario": "Flag and retry content that is detected as AI-generated using built-in AI detection features.",
+        "actors": "['Content Creator']",
+        "preconditions": "WriteHuman has built-in AI detection capabilities.",
+        "steps": "1: WriteHuman processes the transformed text. 2: Built-in detection flags text as AI-generated if needed. 3: Content Creator is prompted to retry processing flagged content."
+      }
+    ]
+  },
+  {
+    "user_story": "As a student, I want to plan my weekly tasks and deadlines in Notion, so I can manage my academic workload effectively. Having a digital planner that supports drag-and-drop scheduling, color-coded subjects, and checklists allows me to stay organized and avoid missing assignment due dates or exam preparations, especially during busy semesters.",
+    "usecases": [
+      {
+        "name": "Create and Organize Weekly Tasks",
+        "scenario": "Allow students to create and organize their weekly tasks and deadlines using Notion.",
+        "actors": "['Student']",
+        "preconditions": "The student has access to Notion and understands its basic functionalities.",
+        "steps": "1: Student logs into their Notion account. 2: Student navigates to their academic planner section. 3: Student creates new tasks and assigns deadlines. 4: Student organizes tasks by subjects."
+      },
+      {
+        "name": "Drag-and-Drop Scheduling",
+        "scenario": "Enable students to use drag-and-drop features for scheduling tasks easily.",
+        "actors": "['Student']",
+        "preconditions": "The student\u2019s Notion setup supports drag-and-drop scheduling.",
+        "steps": "1: Student views their weekly schedule on Notion. 2: Student uses drag-and-drop feature to rearrange tasks as needed. 3: Student adjusts task priorities visually by moving tasks."
+      },
+      {
+        "name": "Color-Coded Subject Management",
+        "scenario": "Allow students to categorize their tasks using color codes for each subject.",
+        "actors": "['Student']",
+        "preconditions": "Color codes are predefined for each subject in the student\u2019s Notion setup.",
+        "steps": "1: Student assigns a color code to each task based on the subject. 2: Student visually differentiates tasks during scheduling. 3: Student modifies color codes when necessary."
+      },
+      {
+        "name": "Checklists for Task Tracking",
+        "scenario": "Provide functionality to use checklists for tracking task completion.",
+        "actors": "['Student']",
+        "preconditions": "Checklist feature is available in the student\u2019s Notion setup.",
+        "steps": "1: Student creates a checklist for each task. 2: Student checks off completed items to track progress. 3: Student reviews completed and pending tasks weekly."
+      },
+      {
+        "name": "Receive Reminders for Deadlines",
+        "scenario": "Ensure students receive timely reminders for deadlines and important dates.",
+        "actors": "['Student']",
+        "preconditions": "Reminder notifications are set up within Notion.",
+        "steps": "1: Student sets reminders when creating each task. 2: Student receives notifications prior to deadlines. 3: Student adjusts reminder settings as needed."
+      }
+    ]
+  },
+  {
+    "user_story": "As a university student, I want to collaborate with teammates in a shared workspace, so that we can organize group project responsibilities clearly. With shared task boards, comments, and synced updates, we can easily divide the workload, track each other\u2019s progress, and communicate efficiently without switching between multiple apps.",
+    "usecases": [
+      {
+        "name": "Shared Workspace Creation and Management",
+        "scenario": "Enable students to create and manage shared workspaces for group projects.",
+        "actors": "['University Student']",
+        "preconditions": "Students have access to the project management platform and are part of a group project.",
+        "steps": "1: Student logs into the project management platform. 2: Student creates a new shared workspace for their group project. 3: Student invites teammates to join the shared workspace."
+      },
+      {
+        "name": "Task Board Creation and Responsibilities Assignment",
+        "scenario": "Provide shared task boards for organizing and assigning project tasks.",
+        "actors": "['University Student']",
+        "preconditions": "Students are part of a shared workspace for a group project.",
+        "steps": "1: Student accesses the shared workspace. 2: Student creates a task board for the project. 3: Student assigns responsibilities to teammates on the task board. 4: Students update the task board with task progress."
+      },
+      {
+        "name": "Real-Time Commenting and Discussions",
+        "scenario": "Allow real-time commenting and discussions within tasks.",
+        "actors": "['University Student']",
+        "preconditions": "Students are working within a shared workspace with tasks assigned.",
+        "steps": "1: Student navigates to a task on the task board. 2: Student adds comments or starts a discussion related to the task. 3: Notifications are sent to all team members for new comments. 4: Students participate in real-time discussions within the task."
+      },
+      {
+        "name": "Progress Tracking and Synced Updates",
+        "scenario": "Enable progress tracking and sync updates across the workspace.",
+        "actors": "['University Student']",
+        "preconditions": "The task board and responsibilities are already set up in the shared workspace.",
+        "steps": "1: Student updates a task status (e.g., in-progress, completed). 2: All updates are synced across the shared workspace. 3: A dashboard displaying progress is updated in real time for all team members. 4: Students review the progress dashboard to track overall project status."
+      }
+    ]
+  },
+  {
+    "user_story": "As a job seeker, I want to build a professional resume page in Notion, so that I can share a polished, accessible profile with employers. The ability to create a clean, web-based resume that includes links to my projects, certifications, and portfolio gives me a modern edge and ensures my application stands out.",
+    "usecases": [
+      {
+        "name": "Resume Page Creation",
+        "scenario": "Building a professional resume page in Notion.",
+        "actors": "['Job Seeker']",
+        "preconditions": "The job seeker has an active Notion account and understands basic Notion functionalities.",
+        "steps": "1: Job seeker logs into Notion. 2: Job seeker creates a new page for the resume. 3: Job seeker designs the layout for the resume page."
+      },
+      {
+        "name": "Integration of Links",
+        "scenario": "Integrating links to projects, certifications, and portfolio in the resume page.",
+        "actors": "['Job Seeker']",
+        "preconditions": "Projects, certifications, and portfolio are hosted online and links are ready to be shared.",
+        "steps": "1: Job seeker collects URLs for projects, certifications, and portfolio. 2: Job seeker embeds the links in relevant sections of the resume page in Notion."
+      },
+      {
+        "name": "Resume Publishing and Sharing",
+        "scenario": "Publishing the resume page and sharing it with potential employers.",
+        "actors": "['Job Seeker']",
+        "preconditions": "The resume page in Notion is fully completed and ready for viewing.",
+        "steps": "1: Job seeker sets the page to public in Notion. 2: Job seeker generates a shareable link for the resume page. 3: Job seeker includes the link in job applications or emails to potential employers."
+      },
+      {
+        "name": "Resume Updates and Maintenance",
+        "scenario": "Updating and maintaining the resume page to ensure it reflects current qualifications and experiences.",
+        "actors": "['Job Seeker']",
+        "preconditions": "The job seeker has made recent updates in their professional experiences or acquired new certifications.",
+        "steps": "1: Job seeker logs into Notion to access the resume page. 2: Job seeker updates the sections of the resume with new information. 3: Job seeker reviews the resume page to ensure formatting and links are correct."
+      }
+    ]
+  },
+  {
+    "user_story": "As a learner, I want to maintain subject-wise class notes, so I can review concepts before exams easily. Notion\u2019s database-style note organization helps me tag topics, embed images or videos, and link concepts across subjects, making revision structured and time-efficient.",
+    "usecases": [
+      {
+        "name": "Create and Organize Class Notes",
+        "scenario": "Enabling learners to create and maintain structured class notes subject-wise in Notion for easy revision.",
+        "actors": "['Learner']",
+        "preconditions": "The learner has access to Notion and understands basic functionality of creating notes and using databases.",
+        "steps": "1: Learner creates a new database entry for a class note in Notion. 2: Learner tags the note with relevant subjects and topics. 3: Learner embeds images or videos related to the note content. 4: Learner saves and organizes the note within the subject database."
+      },
+      {
+        "name": "Tag and Link Concepts Across Subjects",
+        "scenario": "Allowing learners to tag topics and link concepts across different subjects to create a connected learning experience.",
+        "actors": "['Learner']",
+        "preconditions": "The learner has existing subject notes within Notion and is familiar with tagging and linking features.",
+        "steps": "1: Learner opens relevant class notes within Notion. 2: Learner identifies key concepts to tag. 3: Learner links related concepts across different subject notes. 4: Learner saves the updated note to reflect these connections."
+      },
+      {
+        "name": "Embed Media for Enhanced Understanding",
+        "scenario": "Facilitating the embedding of images and videos in notes to enhance understanding and content richness.",
+        "actors": "['Learner']",
+        "preconditions": "The learner has media ready for embedding and has basic knowledge of embedding content in Notion notes.",
+        "steps": "1: Learner selects a note within a subject database. 2: Learner chooses to embed media such as images or videos to complement the text. 3: Learner positions the media appropriately within the note. 4: Learner saves the note with embedded media."
+      },
+      {
+        "name": "Structured Revision for Exams",
+        "scenario": "Helping learners structure revision effectively using tagged and linked notes before exams.",
+        "actors": "['Learner']",
+        "preconditions": "Well-organized and tagged notes are available in Notion, and the learner is familiar with search and filtering options.",
+        "steps": "1: Learner searches or filters notes by tags or subject in Notion. 2: Learner reviews interconnected concepts using links within notes. 3: Learner revises the material systematically with notes organized by the database. 4: Learner marks notes as reviewed for exam preparation."
+      }
+    ]
+  },
+  {
+    "user_story": "As a researcher, I want to organize paper sections, references, and progress, so I can stay on track with deadlines. Using Notion to outline my abstract, methodology, findings, and bibliography in one place helps reduce friction in the writing process and ensures everything is accessible for quick edits or peer reviews.",
+    "usecases": [
+      {
+        "name": "Organize Paper Sections (Research Management Project)",
+        "scenario": "Effective organization of paper sections such as abstract, methodology, findings, and bibliography.",
+        "actors": "['Researcher']",
+        "preconditions": "Notion is set up for the research project, and sections are predefined.",
+        "steps": "1: Researcher opens the Notion workspace dedicated to the research project. 2: Researcher creates sections for abstract, methodology, findings, and bibliography. 3: Researcher inputs relevant information into each section for easy tracking and organization."
+      },
+      {
+        "name": "Track Reference Management (Research Management Project)",
+        "scenario": "Centralized tracking of all references used in the research paper within Notion.",
+        "actors": "['Researcher']",
+        "preconditions": "Researcher has access to all references used in the research.",
+        "steps": "1: Researcher lists all references in a dedicated Notion page or database. 2: References are organized by categories such as books, articles, and online sources for easy access. 3: Researcher updates references as new ones are added or removed during the research process."
+      },
+      {
+        "name": "Monitor Writing Progress (Research Management Project)",
+        "scenario": "Monitoring writing progress to ensure deadlines are met and tasks are completed on time.",
+        "actors": "['Researcher']",
+        "preconditions": "Deadlines and milestones are set up within the Notion workspace.",
+        "steps": "1: Researcher sets deadlines for each section of the paper in Notion. 2: Researcher updates the progress for each section periodically. 3: Researcher receives notifications for approaching deadlines and incomplete tasks."
+      },
+      {
+        "name": "Conduct Peer Reviews (Research Management Project)",
+        "scenario": "Facilitating peer reviews by providing easily accessible and editable sections within Notion.",
+        "actors": "['Researcher', 'Peer Reviewer']",
+        "preconditions": "Sections are organized and accessible by assigned peer reviewers.",
+        "steps": "1: Researcher shares access to the Notion workspace with selected peer reviewers. 2: Peer reviewers add comments or suggestions within the Notion workspace. 3: Researcher reviews feedback and makes necessary edits in response to peer reviews."
+      }
+    ]
+  },
+  {
+    "user_story": "As a remote worker, I want to sync my Google Calendar with Notion, so I can join meetings and take notes from one place. This helps me reduce context switching between tools, stay punctual, and document important meeting insights alongside my daily task lists.",
+    "usecases": [
+      {
+        "name": "Google Calendar Sync with Notion",
+        "scenario": "Integrate Google Calendar with Notion to view and manage meetings directly from Notion.",
+        "actors": "['Remote Worker']",
+        "preconditions": "Google Calendar and Notion accounts are set up and accessible.",
+        "steps": "1: Authorize integration between Google Calendar and Notion. 2: Fetch and display upcoming meetings in Notion. 3: Allow editing of meeting details directly from Notion."
+      },
+      {
+        "name": "Meeting Join from Notion",
+        "scenario": "Enable joining meetings directly from Notion without switching to Google Calendar.",
+        "actors": "['Remote Worker']",
+        "preconditions": "Meetings have associated join links and are synced to Notion.",
+        "steps": "1: Display join link in Notion for each meeting. 2: Enable direct joining of meetings through Notion interface."
+      },
+      {
+        "name": "Taking Meeting Notes in Notion",
+        "scenario": "Provide a seamless way to take notes during meetings in Notion.",
+        "actors": "['Remote Worker']",
+        "preconditions": "Meetings are synced with Notion and notetaking pages are ready.",
+        "steps": "1: Create a note-taking page linked to each meeting in Notion. 2: Allow remote workers to write and save notes during meetings."
+      },
+      {
+        "name": "Daily Task List Integration",
+        "scenario": "Integrate meeting insights with daily task lists in Notion.",
+        "actors": "['Remote Worker']",
+        "preconditions": "Daily task lists are maintained in Notion and meetings are synced.",
+        "steps": "1: Link meeting notes to relevant daily tasks in Notion. 2: Update task lists with action items derived from meeting insights."
+      }
+    ]
+  },
+  {
+    "user_story": "As a productivity enthusiast, I want to use templates for different use-cases, so I can save time setting up new pages. Whether it\u2019s for journaling, habit tracking, or sprint planning, having ready-to-use, customizable templates boosts my efficiency and keeps my workflow consistent.",
+    "usecases": [
+      {
+        "name": "Journaling Template Usecase",
+        "scenario": "Using a pre-designed journaling template to efficiently set up daily journal pages.",
+        "actors": "['Productivity Enthusiast']",
+        "preconditions": "Journaling template is available and customizable.",
+        "steps": "1: User selects the journaling template from a list. 2: User customizes the template with personal preferences. 3: User saves the customized template for daily use."
+      },
+      {
+        "name": "Habit Tracking Template Usecase",
+        "scenario": "Implementing a habit tracking template to monitor daily habits effectively.",
+        "actors": "['Productivity Enthusiast']",
+        "preconditions": "Habit tracking template is available with customizable options.",
+        "steps": "1: User selects the habit tracking template. 2: User customizes the template to include specific habits to track. 3: User saves the template for ongoing habit tracking. 4: User updates the template with daily progress."
+      },
+      {
+        "name": "Sprint Planning Template Usecase",
+        "scenario": "Using a sprint planning template for organizing and tracking tasks in a project sprint.",
+        "actors": "['Productivity Enthusiast']",
+        "preconditions": "Sprint planning template is available with features for task management.",
+        "steps": "1: User selects the sprint planning template from available options. 2: User customizes tasks, deadlines, and priorities within the template. 3: User saves and uses the template throughout the sprint. 4: User updates the sprint planning template regularly to reflect task progress."
+      }
+    ]
+  },
+  {
+    "user_story": "As a blockchain developer, I want to generate API keys and use Coinbase SDKs, so I can build crypto-integrated apps quickly and securely. The developer dashboard should provide access to comprehensive documentation, test environments, and analytics, allowing me to create applications that can interact with wallets, process transactions, and fetch real-time pricing data with minimal setup effort.",
+    "usecases": [
+      {
+        "name": "API Key Generation",
+        "scenario": "Automated generation and management of API keys for accessing Coinbase services.",
+        "actors": "['Blockchain Developer']",
+        "preconditions": "Developer is logged into the developer dashboard.",
+        "steps": "1: Developer accesses the API Key section on the dashboard. 2: Developer clicks 'Generate API Key'. 3: System generates a unique API key. 4: Developer receives confirmation and configuration options for the key."
+      },
+      {
+        "name": "Use Coinbase SDKs",
+        "scenario": "Integration of Coinbase SDKs into applications for crypto features.",
+        "actors": "['Blockchain Developer']",
+        "preconditions": "Developer has access to Coinbase SDKs and API keys.",
+        "steps": "1: Developer accesses the SDKs section on the dashboard. 2: Developer downloads the appropriate SDKs. 3: Developer integrates SDKs into the application code. 4: Application utilizes Coinbase services for crypto functionalities."
+      },
+      {
+        "name": "Access Developer Documentation",
+        "scenario": "Accessing comprehensive documentation to facilitate app development.",
+        "actors": "['Blockchain Developer']",
+        "preconditions": "Developer is logged into the developer dashboard.",
+        "steps": "1: Developer navigates to the documentation section of the dashboard. 2: Developer reviews guides and references. 3: Developer applies knowledge gained to project coding."
+      },
+      {
+        "name": "Use Test Environments",
+        "scenario": "Utilizing test environments to simulate transactions and interactions with crypto wallets.",
+        "actors": "['Blockchain Developer']",
+        "preconditions": "Developer is logged into the developer dashboard and has API keys.",
+        "steps": "1: Developer accesses the test environment setup on the dashboard. 2: Developer configures test scenarios for transactions. 3: Developer runs tests to simulate wallet interactions and transactions. 4: Developer reviews results and adjusts app as necessary."
+      },
+      {
+        "name": "Analytics Access",
+        "scenario": "Monitoring application usage and performance through dashboard analytics.",
+        "actors": "['Blockchain Developer']",
+        "preconditions": "Developer has functional applications integrated with Coinbase services.",
+        "steps": "1: Developer accesses the analytics section on the dashboard. 2: Developer reviews metrics on application usage. 3: Developer uses insights to optimize app performance."
+      },
+      {
+        "name": "Interact with Wallets and Process Transactions",
+        "scenario": "Develop applications to interact with crypto wallets and process transactions securely.",
+        "actors": "['Blockchain Developer', 'End-user']",
+        "preconditions": "Developer has integrated SDKs into their application and has obtained user permissions.",
+        "steps": "1: End-user initiates a transaction via the app. 2: App interacts with Coinbase services for wallet access. 3: Transaction is processed securely. 4: Developer ensures the transaction details are logged and secure."
+      },
+      {
+        "name": "Fetch Real-Time Pricing Data",
+        "scenario": "Fetching and displaying real-time cryptocurrency pricing data in the app.",
+        "actors": "['Blockchain Developer']",
+        "preconditions": "Developer has integrated API keys for pricing data access.",
+        "steps": "1: Application sends request for real-time data via API. 2: Application receives and displays updated pricing data. 3: Developer ensures data refreshes at appropriate intervals."
+      }
+    ]
+  },
+  {
+    "user_story": "As a crypto investor, I want to manage my wallet and initiate payments from a single interface, so I can track and control my assets efficiently. Having an intuitive dashboard where I can view my portfolio, send or receive tokens, and monitor market movements in real time helps me make informed decisions and manage risk proactively.",
+    "usecases": [
+      {
+        "name": "Wallet Management",
+        "scenario": "Manage multiple cryptocurrency wallets from a single interface.",
+        "actors": "['Crypto Investor']",
+        "preconditions": "The user is logged into the platform and has linked their cryptocurrency wallets.",
+        "steps": "1: Investor accesses the wallet management interface. 2: Investor views and selects desired wallet for management. 3: Investor adds or removes wallets as needed."
+      },
+      {
+        "name": "Initiate Payments",
+        "scenario": "Send and receive tokens using an intuitive dashboard.",
+        "actors": "['Crypto Investor']",
+        "preconditions": "The investor's wallet is funded and connected to the dashboard.",
+        "steps": "1: Investor navigates to the payments section. 2: Investor selects to send or receive tokens. 3: Investor enters transaction details and initiates the transaction. 4: Dashboard confirms transaction success or failure."
+      },
+      {
+        "name": "Portfolio View",
+        "scenario": "Display a comprehensive view of the investor's cryptocurrency portfolio.",
+        "actors": "['Crypto Investor']",
+        "preconditions": "Investor has cryptocurrencies in their connected wallets.",
+        "steps": "1: Investor accesses the portfolio view in the dashboard. 2: Dashboard displays all cryptocurrencies held across wallets. 3: Investor views asset allocation and value."
+      },
+      {
+        "name": "Real-Time Market Monitoring",
+        "scenario": "Monitor cryptocurrency market movements in real time.",
+        "actors": "['Crypto Investor']",
+        "preconditions": "The platform receives real-time data from crypto market feeds.",
+        "steps": "1: Investor accesses the market monitoring feature. 2: Dashboard updates with real-time market prices and trends. 3: Investor uses data to make informed decisions."
+      },
+      {
+        "name": "Risk Management",
+        "scenario": "Manage risk by setting alerts and limits.",
+        "actors": "['Crypto Investor']",
+        "preconditions": "Investor has enabled notifications and alerts within the platform.",
+        "steps": "1: Investor sets price alerts and risk limits in the dashboard. 2: System monitors market conditions and triggers alerts when criteria are met. 3: Investor receives notifications and adjusts strategy as necessary."
+      }
+    ]
+  },
+  {
+    "user_story": "As a business owner, I want to accept cryptocurrency payments via Coinbase Commerce, so I can expand my customer payment options globally. The system should provide simple integration with my website or store, allow settlements in multiple currencies, and offer tools to track transactions, invoices, and customer data in one place for seamless financial operations.",
+    "usecases": [
+      {
+        "name": "Cryptocurrency Payment Integration",
+        "scenario": "Enable businesses to accept cryptocurrency payments through Coinbase Commerce.",
+        "actors": "['Business Owner', 'Customer', 'Coinbase Commerce']",
+        "preconditions": "The business website or store is ready for integration with Coinbase Commerce.",
+        "steps": "1: Business owner accesses Coinbase Commerce to set up an account. 2: Business owner integrates Coinbase Commerce into their website or store. 3: Customer selects cryptocurrency payment option at checkout."
+      },
+      {
+        "name": "Currency Settlement Options",
+        "scenario": "Provide options for businesses to settle payments in multiple currencies.",
+        "actors": "['Business Owner', 'Coinbase Commerce']",
+        "preconditions": "Business account is set up on Coinbase Commerce with desired currency settings configured.",
+        "steps": "1: Business owner selects preferred settlement currencies in Coinbase Commerce. 2: Cryptocurrency payments are converted to selected currencies upon receipt."
+      },
+      {
+        "name": "Transaction Tracking and Invoicing",
+        "scenario": "Offer tools for businesses to track transactions, manage invoices, and access customer data.",
+        "actors": "['Business Owner', 'Coinbase Commerce']",
+        "preconditions": "Business account is active on Coinbase Commerce and transactions begin flowing in.",
+        "steps": "1: Business owner logs into Coinbase Commerce dashboard. 2: Business owner accesses transaction history. 3: Business owner generates and manages invoices. 4: Business owner reviews customer data for financial operations."
+      }
+    ]
+  },
+  {
+    "user_story": "As a beginner, I want to learn Python interactively, so I can build my coding skills. I prefer hands-on exercises where I can write and run code directly in the browser, with instant feedback and hints when I make mistakes. This way, I can grasp core concepts like loops, functions, and data structures by actually using them, not just reading about them.",
+    "usecases": [
+      {
+        "name": "Interactive Python Learning Platform",
+        "scenario": "Provide an interactive platform for learning Python with hands-on exercises.",
+        "actors": "['Beginner']",
+        "preconditions": "User has access to a web browser and internet connection.",
+        "steps": "1: User logs into the interactive learning platform. 2: User selects a Python learning module. 3: Platform presents exercises focusing on core concepts like loops, functions, and data structures. 4: User writes and runs Python code directly in the browser. 5: Platform provides instant feedback and hints if the user makes mistakes."
+      },
+      {
+        "name": "Hands-On Exercise Module",
+        "scenario": "Interactive exercises for practicing Python coding.",
+        "actors": "['Beginner']",
+        "preconditions": "User is already logged into the platform and has selected a learning module.",
+        "steps": "1: User chooses a specific exercise to work on. 2: Exercise presents a problem statement related to a core Python concept. 3: User writes and executes code in an in-browser coding environment. 4: Platform evaluates the submitted code and provides feedback or hints."
+      },
+      {
+        "name": "Instant Feedback System",
+        "scenario": "Provide immediate feedback and hints on coding exercises.",
+        "actors": "['Beginner']",
+        "preconditions": "User is actively participating in a coding exercise.",
+        "steps": "1: User submits code for evaluation. 2: System evaluates the code for correctness and optimization. 3: User receives instant feedback on code's correctness. 4: If mistakes are present, helpful hints are displayed to guide the user towards the solution."
+      }
+    ]
+  },
+  {
+    "user_story": "As a learner, I want to track my weekly learning targets and achievements, so I can stay motivated and meet my educational goals. A dashboard that shows my progress, streaks, and completed lessons gives me a clear sense of accomplishment and helps me maintain a consistent learning habit over time.",
+    "usecases": [
+      {
+        "name": "Track Weekly Learning Targets",
+        "scenario": "Allow learners to set and view their weekly learning targets.",
+        "actors": "['Learner']",
+        "preconditions": "Learner is registered in the system and has set up a learning profile.",
+        "steps": "1: Learner logs into the learning platform. 2: Learner sets their weekly learning targets. 3: Learner views progress towards targets on the dashboard."
+      },
+      {
+        "name": "View Achievements and Progress",
+        "scenario": "Display achievements and progress on the dashboard to keep learners motivated.",
+        "actors": "['Learner']",
+        "preconditions": "Learner has completed lessons and achievements data is available.",
+        "steps": "1: Learner accesses the dashboard. 2: Dashboard displays current streaks, completed lessons, and achievements. 3: Learner reviews past performance."
+      },
+      {
+        "name": "Maintain Consistent Learning Habit",
+        "scenario": "Use dashboard insights to encourage a consistent learning routine.",
+        "actors": "['Learner']",
+        "preconditions": "Learner regularly engages with the learning platform.",
+        "steps": "1: Learner views streaks and progress regularly on the dashboard. 2: Dashboard highlights areas for improvement. 3: Learner adjusts learning schedule as needed to maintain consistency."
+      }
+    ]
+  },
+  {
+    "user_story": "As a job seeker, I want to practice interviews using AI feedback, so I can improve my performance before real job interviews. I\u2019d like to go through common coding and behavioral questions, get insights on how I structure my answers, and receive suggestions on how to communicate more effectively and confidently.",
+    "usecases": [
+      {
+        "name": "Practice Coding Interviews",
+        "scenario": "Allow users to practice coding interviews with AI-driven feedback.",
+        "actors": "['Job Seeker', 'AI Feedback System']",
+        "preconditions": "The job seeker has access to a device with internet and the required software application.",
+        "steps": "1: Job seeker selects a coding interview practice session. 2: AI system presents a set of common coding questions. 3: Job seeker submits their code solution. 4: AI system evaluates the code and provides feedback on performance."
+      },
+      {
+        "name": "Practice Behavioral Interviews",
+        "scenario": "Enable users to practice behavioral interviews and receive AI feedback on responses.",
+        "actors": "['Job Seeker', 'AI Feedback System']",
+        "preconditions": "The job seeker has access to a device with internet and the required software application.",
+        "steps": "1: Job seeker selects a behavioral interview practice session. 2: AI system presents a set of common behavioral questions. 3: Job seeker records or writes answers. 4: AI system analyzes the responses and provides feedback on structure and communication."
+      },
+      {
+        "name": "Receive AI Feedback on Answer Structure",
+        "scenario": "Offer insights on how job seekers structure their answers during practice sessions.",
+        "actors": "['Job Seeker', 'AI Feedback System']",
+        "preconditions": "AI system is trained to analyze answer structures and provide meaningful feedback.",
+        "steps": "1: Job seeker completes a practice interview session. 2: AI system analyzes the answer structures. 3: AI system provides feedback on strengths and areas for improvement."
+      },
+      {
+        "name": "Suggestions for Effective Communication",
+        "scenario": "Provide job seekers with suggestions on how to communicate more effectively and confidently.",
+        "actors": "['Job Seeker', 'AI Feedback System']",
+        "preconditions": "AI system includes modules for evaluating communication skills.",
+        "steps": "1: Job seeker completes a practice session. 2: AI system evaluates communication styles. 3: AI system gives personalized suggestions for improvement."
+      }
+    ]
+  },
+  {
+    "user_story": "As a student, I want to learn math, science, and programming through step-by-step lessons and interactive challenges, so I can understand complex topics in a fun and engaging way at my own pace. I also want to track my progress and earn badges to stay motivated and consistent with my studies.",
+    "usecases": [
+      {
+        "name": "Step-by-Step Learning",
+        "scenario": "Provide students with structured, step-by-step lessons in math, science, and programming.",
+        "actors": "['Student']",
+        "preconditions": "The learning platform is available and the student has access credentials.",
+        "steps": "1: Student selects a subject to learn (math, science, or programming). 2: Student is presented with a structured, step-by-step lesson. 3: Student completes each step before moving to the next one."
+      },
+      {
+        "name": "Interactive Challenges",
+        "scenario": "Engage students with interactive challenges to reinforce their understanding.",
+        "actors": "['Student']",
+        "preconditions": "Students have completed the relevant lessons required to attempt the challenges.",
+        "steps": "1: Student selects an interactive challenge related to the lesson just learned. 2: Student engages with the challenge, using hints and tools as needed. 3: Platform provides feedback and solutions once the challenge is completed."
+      },
+      {
+        "name": "Progress Tracking",
+        "scenario": "Allow students to track their learning progress across subjects.",
+        "actors": "['Student']",
+        "preconditions": "Student has completed some lessons or challenges.",
+        "steps": "1: Student accesses the progress tracking feature on the platform. 2: Platform displays a progress dashboard showing completed lessons and challenges. 3: Student reviews his/her progress to plan future learning activities."
+      },
+      {
+        "name": "Badge Earning System",
+        "scenario": "Motivate students by awarding badges for significant milestones.",
+        "actors": "['Student']",
+        "preconditions": "Student has achieved specific targets or completed certain milestones.",
+        "steps": "1: Student completes a lesson, challenge, or milestone. 2: Platform assesses the completion and awards a badge if criteria are met. 3: Student receives a notification about the badge earned and views it in their profile."
+      }
+    ]
+  },
+  {
+    "user_story": "As a test-prep student, I want to prepare for exams like the SAT or MCAT using Khan Academy\u2019s structured practice sets, so I can study with confidence and improve my scores using trusted materials aligned with actual test formats.",
+    "usecases": [
+      {
+        "name": "Access Structured Practice Sets",
+        "scenario": "Provide students with access to structured practice sets for exams like SAT or MCAT.",
+        "actors": "['Test-Prep Student']",
+        "preconditions": "The student has an active Khan Academy account and internet access.",
+        "steps": "1: Student logs into their Khan Academy account. 2: Student navigates to the test-prep section. 3: Student selects the desired exam (e.g., SAT, MCAT). 4: Student accesses structured practice sets designed for the selected exam."
+      },
+      {
+        "name": "Personalized Study Plan",
+        "scenario": "Generate a personalized study plan based on the student's progress and target score.",
+        "actors": "['Test-Prep Student', 'Khan Academy System']",
+        "preconditions": "Student has completed a diagnostic test or initial practice sets.",
+        "steps": "1: Student completes a diagnostic test or initial practice set. 2: Khan Academy system analyzes the student's performance. 3: System generates a personalized study plan tailored to the student's strengths and weaknesses. 4: Student follows the personalized study plan."
+      },
+      {
+        "name": "Track Performance Progress",
+        "scenario": "Allow students to track their progress and performance over time to boost confidence.",
+        "actors": "['Test-Prep Student']",
+        "preconditions": "Student actively uses practice sets and logs their scores.",
+        "steps": "1: Student completes multiple practice sets over time. 2: Khan Academy system records and analyzes scores. 3: System displays progress in a visual format (e.g., charts, graphs). 4: Student reviews performance data to identify areas of improvement."
+      },
+      {
+        "name": "Align Practice Sets with Test Formats",
+        "scenario": "Ensure that practice sets are aligned with actual test formats to enhance preparation efficacy.",
+        "actors": "['Khan Academy Content Team', 'Test-Prep Student']",
+        "preconditions": "Khan Academy content team has access to the latest test formats and guidelines.",
+        "steps": "1: Content team reviews current test formats and guidelines. 2: Team updates practice sets to match latest test formats. 3: Students use practice sets that reflect the actual exam format, enhancing their confidence and preparedness."
+      }
+    ]
+  },
+  {
+    "user_story": "As an educator, I want to assign lessons to my class, monitor student progress, and get real-time insights, so I can tailor my instruction based on each student\u2019s needs and ensure everyone is keeping up with the curriculum.",
+    "usecases": [
+      {
+        "name": "Assign Lessons to Students",
+        "scenario": "Educators assign lessons to their class based on the curriculum.",
+        "actors": "['Educator', 'Learning Management System (LMS)']",
+        "preconditions": "The educator has access to the LMS and the curriculum is available in the system.",
+        "steps": "1: Educator logs into the LMS. 2: Educator selects lessons from the curriculum. 3: Educator assigns the selected lessons to the class. 4: Lessons are made available to the students in the LMS."
+      },
+      {
+        "name": "Monitor Student Progress",
+        "scenario": "Educators monitor the progress of their students in real-time.",
+        "actors": "['Educator', 'LMS', 'Students']",
+        "preconditions": "Students are active in the LMS and have been assigned lessons.",
+        "steps": "1: Educator logs into the LMS. 2: Educator navigates to the class progress dashboard. 3: LMS displays real-time progress of each student. 4: Educator reviews the progress data to identify areas where students may need help."
+      },
+      {
+        "name": "Get Real-Time Insights",
+        "scenario": "Educators receive real-time insights into student performance to tailor instruction.",
+        "actors": "['Educator', 'LMS']",
+        "preconditions": "Student progress data is updated in the LMS.",
+        "steps": "1: Educator views the insights dashboard in the LMS. 2: LMS analyzes student progress data. 3: LMS provides insights on student performance and areas for improvement. 4: Educator uses insights to adapt teaching strategies."
+      },
+      {
+        "name": "Tailor Instruction Based on Insights",
+        "scenario": "Educators modify their teaching approach based on insights from student progress data.",
+        "actors": "['Educator']",
+        "preconditions": "Real-time insights from the LMS are available to the educator.",
+        "steps": "1: Educator reviews insights and identifies students needing additional support. 2: Educator adjusts lesson plans and teaching strategies. 3: Educator provides personalized feedback to students to address specific needs."
+      }
+    ]
+  },
+  {
+    "user_story": "As a teacher, I want to use Khan Academy\u2019s ready-made courses and exercises across subjects, so I can supplement my classroom teaching and offer extra practice to students who need it without creating materials from scratch.",
+    "usecases": [
+      {
+        "name": "Select Ready-Made Courses",
+        "scenario": "Teacher selects and assigns ready-made courses from Khan Academy to complement classroom teaching.",
+        "actors": "['Teacher']",
+        "preconditions": "Khan Academy account is active and has access to a variety of ready-made courses.",
+        "steps": "1: Teacher logs into Khan Academy. 2: Teacher browses through available courses and exercises. 3: Teacher selects the desired course or exercises to supplement classroom teaching. 4: Teacher assigns the course to students through the platform."
+      },
+      {
+        "name": "Monitor Student Progress",
+        "scenario": "Teacher monitors the progress of students on the assigned Khan Academy exercises.",
+        "actors": "['Teacher', 'Students']",
+        "preconditions": "Students have been assigned exercises and are engaging with the material on Khan Academy.",
+        "steps": "1: Students work on the assigned exercises on Khan Academy. 2: Teacher logs into Khan Academy's dashboard. 3: Teacher reviews student progress and performance on the assigned exercises."
+      },
+      {
+        "name": "Offer Extra Practice",
+        "scenario": "Teacher identifies students who need additional practice and assigns extra exercises.",
+        "actors": "['Teacher', 'Students']",
+        "preconditions": "Teacher has access to student performance data on assigned exercises.",
+        "steps": "1: Teacher reviews which students are struggling based on performance data. 2: Teacher selects additional exercises or practice problems from Khan Academy. 3: Teacher assigns these extra practice exercises to the identified students."
+      },
+      {
+        "name": "Provide Feedback",
+        "scenario": "Teacher provides feedback to students based on their performance and Khan Academy progress reports.",
+        "actors": "['Teacher', 'Students']",
+        "preconditions": "Student performance and progress data is available on Khan Academy.",
+        "steps": "1: Teacher logs into Khan Academy and reviews progress reports. 2: Teacher identifies areas where students excel or struggle. 3: Teacher provides personalized feedback and guidance to students during or after classroom lessons."
+      }
+    ]
+  },
+  {
+    "user_story": "As a parent, I want to use the Parent Dashboard on Khan Academy to manage my child\u2019s account, track their learning progress, and set up assignments, so I can stay actively involved in their education. I also want to connect to my child\u2019s account, access their settings, and use tools like Khanmigo Parent Tools, so I can support their learning journey effectively. Even if I don\u2019t know the subject myself, I want to encourage and assist my child by creating separate accounts and monitoring their activity to help them stay motivated and on track.",
+    "usecases": [
+      {
+        "name": "Manage Child\u2019s Account",
+        "scenario": "Enable parents to manage their child's account settings and information.",
+        "actors": "['Parent']",
+        "preconditions": "Parent has an account and is logged into the Parent Dashboard.",
+        "steps": "1: Log into the Parent Dashboard. 2: Navigate to the child's account settings. 3: Update necessary account information. 4: Save changes."
+      },
+      {
+        "name": "Track Learning Progress",
+        "scenario": "Allow parents to view and monitor their child's learning progress on Khan Academy.",
+        "actors": "['Parent']",
+        "preconditions": "Parent and child accounts are linked on the platform.",
+        "steps": "1: Access the Parent Dashboard. 2: Select the child\u2019s profile. 3: View the learning progress and reports. 4: Identify areas of strength and improvement."
+      },
+      {
+        "name": "Set Up Assignments",
+        "scenario": "Enable parents to create and assign educational tasks to their child.",
+        "actors": "['Parent']",
+        "preconditions": "Parent has access to the Parent Dashboard and relevant content.",
+        "steps": "1: Log into the Parent Dashboard. 2: Select the child\u2019s profile. 3: Choose assignments from available educational resources. 4: Assign tasks to the child\u2019s account."
+      },
+      {
+        "name": "Connect to Child\u2019s Account",
+        "scenario": "Allow parents to connect and access their child\u2019s account settings and information.",
+        "actors": "['Parent']",
+        "preconditions": "Parent is logged into the Parent Dashboard with linked accounts.",
+        "steps": "1: Access the Parent Dashboard. 2: Navigate to connecting options. 3: Connect to the child's account. 4: Access and view account settings."
+      },
+      {
+        "name": "Use Khanmigo Parent Tools",
+        "scenario": "Provide parents tools to assist in their child's learning even without subject expertise.",
+        "actors": "['Parent']",
+        "preconditions": "Parent has access to Khanmigo Parent Tools and linked accounts.",
+        "steps": "1: Access the Parent Dashboard. 2: Navigate to Khanmigo Parent Tools. 3: Utilize tools to guide and support learning. 4: Provide feedback or assistance to the child."
+      },
+      {
+        "name": "Encourage and Assist Child\u2019s Learning",
+        "scenario": "Enable parents to support their child's educational journey by creating separate accounts and monitoring activities.",
+        "actors": "['Parent']",
+        "preconditions": "Parent has created separate child accounts and linked them.",
+        "steps": "1: Create separate accounts for each child. 2: Access the Parent Dashboard. 3: Monitor each child's activities and progress. 4: Provide encouragement and support based on insights from activity tracking."
+      }
+    ]
+  },
+  {
+    "user_story": "As a moviegoer, I want to read critic and audience reviews, so I can decide whether a film is worth watching. Being able to see both professional opinions and viewer feedback helps me get a balanced perspective and avoid wasting time on poorly received films.",
+    "usecases": [
+      {
+        "name": "Read Critic Reviews",
+        "scenario": "View professional critics' reviews of movies to gain expert opinions.",
+        "actors": "['Moviegoer', 'Critics']",
+        "preconditions": "Movie database is populated with critics' reviews for various films.",
+        "steps": "1: Moviegoer searches for a specific film. 2: System displays critic reviews for the selected film. 3: Moviegoer reads through the critic reviews to assess the film's quality."
+      },
+      {
+        "name": "Read Audience Reviews",
+        "scenario": "View audience reviews of movies to understand viewer feedback and experiences.",
+        "actors": "['Moviegoer', 'Audience']",
+        "preconditions": "Movie database is populated with audience reviews for various films.",
+        "steps": "1: Moviegoer searches for a specific film. 2: System displays audience reviews for the selected film. 3: Moviegoer reads through the audience feedback to understand viewer satisfaction."
+      },
+      {
+        "name": "Compare Critic and Audience Opinions",
+        "scenario": "Compare both critic and audience reviews for a balanced perspective on films.",
+        "actors": "['Moviegoer']",
+        "preconditions": "Both critic and audience reviews are available in the movie database.",
+        "steps": "1: Moviegoer searches for a specific film. 2: System displays both critic and audience reviews side by side. 3: Moviegoer compares reviews to get a balanced perspective."
+      },
+      {
+        "name": "Filter Reviews by Rating",
+        "scenario": "Filter reviews based on ratings to quickly identify highly rated films.",
+        "actors": "['Moviegoer']",
+        "preconditions": "Reviews include rated scores available in the movie database.",
+        "steps": "1: Moviegoer searches for films. 2: System allows filtering of films based on critic and audience ratings. 3: Moviegoer views filtered list of films with high ratings."
+      }
+    ]
+  },
+  {
+    "user_story": "As a Rotten Tomatoes admin, I want to monitor critic reviews for authenticity, manage critic profiles, and analyze user engagement across the site\u2014such as likes, shares, and comment activity\u2014so that I can ensure review quality, prevent misuse, and make informed decisions to improve user experience and platform trust.",
+    "usecases": [
+      {
+        "name": "Monitor Critic Reviews for Authenticity",
+        "scenario": "Ensure that critic reviews are authentic and adhere to platform policies.",
+        "actors": "['Rotten Tomatoes Admin','Automated Review Monitoring System']",
+        "preconditions": "Critic reviews are submitted and recorded in the system.",
+        "steps": "1: Admin initiates the review monitoring process. 2: Automated system scans reviews for authenticity markers. 3: System flags suspicious reviews for manual inspection. 4: Admin reviews flagged content and takes necessary actions."
+      },
+      {
+        "name": "Manage Critic Profiles",
+        "scenario": "Manage and maintain the profiles of critics on the platform.",
+        "actors": "['Rotten Tomatoes Admin']",
+        "preconditions": "Critic profiles are stored in the system.",
+        "steps": "1: Admin accesses the critic profile management panel. 2: Admin updates profile information as needed. 3: Admin reviews and approves new critic requests and changes. 4: Admin deactivates profiles that no longer meet standards."
+      },
+      {
+        "name": "Analyze User Engagement Data",
+        "scenario": "Analyze user engagement metrics such as likes, shares, and comments to improve user experience and trust.",
+        "actors": "['Rotten Tomatoes Admin','Analytics Tool']",
+        "preconditions": "User engagement data is collected and stored in the database.",
+        "steps": "1: Admin accesses the analytics dashboard. 2: Admin reviews engagement metrics for movies and reviews. 3: Admin identifies trends and anomalies in user activity. 4: Admin generates reports to inform decision-making."
+      }
+    ]
+  },
+  {
+    "user_story": "As a professional movie critic, I want to submit my film reviews on Rotten Tomatoes, include a rating and review summary, and engage with readers through my critic profile, so that I can contribute to the Tomatometer, build my professional presence, and influence public perception of films.",
+    "usecases": [
+      {
+        "name": "Submit Film Review",
+        "scenario": "Professional movie critic submits a detailed film review on Rotten Tomatoes.",
+        "actors": "['Movie Critic']",
+        "preconditions": "Critic is registered and logged into Rotten Tomatoes as a professional critic.",
+        "steps": "1: Critic logs into their Rotten Tomatoes account. 2: Critic navigates to the film's page. 3: Critic submits a review including a rating and review summary. 4: Review is published and contributes to the Tomatometer."
+      },
+      {
+        "name": "Manage Critic Profile",
+        "scenario": "Critic updates and maintains their professional profile on Rotten Tomatoes.",
+        "actors": "['Movie Critic']",
+        "preconditions": "Critic has an active Rotten Tomatoes account.",
+        "steps": "1: Critic logs into Rotten Tomatoes. 2: Critic updates their profile with a bio and professional achievements. 3: Critic views and manages previous reviews and interactions."
+      },
+      {
+        "name": "Engage with Readers",
+        "scenario": "Critic engages with readers and responds to comments or questions on their reviews.",
+        "actors": "['Movie Critic', 'Readers']",
+        "preconditions": "Critic has published reviews that have comments from readers.",
+        "steps": "1: Critic receives notifications of new reader comments. 2: Critic accesses comments on their reviews. 3: Critic responds to reader comments, facilitating discussion."
+      },
+      {
+        "name": "Contribute to the Tomatometer",
+        "scenario": "Critic's reviews contribute to the overall film score on Rotten Tomatoes.",
+        "actors": "['Movie Critic', 'Rotten Tomatoes System']",
+        "preconditions": "Critic's review meets submission guidelines and has been published.",
+        "steps": "1: Critic submits review with a rating. 2: Review is processed and rating is added to the film's Tomatometer score."
+      },
+      {
+        "name": "Influence Public Perception",
+        "scenario": "Critic's reviews influence public perception and the critical reception of the film.",
+        "actors": "['Movie Critic', 'Public']",
+        "preconditions": "Reviews are published and visible to the public.",
+        "steps": "1: Public reads the critic\u2019s reviews. 2: Public forms opinions based on the critic\u2019s analysis. 3: Public perception is influenced by the professional critique."
+      }
+    ]
+  },
+  {
+    "user_story": "As a gamer, I want to browse newly released and trending games, so I can discover and purchase exciting titles to play. Having a dynamic storefront that highlights popular and upcoming games keeps me engaged and helps me stay updated with the latest in the gaming world.",
+    "usecases": [
+      {
+        "name": "Browse Newly Released Games",
+        "scenario": "Allow gamers to explore newly released games on the platform.",
+        "actors": "['Gamer']",
+        "preconditions": "The gaming platform has an updated list of newly released games.",
+        "steps": "1: Gamer logs into the platform. 2: Gamer navigates to the 'New Releases' section. 3: Gamer browses through the list of newly released games. 4: Gamer selects a game for more details."
+      },
+      {
+        "name": "Browse Trending Games",
+        "scenario": "Enable gamers to discover popular and trending games.",
+        "actors": "['Gamer']",
+        "preconditions": "The gaming platform features a curated list of trending games based on popularity metrics.",
+        "steps": "1: Gamer accesses the platform. 2: Gamer opens the 'Trending Now' section. 3: Gamer views the trending games list. 4: Gamer explores details about the selected game."
+      },
+      {
+        "name": "Purchase Game",
+        "scenario": "Facilitate gamers in purchasing games from the platform.",
+        "actors": "['Gamer']",
+        "preconditions": "Gamer is logged in and has a payment method linked to their account.",
+        "steps": "1: Gamer selects a game from the new or trending categories. 2: Gamer clicks on 'Purchase'. 3: Gamer confirms payment details. 4: Gamer completes the purchase transaction."
+      },
+      {
+        "name": "Highlight Popular Games",
+        "scenario": "Showcase popular and highly-rated games on the storefront to engage gamers.",
+        "actors": "['Gamer']",
+        "preconditions": "Platform's storefront dynamically updates to reflect popular games.",
+        "steps": "1: Gamer visits the main page of the platform. 2: Gamer sees highlighted popular games. 3: Gamer clicks on a highlighted game for more information."
+      },
+      {
+        "name": "Highlight Upcoming Games",
+        "scenario": "Feature upcoming game releases to keep gamers informed and excited.",
+        "actors": "['Gamer']",
+        "preconditions": "The platform updates with announcements about upcoming games.",
+        "steps": "1: Gamer navigates to the 'Upcoming Games' section. 2: Gamer scrolls through the list of future releases. 3: Gamer marks games of interest for notification alerts."
+      }
+    ]
+  },
+  {
+    "user_story": "As a game developer, I want to publish my indie game on Steam through the Steamworks Distribution Program, so I can reach a wide audience and manage my release easily. The process lets me sign paperwork, pay the fee, verify my info, and access Steamworks tools to build my store page, upload builds, and set pricing. The review period and waiting time help ensure everything is properly set up before launch, giving me confidence in the release process.",
+    "usecases": [
+      {
+        "name": "Register for Steamworks Account",
+        "scenario": "Game developer registers for a Steamworks account to begin the publishing process.",
+        "actors": "['Game Developer']",
+        "preconditions": "Game developer has a valid Steam account.",
+        "steps": "1: Game developer logs into Steam account. 2: Game developer accesses the Steamworks website. 3: Game developer registers for a Steamworks account."
+      },
+      {
+        "name": "Sign Steamworks Agreement",
+        "scenario": "Game developer signs the Steamworks Distribution Agreement to participate in the distribution program.",
+        "actors": "['Game Developer']",
+        "preconditions": "Steamworks account registration is complete.",
+        "steps": "1: Game developer reviews the Steamworks Distribution Agreement. 2: Game developer signs the agreement electronically."
+      },
+      {
+        "name": "Submit and Pay Publishing Fee",
+        "scenario": "Game developer submits necessary documentation and pays the Steamworks publishing fee.",
+        "actors": "['Game Developer']",
+        "preconditions": "Steamworks Agreement is signed.",
+        "steps": "1: Game developer submits required documentation for verification. 2: Game developer pays the publishing fee through Steamworks. 3: Game developer receives confirmation of payment and submission."
+      },
+      {
+        "name": "Verify Developer Information",
+        "scenario": "Game developer verifies their information for the Steamworks account as part of the onboarding process.",
+        "actors": "['Game Developer']",
+        "preconditions": "Documentation submitted and fee paid.",
+        "steps": "1: Steamworks sends verification request to game developer. 2: Game developer provides necessary information for verification. 3: Steamworks verifies the information and confirms to the developer."
+      },
+      {
+        "name": "Access Steamworks Tools",
+        "scenario": "Game developer accesses tools and resources provided by Steamworks to manage game publishing tasks.",
+        "actors": "['Game Developer']",
+        "preconditions": "Verification is successful and Steamworks account is fully active.",
+        "steps": "1: Game developer logs into Steamworks dashboard. 2: Game developer explores available tools for building the store page, uploading builds, and setting pricing."
+      },
+      {
+        "name": "Build Game Store Page",
+        "scenario": "Game developer creates a store page for the game on Steam with all necessary details and media.",
+        "actors": "['Game Developer']",
+        "preconditions": "Access to Steamworks tools is granted.",
+        "steps": "1: Game developer logs into Steamworks. 2: Game developer uses the dashboard to build the game store page. 3: Game developer uploads media such as screenshots and trailers."
+      },
+      {
+        "name": "Upload Game Builds",
+        "scenario": "Game developer uploads game builds to Steam for distribution.",
+        "actors": "['Game Developer']",
+        "preconditions": "Store page is built and ready for review.",
+        "steps": "1: Game developer prepares the game build. 2: Game developer uploads build through Steamworks. 3: Game developer sets up any necessary updates or patches."
+      },
+      {
+        "name": "Set Game Pricing",
+        "scenario": "Game developer sets the pricing and regional availability for the game.",
+        "actors": "['Game Developer']",
+        "preconditions": "Game builds are uploaded and available on Steamworks.",
+        "steps": "1: Game developer accesses the pricing section of Steamworks. 2: Game developer sets the price for the game. 3: Game developer configures regional pricing settings as required."
+      },
+      {
+        "name": "Participate in Review Period",
+        "scenario": "Game developer undergoes Steamworks review period to ensure all setups are correct before launch.",
+        "actors": "['Game Developer', 'Steam Review Team']",
+        "preconditions": "Store page, game builds, and pricing are set up.",
+        "steps": "1: Submission enters the review process. 2: Steam Review Team validates all aspects of the submission. 3: Game developer receives feedback or approval for launch."
+      },
+      {
+        "name": "Launch Game on Steam",
+        "scenario": "Game developer successfully launches the game on Steam after completing all necessary steps in the Steamworks program.",
+        "actors": "['Game Developer']",
+        "preconditions": "Review period is completed with approval from Steam.",
+        "steps": "1: Game developer selects launch timing based on review feedback. 2: Game developer coordinates with Steam for final checks. 3: Game goes live on the Steam platform, and the developer monitors feedback."
+      }
+    ]
+  },
+  {
+    "user_story": "As a community member, I want to interact with other players through reviews, guides, and screenshots, so I can discover great games and share my experiences. Steam\u2019s community hubs let me follow popular titles, post feedback, and find tips from others. It\u2019s a great way to stay engaged and contribute to a larger network of gamers.",
+    "usecases": [
+      {
+        "name": "Post Game Reviews",
+        "scenario": "Allow community members to post reviews on game titles for others to read.",
+        "actors": "['Community Member']",
+        "preconditions": "Community member is logged into their Steam account and has played the game.",
+        "steps": "1: Community member navigates to the game's community hub. 2: Community member clicks on 'Write a Review'. 3: Community member writes and submits their review. 4: Review is made visible to other users."
+      },
+      {
+        "name": "Share Game Guides",
+        "scenario": "Enable community members to create and share guides for games.",
+        "actors": "['Community Member']",
+        "preconditions": "Community member has tips or strategies to share and is logged into Steam.",
+        "steps": "1: Community member navigates to the game's community hub. 2: Community member selects 'Create a Guide'. 3: Community member writes the guide and includes any necessary multimedia. 4: Guide is submitted and published for the community."
+      },
+      {
+        "name": "Upload and View Screenshots",
+        "scenario": "Allow members to upload screenshots and view others' images for games.",
+        "actors": "['Community Member']",
+        "preconditions": "Community member captures screenshots during gameplay.",
+        "steps": "1: Community member accesses their screenshot library. 2: Community member selects screenshots to upload. 3: Screenshots are shared to the game's community hub. 4: Community members view and comment on uploaded screenshots."
+      },
+      {
+        "name": "Follow Popular Game Titles",
+        "scenario": "Allow users to follow their favorite games to receive updates and participate in discussions.",
+        "actors": "['Community Member']",
+        "preconditions": "User has a Steam account and is interested in being updated on popular games.",
+        "steps": "1: User searches for or selects a game in the community hub. 2: User clicks 'Follow'. 3: User receives updates and notifications about the game."
+      },
+      {
+        "name": "Engage in Community Discussions",
+        "scenario": "Enable community members to engage in discussions about their favorite games.",
+        "actors": "['Community Member']",
+        "preconditions": "Community member is logged into Steam and has interest in discussing games.",
+        "steps": "1: Community member navigates to a game's community hub. 2: Community member selects the 'Discussions' section. 3: Community member reads, responds to, or starts new discussion threads."
+      }
+    ]
+  },
+  {
+    "user_story": "As a backend developer, I want to use a full Postgres database with Supabase, so I can build scalable and relational applications easily. Having native support for SQL, triggers, and extensions means I can leverage powerful relational features without the complexity of traditional database setup, which speeds up development and reduces infrastructure overhead.",
+    "usecases": [
+      {
+        "name": "Database Initialization with Supabase",
+        "scenario": "Set up a full Postgres database using Supabase for application development.",
+        "actors": "['Backend Developer']",
+        "preconditions": "Access to Supabase account and Supabase CLI installed.",
+        "steps": "1: Backend Developer logs into Supabase. 2: Backend Developer initializes a new Supabase project. 3: Backend Developer configures Postgres database settings."
+      },
+      {
+        "name": "Building Scalable Applications",
+        "scenario": "Utilize Supabase to build scalable applications with a Postgres database.",
+        "actors": "['Backend Developer']",
+        "preconditions": "Supabase project and database are initialized.",
+        "steps": "1: Backend Developer defines database schema using SQL. 2: Backend Developer writes application logic to interact with the Postgres database. 3: Backend Developer scales application as required using Supabase's infrastructure."
+      },
+      {
+        "name": "Using SQL, Triggers, and Extensions",
+        "scenario": "Leverage SQL, triggers, and extensions in Supabase for advanced data management.",
+        "actors": "['Backend Developer']",
+        "preconditions": "Postgres database is set up in Supabase.",
+        "steps": "1: Backend Developer writes SQL queries for data manipulation. 2: Backend Developer implements triggers for automatic actions on database events. 3: Backend Developer installs and uses extensions for enhanced database capabilities."
+      },
+      {
+        "name": "Reducing Infrastructure Overhead",
+        "scenario": "Employ Supabase features to minimize complexity and overhead in database management.",
+        "actors": "['Backend Developer']",
+        "preconditions": "Supabase database and features are fully operational.",
+        "steps": "1: Backend Developer integrates Supabase with application stack. 2: Backend Developer utilizes Supabase tools for monitoring and maintenance. 3: Backend Developer automates deployment and scaling processes."
+      }
+    ]
+  },
+  {
+    "user_story": "As an app developer, I want to implement secure user sign-ups and logins using Supabase Auth, so I can protect user data with minimal effort. Built-in authentication with support for email, OAuth, and magic links allows me to focus on core features while ensuring robust access control and session management for my users.",
+    "usecases": [
+      {
+        "name": "User Sign-Up with Email",
+        "scenario": "Allow users to create an account using their email address, ensuring secure storage and handling of credentials.",
+        "actors": "['User', 'Supabase Auth System']",
+        "preconditions": "Supabase Auth is configured to handle sign-ups with email.",
+        "steps": "1: User accesses the sign-up form in the application. 2: User enters their email and password. 3: Supabase Auth validates the credentials and stores them securely. 4: User receives a confirmation email to verify their account."
+      },
+      {
+        "name": "User Login with Email",
+        "scenario": "Enable users to log in to the application using their email and password, ensuring secure sessions.",
+        "actors": "['User', 'Supabase Auth System']",
+        "preconditions": "User has previously signed up using their email and password.",
+        "steps": "1: User enters email and password on the login form. 2: Supabase Auth verifies the credentials. 3: User is granted access and a session is created."
+      },
+      {
+        "name": "User Sign-Up/Login with OAuth",
+        "scenario": "Allow users to sign up or log in using OAuth providers like Google or GitHub, providing secure and fast authentication.",
+        "actors": "['User', 'Supabase Auth System', 'OAuth Provider']",
+        "preconditions": "Supabase Auth is configured with OAuth providers.",
+        "steps": "1: User selects the OAuth provider from the sign-up/login options. 2: User is redirected to the OAuth provider's authentication page. 3: User logs in with their provider account. 4: Supabase receives authentication confirmation and creates a session."
+      },
+      {
+        "name": "User Login with Magic Link",
+        "scenario": "Facilitate passwordless login for users via magic links sent to their email addresses.",
+        "actors": "['User', 'Supabase Auth System']",
+        "preconditions": "User has an email account registered with the application.",
+        "steps": "1: User requests a magic link for login. 2: Supabase sends a magic link to the user's email. 3: User clicks the magic link from their email. 4: Supabase verifies the link and logs the user into their account."
+      },
+      {
+        "name": "Session Management",
+        "scenario": "Manage user sessions securely, ensuring users remain authenticated across their application interactions.",
+        "actors": "['User', 'Supabase Auth System']",
+        "preconditions": "User is logged into their account through any supported method.",
+        "steps": "1: Supabase creates a session token upon successful login. 2: Session token is stored securely on the client side. 3: Supabase uses the token to authenticate subsequent requests. 4: Session expiry and renewal options are handled automatically by Supabase."
+      }
+    ]
+  },
+  {
+    "user_story": "As a developer, I want to deploy custom serverless functions, so I can run backend logic without managing infrastructure. Whether it's handling webhooks, processing form data, or performing secure calculations, these functions help me keep my app lightweight and maintainable.",
+    "usecases": [
+      {
+        "name": "Deploy Webhook Handler (serverless-functions-deployment)",
+        "scenario": "Deploy a serverless function to handle incoming webhooks from external services.",
+        "actors": "['Developer']",
+        "preconditions": "Developer has access to the serverless platform and necessary credentials from external services for webhooks.",
+        "steps": "1: Developer writes a custom serverless function to handle specific webhook events. 2: Developer deploys the function to the serverless platform. 3: Developer configures external services to send webhooks to the function URL."
+      },
+      {
+        "name": "Process Form Data (serverless-functions-deployment)",
+        "scenario": "Deploy a serverless function to process and save submitted form data.",
+        "actors": "['Developer']",
+        "preconditions": "Forms are created and a serverless platform is available for deployment.",
+        "steps": "1: Developer writes a serverless function to parse and validate incoming form data. 2: Developer deploys the function to the serverless platform. 3: Application sends form submissions to the function URL. 4: The function processes and saves the data appropriately."
+      },
+      {
+        "name": "Perform Secure Calculations (serverless-functions-deployment)",
+        "scenario": "Deploy a serverless function to perform backend calculations securely.",
+        "actors": "['Developer']",
+        "preconditions": "Secure calculations logic is defined and a serverless platform is available for deployment.",
+        "steps": "1: Developer writes a serverless function containing the secure calculation logic. 2: Developer deploys the function to the serverless platform. 3: Application calls the function when secure calculations are needed. 4: The function returns calculated results safely to the application."
+      }
+    ]
+  },
+  {
+    "user_story": "As a game developer, I want to synchronize multiplayer states in real time, so players experience smooth interactions without delays. Supabase\u2019s real-time capabilities allow me to broadcast game events instantly, providing players with an immersive and responsive gaming experience.",
+    "usecases": [
+      {
+        "name": "Real-Time State Synchronization",
+        "scenario": "Ensure real-time synchronization of multiplayer game states to maintain seamless interactions.",
+        "actors": "['Game Server', 'Supabase Real-Time Service', 'Players']",
+        "preconditions": "Multiplayer game environment is set up, and Supabase real-time capabilities are configured.",
+        "steps": "1: Game server captures player actions. 2: Supabase real-time service broadcasts player actions to all participants. 3: Game clients update state based on received events to ensure smooth interactions."
+      },
+      {
+        "name": "Instant Game Event Broadcasting",
+        "scenario": "Leverage Supabase to broadcast game events instantly, enhancing player experience.",
+        "actors": "['Game Server', 'Supabase Real-Time Service', 'Players']",
+        "preconditions": "Game server is connected to Supabase, capable of handling real-time event broadcasting.",
+        "steps": "1: Game server triggers an event based on specific conditions. 2: Supabase real-time service broadcasts the event to all connected players. 3: Players receive and respond to event updates instantly, experiencing a real-time reaction."
+      },
+      {
+        "name": "Responsive Gameplay Experience",
+        "scenario": "Provide an immersive gaming experience by minimizing delays using Supabase's real-time features.",
+        "actors": "['Game Server', 'Supabase Real-Time Service', 'Players']",
+        "preconditions": "High-speed internet connection is available, and latency is minimized.",
+        "steps": "1: Player actions generate real-time events. 2: Supabase handles the distribution of these events to ensure minimal delay. 3: Players experience responsive gameplay with immediate feedback from their actions."
+      }
+    ]
+  },
+  {
+    "user_story": "As a machine learning engineer, I want to store and search vector embeddings from OpenAI models, so I can build semantic search experiences. Supabase\u2019s support for vector indexes enables me to perform similarity queries efficiently, allowing users to retrieve contextually relevant results in applications like chatbots, recommendation engines, and intelligent search tools.",
+    "usecases": [
+      {
+        "name": "Store Vector Embeddings",
+        "scenario": "Store vector embeddings from OpenAI models into Supabase for efficient retrieval.",
+        "actors": "['Machine Learning Engineer']",
+        "preconditions": "Access to OpenAI models and an active Supabase instance with vector index support.",
+        "steps": "1: Extract vector embeddings using OpenAI models. 2: Connect to the Supabase database. 3: Store the extracted embeddings in Supabase with appropriate indexing for later retrieval."
+      },
+      {
+        "name": "Perform Similarity Queries",
+        "scenario": "Execute similarity queries using vector indexing in Supabase to find contextually relevant data.",
+        "actors": "['Machine Learning Engineer', 'Application User']",
+        "preconditions": "Vector embeddings stored in Supabase with vector index enabled.",
+        "steps": "1: Input query is processed to generate its vector embedding. 2: Execute a similarity query in Supabase using the generated vector. 3: Retrieve results that are contextually similar to the input query."
+      },
+      {
+        "name": "Build Semantic Search Experiences",
+        "scenario": "Develop semantic search functionalities to enhance user experience in applications.",
+        "actors": "['Machine Learning Engineer', 'Application Developer']",
+        "preconditions": "Pre-existing infrastructure to extract and store vector embeddings.",
+        "steps": "1: Integrate vector search capabilities into the application. 2: Implement user-friendly interfaces for search input. 3: Use Supabase's vector indexes to perform efficient similarity searches. 4: Display contextually relevant results to users."
+      },
+      {
+        "name": "Develop Intelligent Chatbot",
+        "scenario": "Leverage vector embeddings for building chatbots that deliver contextually aware responses.",
+        "actors": "['Machine Learning Engineer', 'Chatbot User']",
+        "preconditions": "Chatbot application with access to stored vector embeddings in Supabase.",
+        "steps": "1: Receive a user message and transform it into a vector embedding. 2: Query the Supabase database to find relevant conversation contexts. 3: Formulate responses based on contextually similar embeddings. 4: Deliver responses back to the user."
+      },
+      {
+        "name": "Implement Recommendation Engine",
+        "scenario": "Use vector embeddings to suggest personalized recommendations based on user interactions.",
+        "actors": "['Machine Learning Engineer', 'End User']",
+        "preconditions": "User interactions are tracked and transformed into vector embeddings.",
+        "steps": "1: Collect user interaction data and convert it into vector embeddings. 2: Perform similarity searches in Supabase to find related items or content. 3: Generate a list of recommendations based on search results. 4: Present recommendations to the user."
+      }
+    ]
+  },
+  {
+    "user_story": "As a music lover, I want to explore trending songs by genre, so I can discover the most popular tracks in my favorite styles. Whether it\u2019s hip-hop, electronic, or indie, having access to genre-specific charts helps me stay in tune with what\u2019s fresh and exciting in the music scenes I enjoy most.",
+    "usecases": [
+      {
+        "name": "Explore Trending Songs by Genre",
+        "scenario": "Users can explore the most popular tracks by selecting their favorite genres.",
+        "actors": "['Music Lover']",
+        "preconditions": "A database of trending songs categorized by genre is available.",
+        "steps": "1: User selects a genre from the available list. 2: System retrieves the top trending songs for the selected genre. 3: User browses through the list of trending songs."
+      },
+      {
+        "name": "Access Genre-Specific Charts",
+        "scenario": "Providing users with curated charts based on selected music genres.",
+        "actors": "['Music Lover']",
+        "preconditions": "Genre-specific music charts are updated and available in the system.",
+        "steps": "1: User navigates to the genre-specific charts section. 2: System displays charts for selected genres. 3: User examines chart details to discover popular tracks."
+      },
+      {
+        "name": "Discover New Music in Hip-Hop, Electronic, and Indie Genres",
+        "scenario": "Facilitating discovery of new music in hip-hop, electronic, and indie genres.",
+        "actors": "['Music Lover']",
+        "preconditions": "Trending tracks in hip-hop, electronic, and indie genres are compiled and accessible.",
+        "steps": "1: User selects a genre (hip-hop, electronic, or indie) of interest. 2: System displays a list of trending music tracks for the chosen genre. 3: User explores tracks to listen and discover new music."
+      }
+    ]
+  },
+  {
+    "user_story": "As an independent musician, I want to amplify and distribute my tracks using SoundCloud Pro tools, so I can grow my audience and monetize my music. Features like analytics, promotional tools, and monetization options help me reach more listeners, understand my audience better, and turn my passion into a sustainable career.",
+    "usecases": [
+      {
+        "name": "Track Upload and Distribution",
+        "scenario": "Musician uploads tracks for distribution through SoundCloud Pro, reaching a wider audience.",
+        "actors": "['Musician', 'SoundCloud Platform']",
+        "preconditions": "The musician has a SoundCloud Pro account and tracks ready for upload.",
+        "steps": "1: Musician logs into their SoundCloud Pro account. 2: Musician uploads a new track to the platform. 3: The track is distributed across SoundCloud, making it accessible to all users."
+      },
+      {
+        "name": "Audience Analytics Review",
+        "scenario": "Musician uses SoundCloud Pro analytics tools to understand audience behavior and demographics.",
+        "actors": "['Musician', 'SoundCloud Analytics Tool']",
+        "preconditions": "Music tracks are uploaded and accessible on SoundCloud Pro.",
+        "steps": "1: Musician logs into their SoundCloud Pro account. 2: Musician accesses the analytics dashboard. 3: Musician reviews data on track plays, listener locations, and engagement metrics."
+      },
+      {
+        "name": "Music Promotion via SoundCloud",
+        "scenario": "Musician utilizes SoundCloud promotional tools to boost track visibility and engagement.",
+        "actors": "['Musician', 'SoundCloud Promotional Tool']",
+        "preconditions": "The musician has existing tracks on their SoundCloud Pro account.",
+        "steps": "1: Musician selects tracks to promote. 2: Musician sets promotional parameters such as target audience and budget. 3: SoundCloud platform optimizes promotion to reach a broader audience."
+      },
+      {
+        "name": "Monetization of Music Tracks",
+        "scenario": "Musician activates monetization options on SoundCloud Pro to earn revenue from their tracks.",
+        "actors": "['Musician', 'SoundCloud Monetization Platform']",
+        "preconditions": "The musician is eligible for monetization and has tracks uploaded to SoundCloud Pro.",
+        "steps": "1: Musician logs into their SoundCloud Pro account. 2: Musician accesses the monetization section. 3: Musician activates monetization on selected tracks. 4: Revenue is generated based on track plays and other engagement metrics."
+      }
+    ]
+  },
+  {
+    "user_story": "As a mobile developer, I want to integrate in-app chat using Stream\u2019s Chat SDK, so I can enable real-time conversations within my app. The SDK should provide a smooth developer experience with features like typing indicators, read receipts, and moderation tools out of the box, so I can build a polished messaging interface with minimal effort.",
+    "usecases": [
+      {
+        "name": "In-app Chat Integration",
+        "scenario": "Integrate Stream\u2019s Chat SDK to enable real-time chat within the mobile app.",
+        "actors": "['Mobile Developer', 'End User']",
+        "preconditions": "The mobile application is ready for third-party SDK integration, and the Stream account is set up.",
+        "steps": "1: Mobile developer incorporates Stream\u2019s Chat SDK into the app. 2: Developer configures the SDK for real-time communication. 3: End users are able to access the chat feature within the app."
+      },
+      {
+        "name": "Enable Typing Indicators",
+        "scenario": "Display typing indicators when users are composing messages.",
+        "actors": "['Mobile Developer', 'End User']",
+        "preconditions": "Stream\u2019s Chat SDK is successfully integrated into the app.",
+        "steps": "1: Developer enables typing indicators via SDK configuration. 2: End users see typing indicators while others are composing messages."
+      },
+      {
+        "name": "Display Read Receipts",
+        "scenario": "Show read receipts to indicate when a message has been read by another user.",
+        "actors": "['Mobile Developer', 'End User']",
+        "preconditions": "Stream\u2019s Chat SDK is integrated and configured to support read receipts.",
+        "steps": "1: Developer activates read receipts in the SDK settings. 2: End users see indicators showing when their messages have been read."
+      },
+      {
+        "name": "Implement Moderation Tools",
+        "scenario": "Use built-in moderation tools to manage and moderate chat content.",
+        "actors": "['Mobile Developer', 'Moderators']",
+        "preconditions": "Moderation features are accessible through the Stream\u2019s Chat SDK and properly configured.",
+        "steps": "1: Developer enables moderation tools in the SDK. 2: Moderators use provided tools to monitor and control chat content."
+      },
+      {
+        "name": "Build Polished Messaging Interface",
+        "scenario": "Create a user-friendly and visually appealing chat interface with minimal effort.",
+        "actors": "['Mobile Developer']",
+        "preconditions": "Stream\u2019s Chat SDK offers customizable UI components.",
+        "steps": "1: Developer utilizes SDK\u2019s UI components to design the chat interface. 2: The interface is tested to ensure usability and visual appeal."
+      }
+    ]
+  },
+  {
+    "user_story": "As a telehealth app developer, I want to embed secure video calling, so patients can consult doctors without leaving the app. Reliable video infrastructure combined with encryption and compliance with healthcare data standards ensures that consultations are both private and convenient for patients.",
+    "usecases": [
+      {
+        "name": "Secure Video Consultation Integration",
+        "scenario": "Embedding secure video calling feature into a telehealth app for patient consultations.",
+        "actors": "['Telehealth App Developer', 'Patient', 'Doctor']",
+        "preconditions": "Telehealth app has existing architecture to support integration, and secure video infrastructure is selected with necessary encryption capabilities.",
+        "steps": "1: App developer integrates video calling SDK into the telehealth app. 2: Developer configures end-to-end encryption for video calls within the app. 3: Developer tests video call functionality to ensure reliability and security."
+      },
+      {
+        "name": "Patient Video Consultation",
+        "scenario": "Patients consult doctors through secure video calls without leaving the telehealth app.",
+        "actors": "['Patient', 'Doctor']",
+        "preconditions": "Patients are registered on the telehealth app and have the necessary permissions to access video consultations.",
+        "steps": "1: Patient logs into the telehealth app. 2: Patient requests a video consultation with a doctor. 3: App connects the patient to the doctor via secure video call. 4: Doctor consults the patient through the video call."
+      },
+      {
+        "name": "Data Encryption and Compliance",
+        "scenario": "Ensuring that all video consultations comply with healthcare data standards and employ end-to-end encryption.",
+        "actors": "['Telehealth App Developer', 'Compliance Officer']",
+        "preconditions": "Video infrastructure supports encryption and complies with healthcare data protection standards.",
+        "steps": "1: App developer configures video infrastructure to comply with relevant healthcare standards. 2: Compliance officer reviews encryption settings and compliance protocols. 3: Developer conducts regular audits to ensure ongoing compliance."
+      },
+      {
+        "name": "Doctor Video Consultation",
+        "scenario": "Doctors provide secure and private consultations to patients using the telehealth app's video feature.",
+        "actors": "['Doctor', 'Patient']",
+        "preconditions": "Doctors are registered on the telehealth app and available for video consultations.",
+        "steps": "1: Doctor logs into the telehealth app. 2: Doctor receives a patient consultation request. 3: App connects the doctor to the patient via secure video call. 4: Doctor conducts the consultation."
+      }
+    ]
+  },
+  {
+    "user_story": "As a social media startup, I want to implement a custom activity feed, so users can see personalized content updates. With Stream\u2019s Feeds API, I can control the logic for what shows up in a user\u2019s feed, enabling interactions like likes, comments, and follows that keep users engaged and returning to the platform.",
+    "usecases": [
+      {
+        "name": "Personalized Activity Feed (social-media-custom-feed project)",
+        "scenario": "Implement a personalized activity feed using Stream's Feeds API to display customized content updates.",
+        "actors": "['User', 'Stream Feeds API']",
+        "preconditions": "User is registered and logged into the social media platform. Stream's Feeds API is accessible and properly configured.",
+        "steps": "1: User logs into the platform. 2: System queries Stream's Feeds API for personalized content updates. 3: System displays the personalized feed on the user's dashboard."
+      },
+      {
+        "name": "Content Interaction (social-media-custom-feed project)",
+        "scenario": "Enable interactions like likes, comments, and follows on content in the activity feed.",
+        "actors": "['User', 'Content Item']",
+        "preconditions": "User has access to the personalized feed and can see the content items.",
+        "steps": "1: User views content in their activity feed. 2: User clicks to like, comment, or follow content items. 3: System updates the interaction data and displays the new state."
+      },
+      {
+        "name": "Feed Update Logic Control (social-media-custom-feed project)",
+        "scenario": "Control the logic for updates in a user's activity feed using Stream's Feeds API.",
+        "actors": "['User', 'Stream Feeds API']",
+        "preconditions": "Feeds API integration is functioning, and logic parameters are set.",
+        "steps": "1: Feed logic parameters are defined (e.g., prioritizing friends' activity). 2: System applies defined logic to fetch updates from Stream's Feeds API. 3: User receives a dynamically updated activity feed."
+      }
+    ]
+  },
+  {
+    "user_story": "As a frontend engineer, I want to use pre-built but customizable UI components, so I can speed up development while maintaining branding. These components should be themeable and flexible, allowing me to match our design system and deliver a consistent user experience without building everything from scratch.",
+    "usecases": [
+      {
+        "name": "UI Component Selection and Import",
+        "scenario": "Frontend engineer selects pre-built UI components to incorporate into the project.",
+        "actors": "['Frontend Engineer']",
+        "preconditions": "A library of pre-built UI components is available and accessible by the frontend engineer.",
+        "steps": "1: Frontend engineer browses the library of UI components. 2: Engineer selects the appropriate components for the project. 3: Engineer imports selected components into the project."
+      },
+      {
+        "name": "UI Component Customization",
+        "scenario": "Frontend engineer customizes selected UI components to fit the project's branding.",
+        "actors": "['Frontend Engineer']",
+        "preconditions": "Selected components are imported into the project and contain customizable properties.",
+        "steps": "1: Engineer adjusts the properties of the UI components to meet branding requirements. 2: Engineer applies CSS styles to match the design system. 3: Engineer verifies that the components align with the brand and design guidelines."
+      },
+      {
+        "name": "Theme Management",
+        "scenario": "Frontend engineer applies theme settings to ensure consistent look and feel across the application.",
+        "actors": "['Frontend Engineer']",
+        "preconditions": "A theme management system is available and integrated with the UI components.",
+        "steps": "1: Engineer selects a base theme suitable for the project. 2: Engineer customizes theme settings (colors, fonts, spacings) to match the design system. 3: Engineer applies the theme settings globally across the application."
+      },
+      {
+        "name": "Component Testing and Integration",
+        "scenario": "Frontend engineer tests UI components for performance and compatibility within the application.",
+        "actors": "['Frontend Engineer']",
+        "preconditions": "Customized UI components are incorporated into the application, and testing frameworks are set up.",
+        "steps": "1: Engineer conducts performance testing of the components. 2: Engineer ensures cross-browser and device compatibility for components. 3: Engineer integrates components fully into the application, verifying functionality with existing features."
+      },
+      {
+        "name": "Consistent User Experience Delivery",
+        "scenario": "Frontend engineer ensures a consistent user experience by leveraging customizable and themeable UI components.",
+        "actors": "['Frontend Engineer']",
+        "preconditions": "Customized UI components are fully integrated and theme settings are applied.",
+        "steps": "1: Engineer reviews the user interface for consistency and alignment with design system. 2: Engineer gathers feedback from the design team to ensure design expectations are met. 3: Engineer makes necessary adjustments based on feedback and testing results."
+      }
+    ]
+  },
+  {
+    "user_story": "As a product manager, I want to scale my app to millions of users with Stream\u2019s reliable backend, so I can ensure high availability. I need peace of mind that the infrastructure can handle spikes in traffic and maintain low-latency performance, especially during key product launches or marketing events.",
+    "usecases": [
+      {
+        "name": "Scalable Infrastructure Deployment",
+        "scenario": "Deploy Stream's scalable infrastructure to support millions of users.",
+        "actors": "['Product Manager', 'DevOps Engineer']",
+        "preconditions": "Stream's scalable infrastructure setup is available and ready for deployment.",
+        "steps": "1: Product Manager collaborates with the DevOps Engineer to configure the Stream infrastructure. 2: DevOps Engineer deploys the infrastructure that can handle millions of users. 3: Product Manager reviews the deployment to ensure it's ready for high availability."
+      },
+      {
+        "name": "Traffic Spike Management",
+        "scenario": "Manage spikes in traffic to ensure continuous service availability.",
+        "actors": "['Product Manager', 'DevOps Engineer']",
+        "preconditions": "Stream infrastructure is configured to detect and adapt to traffic spikes.",
+        "steps": "1: Traffic spike occurs during a key event. 2: System automatically scales resources to handle increased load. 3: Product Manager monitors the system stability during the spike."
+      },
+      {
+        "name": "Low-Latency Performance Optimization",
+        "scenario": "Ensure low-latency performance during high traffic.",
+        "actors": "['Product Manager', 'Performance Engineer']",
+        "preconditions": "Performance testing tools are integrated with Stream's infrastructure.",
+        "steps": "1: Performance Engineer runs tests simulating high traffic scenarios. 2: System optimization tweaks are applied to reduce latency. 3: Product Manager reviews test results to confirm low-latency is maintained."
+      },
+      {
+        "name": "Reliability Assurance for Product Launches",
+        "scenario": "Ensure system reliability during product launches and marketing events.",
+        "actors": "['Product Manager', 'DevOps Engineer', 'Marketing Team']",
+        "preconditions": "System is prepared and tested for high availability during specific events.",
+        "steps": "1: Product Manager coordinates with the Marketing Team regarding expected traffic. 2: DevOps Engineer sets up monitoring and alert systems. 3: During launch, Product Manager and DevOps Engineer monitor system performance and resolve any issues promptly."
+      }
+    ]
+  },
+  {
+    "user_story": "As a cross-platform developer, I want to use SDKs for React, Flutter, Android, and iOS, so I can deliver a consistent chat experience everywhere. Unified APIs and consistent behavior across platforms help reduce development time and ensure feature parity for all users regardless of device.",
+    "usecases": [
+      {
+        "name": "Implement Chat Feature with SDKs",
+        "scenario": "Develop a chat feature using SDKs across multiple platforms to ensure consistent user experience.",
+        "actors": "['Cross-Platform Developer']",
+        "preconditions": "SDKs for React, Flutter, Android, and iOS are available and documented.",
+        "steps": "1: Cross-platform developer reviews SDK documentation for React, Flutter, Android, and iOS. 2: Developer integrates chat SDK into each platform's codebase. 3: Developer ensures the chat feature behaves consistently across all platforms."
+      },
+      {
+        "name": "Ensure Unified APIs Across Platforms",
+        "scenario": "Utilize unified APIs to maintain consistency across different platform implementations.",
+        "actors": "['Cross-Platform Developer']",
+        "preconditions": "Unified APIs are available for use across the React, Flutter, Android, and iOS SDKs.",
+        "steps": "1: Developer checks API documentation for consistency. 2: Developer implements chat features using the unified API. 3: Developer tests to ensure consistent behavior across platforms."
+      },
+      {
+        "name": "Reduce Development Time with Consistent SDKs",
+        "scenario": "Leverage SDKs to minimize development time and maintain feature parity across platforms.",
+        "actors": "['Cross-Platform Developer']",
+        "preconditions": "Consistent SDKs are provided for all targeted platforms.",
+        "steps": "1: Developer uses the SDKs to accelerate the development process. 2: Developer verifies that features are equally implemented across all platforms. 3: Developer conducts tests to ensure feature parity and consistent user experience."
+      },
+      {
+        "name": "Cross-Platform Feature Testing",
+        "scenario": "Test chat functionalities across different platforms to ensure consistent user experience.",
+        "actors": "['Cross-Platform Developer', 'Quality Assurance Tester']",
+        "preconditions": "Chat SDKs are implemented in the codebase for all platforms.",
+        "steps": "1: Developer and QA tester plan testing across each platform. 2: Execute tests to compare functionality on React, Flutter, Android, and iOS. 3: Address discrepancies to ensure uniform chat experience."
+      }
+    ]
+  },
+  {
+    "user_story": "As an AI product owner, I want to connect ChatGPT with Stream Chat, so users can interact with bots in a natural way inside our app. Integrating conversational AI within the chat flow adds value to users by enabling instant help, task automation, and intelligent conversation handling in real time.",
+    "usecases": [
+      {
+        "name": "Integrate ChatGPT with Stream Chat (Chat Integration Project)",
+        "scenario": "Enable integration of ChatGPT with Stream Chat for real-time user interaction within the app.",
+        "actors": "['AI Product Owner', 'Developer', 'End User']",
+        "preconditions": "Stream Chat API and ChatGPT API are available and accessible for integration.",
+        "steps": "1: Developer connects ChatGPT API with Stream Chat. 2: End users initiate conversation in the app. 3: ChatGPT processes the conversation in real-time within the Stream Chat. 4: Responses from ChatGPT are displayed to the user within the chat flow."
+      },
+      {
+        "name": "Provide Instant Help (Chat Integration Project)",
+        "scenario": "Offer immediate assistance to users through ChatGPT when they encounter questions or issues.",
+        "actors": "['AI Product Owner', 'Developer', 'End User']",
+        "preconditions": "ChatGPT is integrated with Stream Chat and configured to recognize help-related queries.",
+        "steps": "1: User types a help-related query in the chat. 2: ChatGPT identifies and processes the query. 3: ChatGPT provides an instant response with help instructions or solutions. 4: User receives and acts on the information provided."
+      },
+      {
+        "name": "Enable Task Automation (Chat Integration Project)",
+        "scenario": "Use ChatGPT to automate repetitive tasks and streamline processes for users.",
+        "actors": "['AI Product Owner', 'Developer', 'End User']",
+        "preconditions": "Tasks amenable to automation are identified and implemented within ChatGPT capabilities.",
+        "steps": "1: User enters a task request in the chat. 2: ChatGPT interprets the request and initiates the automated task. 3: The task is executed, and results or confirmations are sent back to the user in the chat."
+      },
+      {
+        "name": "Intelligent Conversation Handling (Chat Integration Project)",
+        "scenario": "Enhance user experience by using ChatGPT for nuanced and context-aware interaction handling.",
+        "actors": "['AI Product Owner', 'Developer', 'End User']",
+        "preconditions": "ChatGPT is trained with a diverse dataset for understanding complex user interactions.",
+        "steps": "1: User engages in a conversation that requires contextual understanding. 2: ChatGPT processes the conversation context and intent. 3: ChatGPT provides intelligent responses, adapting to the conversation flow. 4: User experiences seamless and natural conversation within the app."
+      }
+    ]
+  },
+  {
+    "user_story": "As a patient managing chronic conditions, I want to upload my prescription, search for all prescribed and over-the-counter medicines, add them to my cart, and schedule recurring deliveries, so that I can consistently receive authentic medications without missing a dose or visiting a pharmacy.",
+    "usecases": [
+      {
+        "name": "Upload Prescription",
+        "scenario": "Allow the patient to upload a digital copy of their prescription for verification and processing.",
+        "actors": "['Patient', 'System']",
+        "preconditions": "Patient has a valid account and a digital copy of the prescription.",
+        "steps": "1: Patient logs into the system.\n2: Patient navigates to the upload section and selects the prescription file.\n3: System verifies the format and content of the prescription.\n4: System confirms successful upload."
+      },
+      {
+        "name": "Search Medications",
+        "scenario": "Enable patients to search for prescribed and over-the-counter medicines available in the system.",
+        "actors": "['Patient', 'Medication Database']",
+        "preconditions": "Prescription details or specific medication names are verified and available in the system.",
+        "steps": "1: Patient enters medication name or prescription details in the search bar.\n2: System queries the medication database.\n3: System displays a list of matching medications to the patient."
+      },
+      {
+        "name": "Add Medications to Cart",
+        "scenario": "Allow patients to add selected medications to their shopping cart for purchase.",
+        "actors": "['Patient', 'System']",
+        "preconditions": "Patient is logged in and has an active session; medications are available in stock.",
+        "steps": "1: Patient selects desired medications from a search result list.\n2: Patient adds selected medications to the cart.\n3: System updates the cart with chosen items."
+      },
+      {
+        "name": "Schedule Recurring Deliveries",
+        "scenario": "Enable patients to schedule regular delivery of their medications to ensure consistent access.",
+        "actors": "['Patient', 'System', 'Delivery Service']",
+        "preconditions": "Medications are added to the cart, and the patient has provided payment and shipping information.",
+        "steps": "1: Patient navigates to the delivery scheduling section.\n2: Patient selects delivery intervals (e.g., weekly, monthly).\n3: Patient confirms the schedule.\n4: System saves the delivery schedule and sends confirmation to the delivery service."
+      }
+    ]
+  },
+  {
+    "user_story": "As a wellness-focused user, I want to browse, filter, and buy health, beauty, and personal care products curated for my needs, so that I can maintain my lifestyle through trusted brands delivered conveniently.",
+    "usecases": [
+      {
+        "name": "Browse Products by Category",
+        "scenario": "Allow users to browse products categorized under health, beauty, and personal care.",
+        "actors": "['Wellness-focused User']",
+        "preconditions": "The platform is accessible online and categorized listings are available.",
+        "steps": "1: User accesses the online platform. 2: User navigates to the desired category (health, beauty, or personal care). 3: User browses through listed products under the chosen category."
+      },
+      {
+        "name": "Filter Products by Specific Needs",
+        "scenario": "Enable users to filter products based on specific health or beauty needs.",
+        "actors": "['Wellness-focused User']",
+        "preconditions": "Filtering options are implemented for product listings based on predefined criteria.",
+        "steps": "1: User selects the filter option on the product listing page. 2: User chooses specific needs or preferences (e.g., organic, vegan, anti-aging). 3: The platform displays filtered products matching the user's criteria."
+      },
+      {
+        "name": "Purchase Products",
+        "scenario": "Facilitate the purchase of selected health, beauty, and personal care products.",
+        "actors": "['Wellness-focused User']",
+        "preconditions": "User is logged into their account and has valid payment options registered.",
+        "steps": "1: User selects products to purchase. 2: User adds products to the shopping cart. 3: User reviews the cart and proceeds to checkout. 4: User enters payment details and confirms purchase. 5: Order confirmation is displayed with delivery details."
+      },
+      {
+        "name": "View Product Details",
+        "scenario": "Provide detailed information on each product, including ingredients and usage instructions.",
+        "actors": "['Wellness-focused User']",
+        "preconditions": "Product detail pages are populated with comprehensive information.",
+        "steps": "1: User selects a product to view details. 2: Product detail page displays, showing ingredients, usage, and reviews. 3: User reads through the details to make informed purchasing decisions."
+      },
+      {
+        "name": "Curated Product Recommendations",
+        "scenario": "Provide personalized product recommendations based on user preferences and browsing history.",
+        "actors": "['Wellness-focused User']",
+        "preconditions": "User preferences and browsing history are recorded and analyzed for recommendations.",
+        "steps": "1: User logs into their account. 2: Platform analyzes user data to curate recommendations. 3: Recommended products are displayed prominently on the user\u2019s landing page."
+      }
+    ]
+  },
+  {
+    "user_story": "As a busy professional, I want to book diagnostic lab tests that offer sample collection at my home, view reports digitally, and store them securely in my health record, so that I can monitor my health without going to a hospital.",
+    "usecases": [
+      {
+        "name": "Book Home Sample Collection",
+        "scenario": "Facilitating the booking of diagnostic lab tests with home sample collection for users.",
+        "actors": "['User', 'Mobile App', 'Lab Technician']",
+        "preconditions": "User has installed the mobile app and logged into their account.",
+        "steps": "1: User selects the desired diagnostic lab test within the app. 2: User schedules a convenient time for home sample collection. 3: Lab technician receives the booking details and confirms appointment."
+      },
+      {
+        "name": "View Digital Lab Reports",
+        "scenario": "Providing users with access to view their lab test reports digitally.",
+        "actors": "['User', 'Mobile App', 'Diagnostic Lab System']",
+        "preconditions": "Lab test results are processed and available in the diagnostic lab system.",
+        "steps": "1: Diagnostic lab system uploads the report to the user's account on the app. 2: User receives a notification about the availability of their lab report. 3: User logs into the app and views the digital lab report."
+      },
+      {
+        "name": "Store Reports in Health Record",
+        "scenario": "Ensuring that users can securely store their lab test reports in their health record for future reference.",
+        "actors": "['User', 'Mobile App', 'Health Record System']",
+        "preconditions": "User's health record is set up within the app or connected to the app.",
+        "steps": "1: User opts to store the lab report in their health record from the app interface. 2: The app securely stores the report in the user's health record system. 3: User can access and review their stored reports anytime through the app."
+      }
+    ]
+  },
+  {
+    "user_story": "As a pet owner, I want to order veterinary medicines, schedule vaccinations, and buy pet food and care products from a dedicated section, so that I can keep my pets healthy with verified veterinary support.",
+    "usecases": [
+      {
+        "name": "Order Veterinary Medicines",
+        "scenario": "Allow pet owners to order veterinary medicines from a dedicated section of the platform.",
+        "actors": "['Pet Owner']",
+        "preconditions": "Pet owner has an account on the platform and veterinary medicines are listed in the system.",
+        "steps": "1: Pet owner logs into the platform. 2: Pet owner navigates to the veterinary medicines section. 3: Pet owner selects the required medicines. 4: Pet owner places the order and chooses payment method. 5: System processes the order and confirms it to the pet owner."
+      },
+      {
+        "name": "Schedule Vaccinations",
+        "scenario": "Enable pet owners to schedule vaccinations for their pets.",
+        "actors": "['Pet Owner', 'Veterinarian']",
+        "preconditions": "Pet owner has an account on the platform and the pet's details are registered in the system.",
+        "steps": "1: Pet owner logs into the platform. 2: Pet owner navigates to the vaccination scheduling section. 3: Pet owner selects the type of vaccination needed. 4: Pet owner chooses a date and time from the available slots. 5: System confirms the vaccination appointment with the veterinarian."
+      },
+      {
+        "name": "Buy Pet Food and Care Products",
+        "scenario": "Allow pet owners to purchase pet food and care products from a dedicated section.",
+        "actors": "['Pet Owner']",
+        "preconditions": "Pet owner has an account on the platform and food and care products are listed in the system.",
+        "steps": "1: Pet owner logs into the platform. 2: Pet owner navigates to the pet food and care products section. 3: Pet owner browses and selects the products needed. 4: Pet owner places the order and chooses payment method. 5: System processes the order and confirms it to the pet owner."
+      },
+      {
+        "name": "Access Verified Veterinary Support",
+        "scenario": "Provide pet owners with access to verified veterinary support for their pets' health needs.",
+        "actors": "['Pet Owner', 'Veterinarian']",
+        "preconditions": "Pet owner has an account on the platform and verified veterinarians are registered with the system.",
+        "steps": "1: Pet owner logs into the platform. 2: Pet owner navigates to the veterinary support section. 3: Pet owner selects the type of support needed. 4: Pet owner is matched with a verified veterinarian for consultation. 5: System schedules a consultation or provides answers to questions, ensuring verified support."
+      }
+    ]
+  },
+  {
+    "user_story": "As an elderly or non-tech-savvy user who struggles with using mobile apps or websites, I want to place my medicine order simply by sending a message or photo of my prescription via WhatsApp, so that I can get the medicines I need without dealing with complex app interfaces or digital forms.",
+    "usecases": [
+      {
+        "name": "Receive Prescription via WhatsApp",
+        "scenario": "Allow users to send a prescription by message or photo via WhatsApp to place a medicine order.",
+        "actors": "['User', 'Pharmacy Assistant', 'WhatsApp']",
+        "preconditions": "User has access to WhatsApp and a valid prescription image or message ready to send.",
+        "steps": "1: User captures a photo of the prescription or types a message with prescription details. 2: User sends the photo or message to the pharmacy's designated WhatsApp number. 3: Pharmacy assistant receives the message/photo and verifies the prescription details."
+      },
+      {
+        "name": "Process Order from Prescription",
+        "scenario": "Pharmacy processes the medicine order received via WhatsApp and confirms the order with the user.",
+        "actors": "['Pharmacy Assistant', 'User']",
+        "preconditions": "Pharmacy assistant has received a valid prescription via WhatsApp.",
+        "steps": "1: Pharmacy assistant reviews the prescription details sent via WhatsApp. 2: Pharmacy assistant verifies medicine availability and prepares the order. 3: Pharmacy assistant sends an order confirmation and expected delivery time to the user via WhatsApp."
+      },
+      {
+        "name": "Deliver Medicines",
+        "scenario": "Ensure the delivery of medicines as ordered through the WhatsApp prescription process.",
+        "actors": "['Delivery Staff', 'User', 'Pharmacy Assistant']",
+        "preconditions": "Order has been confirmed and medicines are ready for delivery.",
+        "steps": "1: Pharmacy assistant hands over the prepared order to delivery staff. 2: Delivery staff delivers the medicine order to the user. 3: User receives the order and provides confirmation of receipt."
+      }
+    ]
   }
 ]

@@ -1,0 +1,917 @@
+[
+  {
+    "user_story": "A student registered in the LearnPro platform may enroll in one or more courses offered in a given semester. Each course has specific prerequisites and enrollment limits. Upon selecting a course, the system shall verify whether the student has satisfied all prerequisites. If not, the system shall prompt the student to either choose another course or request advisor approval. The student must select a preferred schedule from available options. If all slots are full, the system shall place the student on a waitlist and notify them of their position. After successful enrollment, the student shall gain access to the course dashboard, which includes lecture videos, reading materials, and assignment portals. The student must submit assignments before due dates. Late submissions are either rejected or flagged, depending on course policy. The system shall track student progress and notify them weekly about pending tasks and upcoming exams. At the end of the course, students may provide anonymous feedback, which is reviewed by academic coordinators.",
+    "usecases": [
+      {
+        "name": "Enroll in Course",
+        "scenario": "A student enrolls in a course for a given semester.",
+        "actors": "['Student']",
+        "preconditions": "Student is registered on the LearnPro platform.",
+        "steps": "1: Student navigates to the course enrollment section. 2: Student selects a course to enroll in. 3: System verifies if prerequisites are satisfied. 4: System checks for available enrollment slots. 5: System confirms enrollment if all conditions are met."
+      },
+      {
+        "name": "Verify Course Prerequisites",
+        "scenario": "System verifies whether a student has satisfied all prerequisites for a course.",
+        "actors": "['System']",
+        "preconditions": "Student has selected a course to enroll in.",
+        "steps": "1: System retrieves student's completed courses. 2: System compares prerequisites of selected course with student's course history. 3: System confirms prerequisite satisfaction or alerts the student of any deficiencies."
+      },
+      {
+        "name": "Handle Enrollment Limit",
+        "scenario": "System handles situations when course enrollment limits are reached.",
+        "actors": "['System']",
+        "preconditions": "Student has selected a course, and prerequisites are satisfied.",
+        "steps": "1: System checks the enrollment limit for the selected course. 2: If enrollment limit is reached, system places student on a waitlist. 3: System notifies student of their waitlist position."
+      },
+      {
+        "name": "Select Course Schedule",
+        "scenario": "Student selects a preferred schedule for the enrolled course.",
+        "actors": "['Student']",
+        "preconditions": "Student is enrolling in a course with multiple schedule options.",
+        "steps": "1: Student views available schedule options for the course. 2: Student selects a preferred schedule. 3: System confirms schedule selection if slots are available."
+      },
+      {
+        "name": "Access Course Dashboard",
+        "scenario": "Student gains access to the course dashboard after successful enrollment.",
+        "actors": "['Student']",
+        "preconditions": "Student is successfully enrolled in the course.",
+        "steps": "1: Student logs into the LearnPro platform. 2: Student navigates to 'My Courses'. 3: System provides access to the course dashboard with lectures, readings, and assignments."
+      },
+      {
+        "name": "Submit Assignment",
+        "scenario": "Student submits assignments through the course dashboard.",
+        "actors": "['Student']",
+        "preconditions": "Student is enrolled in the course and has access to the dashboard.",
+        "steps": "1: Student accesses the assignment portal on the course dashboard. 2: Student uploads the completed assignment by the due date. 3: System confirms submission and records the date and time."
+      },
+      {
+        "name": "Manage Late Assignment Submissions",
+        "scenario": "System handles late assignment submissions according to course policy.",
+        "actors": "['System']",
+        "preconditions": "Assignment is submitted after the due date.",
+        "steps": "1: System checks submission date against the due date. 2: System either rejects or flags the late submission based on course policy. 3: System notifies student of the status of the submission."
+      },
+      {
+        "name": "Track Student Progress",
+        "scenario": "System tracks and notifies students of their course progress and pending tasks.",
+        "actors": "['System']",
+        "preconditions": "Student is enrolled in a course.",
+        "steps": "1: System monitors student progress metrics. 2: System sends weekly notifications about pending tasks and upcoming exams."
+      },
+      {
+        "name": "Provide Course Feedback",
+        "scenario": "Student provides anonymous feedback for the completed course.",
+        "actors": "['Student']",
+        "preconditions": "Course has ended.",
+        "steps": "1: Student accesses feedback form from the course dashboard. 2: Student submits anonymous feedback on the course. 3: System collects and forwards feedback to academic coordinators."
+      }
+    ]
+  },
+  {
+    "user_story": "An employee logged into the LeaveTrack portal shall be able to submit a leave request by selecting the type of leave (e.g., casual, sick, or earned), start date, end date, and reason. The system shall verify the employee's leave balance before accepting the request. If the requested leave exceeds the available balance, the system shall notify the employee and either allow adjustment of the leave period or cancel the request. Once submitted, the request shall be routed to the appropriate manager for approval. The manager shall receive a notification and can approve, reject, or request clarification. The employee shall be updated on the decision via email and system alerts. If approved, the leave record is updated in the employee's profile and marked on the team calendar. The system must also allow employees to view past leave history and current leave balance in real time.",
+    "usecases": [
+      {
+        "name": "Employee Login",
+        "scenario": "An employee logs into the LeaveTrack portal using secure credentials.",
+        "actors": "['Employee']",
+        "preconditions": "Employee is registered and has valid login credentials.",
+        "steps": "1: Employee navigates to the LeaveTrack login page. 2: Employee enters username and password. 3: System verifies credentials and grants access upon successful verification."
+      },
+      {
+        "name": "Submit Leave Request",
+        "scenario": "An employee submits a leave request by selecting leave type, start date, end date, and reason.",
+        "actors": "['Employee']",
+        "preconditions": "Employee is logged into the LeaveTrack portal.",
+        "steps": "1: Employee navigates to the leave request page. 2: Employee selects leave type (e.g., casual, sick, earned). 3: Employee inputs start date, end date, and reason for leave. 4: Employee submits the leave request."
+      },
+      {
+        "name": "Verify Leave Balance",
+        "scenario": "The system verifies the employee's leave balance before processing the leave request.",
+        "actors": "['System']",
+        "preconditions": "Employee has submitted a leave request.",
+        "steps": "1: System checks the employee's leave balance for the requested leave type. 2: If balance is sufficient, proceed to route request. 3: If balance is insufficient, notify employee with options to adjust or cancel."
+      },
+      {
+        "name": "Route Leave Request for Approval",
+        "scenario": "The submitted leave request is routed to the appropriate manager for approval.",
+        "actors": "['System']",
+        "preconditions": "Employee's leave request is submitted with sufficient leave balance.",
+        "steps": "1: System identifies the appropriate manager for approval. 2: System routes the leave request to the manager."
+      },
+      {
+        "name": "Manager Reviews Leave Request",
+        "scenario": "The manager reviews the leave request and decides to approve, reject, or request clarification.",
+        "actors": "['Manager']",
+        "preconditions": "Manager has received the leave request notification.",
+        "steps": "1: Manager receives a notification of a new leave request. 2: Manager reviews the details of the leave request. 3: Manager decides to approve, reject, or request clarification."
+      },
+      {
+        "name": "Employee Receives Leave Decision",
+        "scenario": "The employee receives notification of the manager's decision on their leave request.",
+        "actors": "['Employee', 'System']",
+        "preconditions": "Manager has made a decision on the leave request.",
+        "steps": "1: System sends an email and system alert to the employee. 2: Employee views the decision notification."
+      },
+      {
+        "name": "Update Leave Records",
+        "scenario": "If leave is approved, the system updates the employee's leave record and team calendar.",
+        "actors": "['System']",
+        "preconditions": "Leave request has been approved by the manager.",
+        "steps": "1: System updates the leave balance and record in the employee's profile. 2: System marks the approved leave period on the team calendar."
+      },
+      {
+        "name": "View Leave History and Balance",
+        "scenario": "Employee views past leave history and current leave balance in real time.",
+        "actors": "['Employee']",
+        "preconditions": "Employee is logged into the LeaveTrack portal.",
+        "steps": "1: Employee navigates to the view leave history and balance section. 2: System displays the employee's past leave history and current leave balances."
+      }
+    ]
+  },
+  {
+    "user_story": "A user logged into the SmartHome controller application shall be able to add, remove, and configure smart devices within their household. Devices must first be discovered via Bluetooth or Wi-Fi scan. Once found, the system shall prompt the user to name the device and assign it to a room. If the device requires firmware updates, the system shall notify the user and block further configuration until the update is completed. Each device can be assigned custom routines or automated rules, such as turning on lights at sunset or adjusting the thermostat when the user leaves the house. The system shall allow manual overrides for any automated routine. If a device goes offline, the user shall receive an alert and a troubleshooting guide. Devices can be shared with household members, who must accept access via their own authenticated accounts.",
+    "usecases": [
+      {
+        "name": "Login to SmartHome Controller",
+        "scenario": "A user logs into the SmartHome controller application using secure credentials.",
+        "actors": "User",
+        "preconditions": "User has valid login credentials.",
+        "steps": "1: User opens the SmartHome controller app. 2: User enters username and password. 3: System verifies credentials and grants access upon successful verification."
+      },
+      {
+        "name": "Discover Devices",
+        "scenario": "User discovers smart devices via Bluetooth or Wi-Fi scan.",
+        "actors": "User",
+        "preconditions": "User is logged into the SmartHome application.",
+        "steps": "1: User initiates a device discovery scan through Bluetooth or Wi-Fi. 2: System scans and lists all available devices."
+      },
+      {
+        "name": "Add New Device",
+        "scenario": "User adds a new discovered device to the SmartHome application.",
+        "actors": "User",
+        "preconditions": "Devices have been discovered via scan.",
+        "steps": "1: User selects a device from the discovered list. 2: System prompts user to name the device and assign it to a room. 3: User names the device and assigns it to a room. 4: System adds the device to the user's account."
+      },
+      {
+        "name": "Remove Device",
+        "scenario": "User removes a device from the SmartHome application.",
+        "actors": "User",
+        "preconditions": "Device is added to the user's account.",
+        "steps": "1: User navigates to the list of added devices. 2: User selects a device to remove. 3: System confirms removal and deletes the device from the user's account."
+      },
+      {
+        "name": "Configure Device",
+        "scenario": "User configures a device's settings and automation rules.",
+        "actors": "User",
+        "preconditions": "Device is added to the user's account and is online.",
+        "steps": "1: User selects a device to configure. 2: System presents configuration options. 3: User adjusts settings and assigns automation rules."
+      },
+      {
+        "name": "Update Device Firmware",
+        "scenario": "User updates device firmware when notified by the system.",
+        "actors": "User",
+        "preconditions": "Device requires a firmware update.",
+        "steps": "1: System notifies user of a required firmware update. 2: User initiates the update process. 3: System downloads and installs the firmware update. 4: System blocks further configuration until the update is completed. 5: System confirms update completion."
+      },
+      {
+        "name": "Manage Device Offline Alert",
+        "scenario": "User receives an alert when a device goes offline and accesses troubleshooting.",
+        "actors": "User",
+        "preconditions": "Device is offline.",
+        "steps": "1: System detects a device is offline. 2: System sends an alert to the user. 3: User accesses the alert and reviews the troubleshooting guide."
+      },
+      {
+        "name": "Share Device Access",
+        "scenario": "User shares device access with household members.",
+        "actors": "User",
+        "preconditions": "Device is added to the user's account.",
+        "steps": "1: User selects a device to share. 2: User specifies household member's account. 3: System sends an access request to the household member. 4: Household member accepts the access request."
+      },
+      {
+        "name": "Assign Custom Routines or rules",
+        "scenario": "User assigns custom routines or automated rules to a device.",
+        "actors": "User",
+        "preconditions": "Device is added to the user's account and is online.",
+        "steps": "1: User selects a device to assign routines. 2: System presents options for custom routines (e.g., turn on lights at sunset). 3: User configures the routine settings. 4: System saves the routine and applies it to the device."
+      },
+      {
+        "name": "Manual Override Automation",
+        "scenario": "User manually overrides an automated device routine.",
+        "actors": "User",
+        "preconditions": "Device has an active automation rule.",
+        "steps": "1: User accesses the device settings. 2: User initiates a manual override of the automation rule. 3: System executes the manual command, temporarily disabling the automation."
+      }
+    ]
+  },
+  {
+    "user_story": "A warehouse staff member using the InvTrack system shall be able to receive, log, and dispatch items using a handheld barcode scanner. Each item must have a unique SKU and location tag. Upon receiving goods, the system shall prompt the user to scan the barcode, verify the quantity, and assign a storage location. If discrepancies are found between the shipment and the purchase order, the system shall notify the supervisor and mark the batch for review. During dispatch, the system shall verify stock availability before generating a pick list. If stock is insufficient, an out-of-stock alert is triggered, and the system offers options to place a backorder or reroute from another warehouse. Each inventory movement must be logged with a timestamp, responsible employee ID, and quantity moved. The system shall also generate daily inventory reports and alert the manager when any item reaches its reorder threshold.",
+    "usecases": [
+      {
+        "name": "Receive Goods",
+        "scenario": "Warehouse staff receives goods using the InvTrack system.",
+        "actors": "['Warehouse Staff']",
+        "preconditions": "Goods have arrived at the warehouse.",
+        "steps": "1: Staff scans the barcode of the received goods.\n2: System verifies and logs the SKUs.\n3: System prompts to verify the quantity and assign a storage location.\n4: Staff confirms the quantity and assigns location."
+      },
+      {
+        "name": "Log Discrepancy Alert",
+        "scenario": "System alerts supervisor if discrepancies between shipment and purchase order are found.",
+        "actors": "['System', 'Supervisor']",
+        "preconditions": "Discrepancy in quantity or items is detected.",
+        "steps": "1: System compares received items with purchase order.\n2: System identifies a discrepancy.\n3: System notifies the supervisor for review.\n4: System marks the batch for further inspection."
+      },
+      {
+        "name": "Dispatch Items",
+        "scenario": "Warehouse staff dispatches items using the InvTrack system.",
+        "actors": "['Warehouse Staff']",
+        "preconditions": "Items are available for dispatch.",
+        "steps": "1: Staff scans items for dispatch.\n2: System verifies stock availability.\n3: System generates a pick list.\n4: Staff picks items for dispatch."
+      },
+      {
+        "name": "Trigger Out-of-Stock Alert",
+        "scenario": "System triggers an alert if there is insufficient stock during dispatch.",
+        "actors": "['System', 'Warehouse Staff']",
+        "preconditions": "An item is out of stock or insufficient quantity.",
+        "steps": "1: System checks stock levels after item scanning.\n2: System identifies insufficient stock.\n3: System triggers an out-of-stock alert.\n4: System offers options for backorder or reroute from another warehouse."
+      },
+      {
+        "name": "Log Inventory Movement",
+        "scenario": "Each inventory movement is logged with details in the InvTrack system.",
+        "actors": "['System']",
+        "preconditions": "Inventory movement occurs (receiving, dispatching).",
+        "steps": "1: System logs SKU details with timestamp.\n2: System logs responsible employee ID.\n3: System records the quantity moved."
+      },
+      {
+        "name": "Generate Daily Inventory Reports",
+        "scenario": "System generates daily inventory reports for the warehouse manager.",
+        "actors": "['System', 'Manager']",
+        "preconditions": "Daily reporting time is reached.",
+        "steps": "1: System compiles inventory data.\n2: System generates the daily report.\n3: System sends report to the manager."
+      },
+      {
+        "name": "Alert for Reorder Threshold",
+        "scenario": "System alerts the manager when inventory reaches the reorder threshold.",
+        "actors": "['System', 'Manager']",
+        "preconditions": "An item reaches its reorder threshold.",
+        "steps": "1: System monitors inventory levels.\n2: System detects an item at reorder threshold.\n3: System sends an alert to the manager."
+      }
+    ]
+  },
+  {
+    "user_story": "A traveler logged into the SkyConnect booking platform shall be able to search for flights using origin, destination, and travel date. Once results are displayed, the traveler may filter by airline, price, and duration. After selecting a flight, the system shall request passenger details, including identification and contact information. The traveler must choose a payment method and confirm the booking. Upon successful payment, the system shall issue an electronic ticket and booking reference. Within 24 hours of departure, the system shall allow check-in by confirming identity and offering seat selection. If preferred seats are unavailable, the system shall suggest alternatives or offer paid upgrades. Upon check-in, the boarding pass shall be sent via email and made available for download. For international flights, the system shall verify passport and visa requirements before confirming check-in.",
+    "usecases": [
+      {
+        "name": "Traveler Login",
+        "scenario": "Traveler logs into the SkyConnect booking platform to initiate the booking process.",
+        "actors": "Traveler",
+        "preconditions": "User has an active account and valid login credentials.",
+        "steps": "1. Traveler navigates to the SkyConnect login page. 2. Traveler inputs username and password. 3. System verifies credentials and grants access."
+      },
+      {
+        "name": "Search Flights",
+        "scenario": "Traveler searches for flights based on origin, destination, and travel date.",
+        "actors": "Traveler",
+        "preconditions": "Traveler is logged into the SkyConnect platform.",
+        "steps": "1. Traveler selects origin, destination, and travel date. 2. System displays available flight options."
+      },
+      {
+        "name": "Filter Flight Results",
+        "scenario": "Traveler filters flight search results by airline, price, and duration.",
+        "actors": "Traveler",
+        "preconditions": "Flight search results are displayed on the platform.",
+        "steps": "1. Traveler applies filters such as airline, price, and duration. 2. System updates the search results according to the selected filters."
+      },
+      {
+        "name": "Select Flight",
+        "scenario": "Traveler selects a flight from search results for booking.",
+        "actors": "Traveler",
+        "preconditions": "Filtered flight results are displayed.",
+        "steps": "1. Traveler selects the desired flight. 2. System prompts for passenger details."
+      },
+      {
+        "name": "Enter Passenger Details",
+        "scenario": "Traveler enters passenger details including identification and contact information.",
+        "actors": "Traveler",
+        "preconditions": "Traveler has selected a flight for booking.",
+        "steps": "1. Traveler inputs passenger identification and contact information. 2. System verifies the entered information."
+      },
+      {
+        "name": "Choose Payment Method",
+        "scenario": "Traveler selects a payment method to confirm the flight booking.",
+        "actors": "Traveler",
+        "preconditions": "Passenger details have been entered and verified.",
+        "steps": "1. Traveler chooses a preferred payment method. 2. System processes the chosen payment method."
+      },
+      {
+        "name": "Confirm Booking",
+        "scenario": "System confirms the booking after successful payment and issues an electronic ticket.",
+        "actors": "Traveler, System",
+        "preconditions": "Payment is successfully processed.",
+        "steps": "1. System confirms booking and generates a booking reference. 2. System sends an electronic ticket to the traveler."
+      },
+      {
+        "name": "Check-in Confirmation",
+        "scenario": "Traveler checks in within 24 hours of flight departure, confirming identity and selecting a seat.",
+        "actors": "Traveler",
+        "preconditions": "Within 24 hours of departure and traveler has a valid booking.",
+        "steps": "1. Traveler initiates the check-in process. 2. System confirms traveler identity and offers seat selection options."
+      },
+      {
+        "name": "Handle Seat Preferences",
+        "scenario": "System addresses unavailable preferred seat options, suggesting alternatives or upgrades.",
+        "actors": "System, Traveler",
+        "preconditions": "Traveler is checking in and preferred seats are unavailable.",
+        "steps": "1. System notifies traveler of unavailable seats. 2. System suggests alternative seats or offers paid upgrades."
+      },
+      {
+        "name": "Receive Boarding Pass",
+        "scenario": "Traveler receives a boarding pass via email and download upon check-in.",
+        "actors": "System, Traveler",
+        "preconditions": "Traveler has successfully checked in for the flight.",
+        "steps": "1. System sends the boarding pass to the traveler's email. 2. Boarding pass is made available for download."
+      },
+      {
+        "name": "Verify Passport and Visa for International Flights",
+        "scenario": "System verifies passport and visa requirements for international flights during check-in.",
+        "actors": "System",
+        "preconditions": "Traveler is checking in for an international flight.",
+        "steps": "1. System verifies traveler's passport and visa details. 2. Check-in is confirmed following successful verification."
+      }
+    ]
+  },
+  {
+    "user_story": "A taxpayer registered in the e-Tax platform shall be able to submit annual tax returns. After logging in with a secure authentication method, the system shall prompt the taxpayer to import salary and investment data from verified sources. The system shall validate entries against official records and highlight inconsistencies. The taxpayer may edit any pre-filled data and add deductions under permitted sections. If any deduction is flagged as ineligible, the system shall notify the user with an explanation. Upon completion, the system shall calculate the total tax liability or refund. The user must review a summary and digitally sign the declaration before submission. Once filed, an acknowledgment receipt is generated with a unique filing number. The system shall also allow users to track refund status and download previous years' returns.",
+    "usecases": [
+      {
+        "name": "Taxpayer Login",
+        "scenario": "A taxpayer logs into the e-Tax platform using secure credentials.",
+        "actors": "['Taxpayer']",
+        "preconditions": "Taxpayer is registered on the e-Tax platform and has valid login credentials.",
+        "steps": "1: Taxpayer navigates to the e-Tax login page. 2: Taxpayer enters username and password. 3: System verifies credentials and grants access upon successful verification."
+      },
+      {
+        "name": "Import Salary and Investment Data",
+        "scenario": "A taxpayer imports salary and investment data from verified sources.",
+        "actors": "['Taxpayer']",
+        "preconditions": "Taxpayer is logged into the e-Tax platform.",
+        "steps": "1: Taxpayer accesses the data import section. 2: Taxpayer selects verified sources to import data from. 3: System imports data and pre-fills relevant sections."
+      },
+      {
+        "name": "Validate Data Entries",
+        "scenario": "System validates imported data against official records.",
+        "actors": "['System']",
+        "preconditions": "Taxpayer has imported data from verified sources.",
+        "steps": "1: System checks imported data against official records. 2: System highlights any inconsistencies found."
+      },
+      {
+        "name": "Edit Pre-filled Data",
+        "scenario": "A taxpayer edits any pre-filled data as needed.",
+        "actors": "['Taxpayer']",
+        "preconditions": "Taxpayer has reviewed the imported data.",
+        "steps": "1: Taxpayer reviews pre-filled data. 2: Taxpayer edits any incorrect or incomplete data entries."
+      },
+      {
+        "name": "Add Deductions",
+        "scenario": "A taxpayer adds deductions under permitted sections.",
+        "actors": "['Taxpayer']",
+        "preconditions": "Taxpayer has reviewed and edited pre-filled data.",
+        "steps": "1: Taxpayer navigates to deduction section. 2: Taxpayer adds deductions under permitted sections."
+      },
+      {
+        "name": "Flag Ineligible Deductions",
+        "scenario": "System flags any ineligible deductions and notifies the taxpayer.",
+        "actors": "['System']",
+        "preconditions": "Taxpayer has added deductions.",
+        "steps": "1: System checks entered deductions. 2: System flags any deductions as ineligible and provides an explanation to the taxpayer."
+      },
+      {
+        "name": "Calculate Tax Liability or Refund",
+        "scenario": "System calculates total tax liability or refund after data entry completion.",
+        "actors": "['System']",
+        "preconditions": "All data entries and deductions have been completed.",
+        "steps": "1: System processes all entries. 2: System calculates total tax liability or potential refund amount."
+      },
+      {
+        "name": "Review Summary and Digital Sign",
+        "scenario": "A taxpayer reviews a summary and digitally signs the declaration before submission.",
+        "actors": "['Taxpayer']",
+        "preconditions": "System has calculated tax liability or refund.",
+        "steps": "1: Taxpayer reviews the summary of entries and results. 2: Taxpayer digitally signs the declaration for submission."
+      },
+      {
+        "name": "Submit Tax Return",
+        "scenario": "A taxpayer submits the completed tax return in the e-Tax system.",
+        "actors": "['Taxpayer']",
+        "preconditions": "Taxpayer has reviewed and signed the declaration.",
+        "steps": "1: Taxpayer confirms submission. 2: System files the tax return and generates an acknowledgment receipt with a unique filing number."
+      },
+      {
+        "name": "Track Refund Status",
+        "scenario": "A taxpayer tracks the refund status after filing.",
+        "actors": "['Taxpayer']",
+        "preconditions": "Taxpayer has filed the tax return and a refund is applicable.",
+        "steps": "1: Taxpayer navigates to the refund tracking section. 2: Taxpayer checks the current status of the refund."
+      },
+      {
+        "name": "Download Previous Years' Returns",
+        "scenario": "A taxpayer downloads previous years' tax returns from the system.",
+        "actors": "['Taxpayer']",
+        "preconditions": "Taxpayer is logged into the e-Tax platform.",
+        "steps": "1: Taxpayer navigates to the returns archive section. 2: Taxpayer selects the desired previous year's return. 3: System provides the downloadable file of the selected return."
+      }
+    ]
+  },
+  {
+    "user_story": "The system shall let a Patron, who is logged into the COS;place an order for one or more meals. The system shall confirm that the Patron is registered for payroll deduction to place an order. If the Patron is not registered for payroll deduction, the system shall give the Patron options to register now and continue placing an order, to place an order for pickup in the cafeteria, or to exit from the COS. The system shall prompt the Patron for the meal date. If the meal date is the current date and the current time is after the order cutoff time, the system shall inform the patron that it's too late to place an order for today. The Patron may either change the meal date or cancel the order. The Patron shall specify whether the order is to be picked up or delivered. If the order is to be delivered and there are still available delivery times for the meal date, the Patron shall provide a valid delivery location.",
+    "usecases": [
+      {
+        "name": "Patron Login",
+        "scenario": "A Patron logs into the COS system with their credentials.",
+        "actors": "Patron",
+        "preconditions": "Patron has valid login credentials.",
+        "steps": "1: Patron navigates to the COS login page. 2: Patron enters username and password. 3: System verifies credentials and grants access upon successful verification."
+      },
+      {
+        "name": "Place Meal Order",
+        "scenario": "A Patron places an order for one or more meals.",
+        "actors": "Patron",
+        "preconditions": "Patron is logged into the COS system.",
+        "steps": "1: Patron selects 'Place Order' in the system. 2: Patron adds one or more meals to the order."
+      },
+      {
+        "name": "Verify Payroll Deduction Registration",
+        "scenario": "System verifies Patron\u2019s registration for payroll deduction before placing an order.",
+        "actors": "System",
+        "preconditions": "Patron initiates a meal order.",
+        "steps": "1: System checks if the Patron is registered for payroll deduction. 2: System allows order placement if registered. 3: System provides options to register, pay for pickup, or exit if not registered."
+      },
+      {
+        "name": "Register for Payroll Deduction",
+        "scenario": "A Patron registers for payroll deduction to proceed with meal order placement.",
+        "actors": "Patron",
+        "preconditions": "Patron is not registered for payroll deduction.",
+        "steps": "1: Patron selects the option to register for payroll deduction. 2: Patron completes the registration process. 3: System confirms registration and proceeds with order placement."
+      },
+      {
+        "name": "Select Meal Date",
+        "scenario": "A Patron selects a date for their meal order.",
+        "actors": "Patron",
+        "preconditions": "Patron is placing a meal order.",
+        "steps": "1: System prompts Patron for a meal date. 2: Patron selects the desired meal date."
+      },
+      {
+        "name": "Handle Order Cutoff Time",
+        "scenario": "System handles cases when an order is placed after the cutoff time for the current date.",
+        "actors": "System",
+        "preconditions": "Patron selects the current date for the meal order and the cutoff time has passed.",
+        "steps": "1: System checks current time against the order cutoff time. 2: System informs Patron if the ordering time for today has passed. 3: Patron decides to change the meal date or cancel the order."
+      },
+      {
+        "name": "Specify Order Pickup or Delivery",
+        "scenario": "A Patron specifies whether their meal order is for pickup or delivery.",
+        "actors": "Patron",
+        "preconditions": "Meal order is created and meal date is selected.",
+        "steps": "1: System prompts Patron to choose between pickup or delivery. 2: Patron selects order pickup or delivery."
+      },
+      {
+        "name": "Provide Delivery Location",
+        "scenario": "A Patron provides a delivery location for their meal order if delivery is selected.",
+        "actors": "Patron",
+        "preconditions": "Patron has selected delivery and there are available delivery times.",
+        "steps": "1: Patron selects a delivery time from available options. 2: Patron enters a valid delivery location. 3: System confirms delivery details."
+      }
+    ]
+  },
+  {
+    "user_story": "A library issues loan items to each customer. Each customer is known as a member and is issued a membership card that shows a unique member number. It is necessary that the membership number and other details on a customer must be kept such as a name, address, and date-of-birth. The library is made up of a number of subject sections. Each section is denoted by a classification-mark. A loan item is identified by a bar-code. There are exactly two types of loan items, language tapes, and books. A language tape has a titlelanguage, and level. A book has a title, and author(s). It is possibility that each customer may borrow up to at most 8 items. It is possibility that each item can be borrowed, reserved or renewed to extend a current loan. When an item is issued the customer's membership-number is scanned via a bar code reader or entered manually. If the membership is valid and the number of items on loan at most 8, the book's bar-code is read, either via the bar code reader or entered manually. It is possibility that if the item can be issued the item is stamped and then issued. It is necessary that the library must support the facility for an item to be searched and for a daily update of records",
+    "usecases": [
+      {
+        "name": "Register Member",
+        "scenario": "A new member registers at the library and receives a membership card.",
+        "actors": "Member",
+        "preconditions": "Member details are collected and verified.",
+        "steps": "1: Member provides personal details including name, address, and date of birth. 2: System generates a unique membership number. 3: Membership card is issued to the member."
+      },
+      {
+        "name": "Search for Item",
+        "scenario": "A member searches for an item in the library.",
+        "actors": "Member",
+        "preconditions": "Member is aware of the section or classification-mark for the item.",
+        "steps": "1: Member accesses the search function. 2: Member enters search criteria such as title or classification-mark. 3: System displays search results matching the criteria."
+      },
+      {
+        "name": "Borrow Item",
+        "scenario": "A member borrows an item from the library.",
+        "actors": "Member",
+        "preconditions": "Member has a valid membership and less than 8 items borrowed.",
+        "steps": "1: Member presents membership card to be scanned. 2: System verifies the membership details. 3: Member provides the item to borrow. 4: System reads the item's bar-code. 5: System confirms the borrowing and stamps the item. 6: Member receives the item."
+      },
+      {
+        "name": "Reserve Item",
+        "scenario": "A member reserves an item that is currently unavailable.",
+        "actors": "Member",
+        "preconditions": "Member searches for an item that is currently on loan.",
+        "steps": "1: Member accesses item details. 2: System checks item availability status. 3: Member requests to reserve the item. 4: System confirms and records the reservation."
+      },
+      {
+        "name": "Renew Item",
+        "scenario": "A member renews a borrowed item to extend the loan period.",
+        "actors": "Member",
+        "preconditions": "Item is borrowed and not reserved by another member.",
+        "steps": "1: Member accesses their borrowed items list. 2: Member selects the item to renew. 3: System checks renewal eligibility. 4: System confirms and records the renewal."
+      },
+      {
+        "name": "Update Daily Records",
+        "scenario": "The system updates loan records daily to maintain accuracy.",
+        "actors": "System",
+        "preconditions": "System is set to automatically update records daily.",
+        "steps": "1: System initiates daily record update process. 2: System processes current loans, returns, and reservations. 3: System updates records with any changes."
+      }
+    ]
+  },
+  {
+    "user_story": "The bank client application must enable deposits to and withdrawals from accounts, with each transaction meticulously recorded, including date, time, transaction type, amount, and the account balance post-transaction, and clients must be able to review all transactions for a given account. Clients can have two account types, checking and saving, where each checking account can be linked to one saving account, and access is secured via a personal identification number (PIN) code. Neither checking nor saving accounts are permitted to have a negative balance; if a checking account withdrawal exceeds its current balance, the application must automatically draw funds from the linked saving account, but if the saving account's balance is insufficient, the transaction will be terminated, and the user informed.",
+    "usecases": [
+      {
+        "name": "Client Login",
+        "scenario": "A client logs into the bank application using a secure PIN code.",
+        "actors": "['Client']",
+        "preconditions": "Client is registered with the bank and has a valid PIN.",
+        "steps": "1: Client opens the bank application.\n2: Client enters the PIN code.\n3: System verifies the PIN and grants access upon successful verification."
+      },
+      {
+        "name": "Deposit Funds",
+        "scenario": "A client deposits funds into an account.",
+        "actors": "['Client']",
+        "preconditions": "Client is logged into the bank application.",
+        "steps": "1: Client selects the account to deposit funds.\n2: Client enters the deposit amount.\n3: System records the transaction details (date, time, amount, updated balance).\n4: System confirms the deposit and updates the account balance."
+      },
+      {
+        "name": "Withdraw Funds from Checking Account",
+        "scenario": "A client withdraws funds from a checking account.",
+        "actors": "['Client']",
+        "preconditions": "Client is logged into the bank application and has a checking account.",
+        "steps": "1: Client selects the checking account for withdrawal.\n2: Client enters the withdrawal amount.\n3: System checks the checking account balance.\n4: If funds are sufficient, system processes the withdrawal and updates the balance.\n5: System records the transaction details."
+      },
+      {
+        "name": "Withdraw Funds with Insufficient Checking Balance",
+        "scenario": "System handles withdrawals exceeding the checking account balance by drawing from the linked saving account.",
+        "actors": "['System']",
+        "preconditions": "Client is logged in and initiates a withdrawal exceeding the checking account balance.",
+        "steps": "1: System detects insufficient funds in the checking account.\n2: System checks the linked saving account balance.\n3: If saving account funds are sufficient, system transfers the necessary amount to cover the withdrawal.\n4: System updates the balances and records the transaction details.\n5: If funds are insufficient, system terminates the transaction and informs the client."
+      },
+      {
+        "name": "View Transaction History",
+        "scenario": "A client views the transaction history for a specific account.",
+        "actors": "['Client']",
+        "preconditions": "Client is logged into the bank application and has an account with transaction history.",
+        "steps": "1: Client navigates to the account details section.\n2: Client selects the option to view transaction history.\n3: System displays a list of transactions including date, time, type, amount, and balance after each transaction."
+      }
+    ]
+  },
+  {
+    "user_story": "The Time Monitor Software System primarily serves two functions: allowing developers to record timestamp data via a web browser into a database, and enabling managers to analyze these records. Each timestamp record captures the duration of a specific activity and is uniquely identified by a combination of the project, user, and the date the activity occurred. The activity itself is described by a task name, an activity, and an artefact. For managerial analysis, dates are often framed in terms of the current week, which spans from the Monday immediately preceding the current day to the Sunday immediately following it, inclusively. A task represents a unit of work defined by the manager, for which developers are accountable, and is a scheduled component with defined start and end dates (e.g., \"Implement module A\" or \"Design library XYZ\"). Developers typically work on assigned tasks, and there can be a many-to-many relationship between developers and tasks, meaning one developer can work on multiple tasks, and one task can involve multiple developers.",
+    "usecases": [
+      {
+        "name": "Record Timestamp Data",
+        "scenario": "A developer records timestamp data for a specific activity via a web browser.",
+        "actors": "['Developer']",
+        "preconditions": "Developer is logged into the system.",
+        "steps": "1: Developer navigates to the timestamp entry page.\n2: Developer selects the project and task.\n3: Developer enters the activity details.\n4: Developer records the duration of the activity.\n5: System saves the timestamp data to the database."
+      },
+      {
+        "name": "View Timestamp Records",
+        "scenario": "A manager views timestamp records for analysis.",
+        "actors": "['Manager']",
+        "preconditions": "Manager is logged into the system.",
+        "steps": "1: Manager navigates to the analysis section.\n2: Manager selects the desired date range and criteria.\n3: System displays the filtered timestamp records."
+      },
+      {
+        "name": "Define and Assign Task",
+        "scenario": "A manager defines a new task and assigns it to developers.",
+        "actors": "['Manager']",
+        "preconditions": "The manager is logged into the system.",
+        "steps": "1: Manager navigates to the task management section.\n2: Manager creates a new task with start and end dates.\n3: Manager assigns the task to one or more developers.\n4: System updates the task assignments."
+      },
+      {
+        "name": "Filter Records by Week",
+        "scenario": "A manager filters timestamp records by the current week.",
+        "actors": "['Manager']",
+        "preconditions": "Manager is logged into the system.",
+        "steps": "1: Manager selects the 'current week' filter.\n2: System calculates the date range from Monday to Sunday surrounding the current date.\n3: System displays records within the calculated week."
+      }
+    ]
+  },
+  {
+    "user_story": "The user initiates the process by placing either a dish or a cup onto the belt. As the belt moves, it carries the part toward the vision system. When a part enters the vision system's sensor zone, the vision system detects it and promptly signals the belt to stop. The vision system then identifies the type of part (dish or cup) and relays this information to the robot. The robot, equipped with two arms, then picks up the part from the belt, allowing the belt to resume movement. The assembly is complete once both a dish and a cup have been placed separately onto the tray by the robot's arms.",
+    "usecases": [
+      {
+        "name": "Place Part on Belt",
+        "scenario": "The user places either a dish or a cup onto the moving belt.",
+        "actors": "['User']",
+        "preconditions": "Belt is operational and moving.",
+        "steps": "1: User places a part (dish or cup) onto the belt."
+      },
+      {
+        "name": "Move Part to Vision System",
+        "scenario": "The belt carries the part toward the vision system.",
+        "actors": "['System']",
+        "preconditions": "Belt is moving with a part on it.",
+        "steps": "1: Belt continuously moves. 2: Part is carried to the vision system's sensor zone."
+      },
+      {
+        "name": "Detect Part in Sensor Zone",
+        "scenario": "The vision system detects a part when it enters the sensor zone and signals the belt to stop.",
+        "actors": "['Vision System']",
+        "preconditions": "Part is in the vision system's sensor zone.",
+        "steps": "1: Part enters the sensor zone. 2: Vision system detects the part. 3: Vision system signals the belt to stop."
+      },
+      {
+        "name": "Identify Part Type",
+        "scenario": "The vision system identifies the type of part on the belt.",
+        "actors": "['Vision System']",
+        "preconditions": "Belt is stopped with a part detected in the sensor zone.",
+        "steps": "1: Vision system analyzes the part. 2: Vision system determines if the part is a dish or a cup."
+      },
+      {
+        "name": "Signal Robot for Part Pickup",
+        "scenario": "Vision system relays part type information to the robot for pickup.",
+        "actors": "['Vision System', 'Robot']",
+        "preconditions": "Part type is identified by the vision system.",
+        "steps": "1: Vision system sends part type information to the robot."
+      },
+      {
+        "name": "Pick Up Part from Belt",
+        "scenario": "Robot uses its arms to pick up the identified part from the belt.",
+        "actors": "['Robot']",
+        "preconditions": "Robot receives part type information from the vision system.",
+        "steps": "1: Robot positions arms to pick part. 2: Robot picks up the part from the belt."
+      },
+      {
+        "name": "Resume Belt Movement",
+        "scenario": "The belt resumes movement after the robot picks up the part.",
+        "actors": "['System']",
+        "preconditions": "Part is picked up from the belt by the robot.",
+        "steps": "1: Robot signals system to resume belt movement. 2: Belt resumes moving."
+      },
+      {
+        "name": "Place Part on Tray",
+        "scenario": "Robot places the picked part onto the tray.",
+        "actors": "['Robot']",
+        "preconditions": "Robot has picked up the part from the belt.",
+        "steps": "1: Robot moves part to a designated tray location. 2: Robot places the part onto the tray."
+      },
+      {
+        "name": "Complete Assembly",
+        "scenario": "Assembly is complete when both a dish and a cup are placed on the tray.",
+        "actors": "['Robot']",
+        "preconditions": "Both dish and cup are placed on the tray.",
+        "steps": "1: Robot confirms that both a dish and a cup are on the tray. 2: System records completion of the assembly process."
+      }
+    ]
+  },
+  {
+    "user_story": "A pet owner with an active VetConnect account may register multiple pets, each with unique profiles containing vaccination history, breed-specific health alerts, and dietary preferences. Using the app, the user can book virtual consultations with licensed veterinarians, upload photos or videos of pet symptoms, and receive prescriptions digitally. After the consultation, the app provides a follow-up checklist, medication reminders, and direct links to order pet meds online. For emergencies, users can tap an SOS button to get connected to a 24/7 vet hotline within 60 seconds.",
+    "usecases": [
+      {
+        "name": "Register a Pet",
+        "scenario": "A pet owner registers a new pet on their VetConnect account.",
+        "actors": "['Pet Owner']",
+        "preconditions": "Pet owner has an active VetConnect account.",
+        "steps": "1: Pet owner navigates to the pet registration section. 2: Pet owner enters pet details such as name, breed, and age. 3: System creates a unique profile for the pet."
+      },
+      {
+        "name": "Add Pet Vaccination History",
+        "scenario": "A pet owner adds vaccination history to a pet's profile.",
+        "actors": "['Pet Owner']",
+        "preconditions": "Pet profile is created and active.",
+        "steps": "1: Pet owner selects a pet profile. 2: Pet owner enters vaccination details. 3: System updates the pet profile with vaccination history."
+      },
+      {
+        "name": "Receive Breed-specific Health Alerts",
+        "scenario": "The system sends breed-specific health alerts to the pet owner.",
+        "actors": "['System']",
+        "preconditions": "Pet profile is created with breed information.",
+        "steps": "1: System analyzes the pet's breed information. 2: System identifies relevant health alerts. 3: System sends alerts to the pet owner."
+      },
+      {
+        "name": "Set Dietary Preferences",
+        "scenario": "A pet owner sets dietary preferences for a pet.",
+        "actors": "['Pet Owner']",
+        "preconditions": "Pet profile is created and active.",
+        "steps": "1: Pet owner selects a pet profile. 2: Pet owner enters dietary information. 3: System saves the dietary preferences in the pet's profile."
+      },
+      {
+        "name": "Book Virtual Consultation",
+        "scenario": "A pet owner books a virtual consultation with a veterinarian.",
+        "actors": "['Pet Owner']",
+        "preconditions": "Pet owner is logged into the VetConnect app.",
+        "steps": "1: Pet owner selects 'Book Consultation' option. 2: Pet owner chooses an available time slot with a veterinarian. 3: System confirms the booking and sends a notification."
+      },
+      {
+        "name": "Upload Pet Symptoms",
+        "scenario": "A pet owner uploads photos or videos of pet symptoms.",
+        "actors": "['Pet Owner']",
+        "preconditions": "Virtual consultation is booked.",
+        "steps": "1: Pet owner accesses the consultation details. 2: Pet owner uploads photos or videos of pet symptoms. 3: System appends the files to the consultation record."
+      },
+      {
+        "name": "Receive Digital Prescription",
+        "scenario": "A pet owner receives a digital prescription after a consultation.",
+        "actors": "['System', 'Pet Owner']",
+        "preconditions": "Virtual consultation is completed.",
+        "steps": "1: Veterinarian issues a digital prescription. 2: System sends the prescription to the pet owner's account."
+      },
+      {
+        "name": "Follow-up Checklist",
+        "scenario": "The system provides a follow-up checklist after a consultation.",
+        "actors": "['System']",
+        "preconditions": "Virtual consultation is completed.",
+        "steps": "1: System generates a follow-up checklist based on the consultation. 2: System sends the checklist to the pet owner."
+      },
+      {
+        "name": "Medication Reminders",
+        "scenario": "The system sends medication reminders to the pet owner.",
+        "actors": "['System']",
+        "preconditions": "Digital prescription is issued.",
+        "steps": "1: System identifies medication schedule from the prescription. 2: System sends reminders to the pet owner at scheduled times."
+      },
+      {
+        "name": "Order Pet Meds Online",
+        "scenario": "Pet owner orders pet medications online through the app.",
+        "actors": "['Pet Owner']",
+        "preconditions": "Digital prescription is available.",
+        "steps": "1: Pet owner navigates to the medication order section. 2: Pet owner selects prescribed meds. 3: System processes the order and confirms purchase."
+      },
+      {
+        "name": "Activate SOS for Emergency",
+        "scenario": "Pet owner uses SOS button to connect to a 24/7 vet hotline.",
+        "actors": "['Pet Owner', 'System']",
+        "preconditions": "User has emergency with a pet.",
+        "steps": "1: Pet owner taps the SOS button in the app. 2: System connects the user to a 24/7 vet hotline within 60 seconds."
+      }
+    ]
+  },
+  {
+    "user_story": "A verified patient logged into the MediChain platform can access and manage their entire medical history, including past diagnoses, prescriptions, lab reports, and imaging files, which are securely stored on a decentralized ledger. The patient may grant time-limited access to selected records for a specific physician or medical institution via a QR code or secure token. Once access is granted, the physician can view but not alter the data. The patient is notified of every access event. This ensures full control and traceability over their sensitive medical data.",
+    "usecases": [
+      {
+        "name": "Patient Login",
+        "scenario": "A verified patient logs into the MediChain platform using secure credentials.",
+        "actors": "['Patient']",
+        "preconditions": "Patient is registered with valid login credentials.",
+        "steps": "1: Patient navigates to the MediChain login page. 2: Patient enters their username and password. 3: System verifies credentials and grants access upon successful verification."
+      },
+      {
+        "name": "Access Medical History",
+        "scenario": "A logged-in patient accesses their medical history, including diagnoses, prescriptions, and lab reports.",
+        "actors": "['Patient']",
+        "preconditions": "Patient is logged into the MediChain platform.",
+        "steps": "1: Patient navigates to the medical history section. 2: System displays the patient's complete medical history securely from the decentralized ledger."
+      },
+      {
+        "name": "Grant Access to Medical Records",
+        "scenario": "A patient grants time-limited access to their medical records for a physician or medical institution.",
+        "actors": "['Patient']",
+        "preconditions": "Patient is logged into the MediChain platform and has selected records to share.",
+        "steps": "1: Patient selects specific records to share. 2: Patient chooses access duration. 3: Patient generates a QR code or secure token for access. 4: System records access permission on the decentralized ledger."
+      },
+      {
+        "name": "Physician Access Records",
+        "scenario": "A physician uses a QR code or secure token to access a patient\u2019s medical records.",
+        "actors": "['Physician']",
+        "preconditions": "Physician has received a QR code or secure token with access permission.",
+        "steps": "1: Physician scans the QR code or inputs the secure token. 2: System verifies access rights. 3: System grants view-only access to the selected medical records."
+      },
+      {
+        "name": "Notify Patient of Access Event",
+        "scenario": "Patient receives a notification for every access event of their medical records.",
+        "actors": "['System', 'Patient']",
+        "preconditions": "Patient has granted access to their medical records.",
+        "steps": "1: System logs each access event with details on the decentralized ledger. 2: System sends a notification to the patient about the access event."
+      }
+    ]
+  },
+  {
+    "user_story": "A registered farmer using the FarmWise mobile application may log their daily crop activities, such as seeding, irrigation, fertilization, and pest control, by selecting from a guided checklist. The system automatically tags each entry with geolocation and timestamp data, and syncs the data with regional weather records. The farmer may later view a dashboard summarizing crop health trends and receive AI-generated recommendations tailored to their crop type and zone. In case of recurring pest outbreaks or unusual weather patterns, the platform also alerts neighboring farmers to take preventive actions.\n",
+    "usecases": [
+      {
+        "name": "Farmer Login",
+        "scenario": "A registered farmer logs into the FarmWise mobile application using secure credentials.",
+        "actors": "Farmer",
+        "preconditions": "Farmer is registered and has valid login credentials.",
+        "steps": "1: Farmer opens the FarmWise app. 2: Farmer enters username and password. 3: System verifies credentials and grants access upon successful verification."
+      },
+      {
+        "name": "Log Crop Activity",
+        "scenario": "A farmer logs daily crop activities using a guided checklist.",
+        "actors": "Farmer",
+        "preconditions": "Farmer is logged into the FarmWise mobile application.",
+        "steps": "1: Farmer navigates to the crop activity section. 2: Farmer selects the type of activity (e.g., seeding, irrigation). 3: Farmer completes the checklist for the selected activity. 4: System tags the entry with geolocation and timestamp data. 5: System syncs the data with regional weather records."
+      },
+      {
+        "name": "View Dashboard",
+        "scenario": "A farmer views a dashboard summarizing crop health trends.",
+        "actors": "Farmer",
+        "preconditions": "Farmer has logged crop activities in the FarmWise system.",
+        "steps": "1: Farmer navigates to the dashboard section. 2: System displays crop health trends and summary data."
+      },
+      {
+        "name": "Receive AI-Generated Recommendations",
+        "scenario": "Farmer receives AI-generated crop management recommendations.",
+        "actors": "Farmer",
+        "preconditions": "Farmer has viewed the dashboard.",
+        "steps": "1: Farmer views AI-generated recommendations on the dashboard. 2: Recommendations are tailored based on crop type and zone."
+      },
+      {
+        "name": "Set Alerts for Pest Outbreaks",
+        "scenario": "System alerts neighboring farmers of recurring pest outbreaks.",
+        "actors": "System",
+        "preconditions": "A recurring pest outbreak is detected in the system.",
+        "steps": "1: System detects pest outbreak patterns. 2: System sends alerts to neighboring farmers."
+      },
+      {
+        "name": "Set Alerts for Unusual Weather Patterns",
+        "scenario": "System alerts farmers of unusual weather patterns.",
+        "actors": "System",
+        "preconditions": "System identifies unusual weather patterns in the region.",
+        "steps": "1: System detects unusual weather patterns. 2: System sends alerts to farmers in affected zones."
+      }
+    ]
+  },
+  {
+    "user_story": "A registered user on the MindBloom app, which supports mental health tracking and therapy, may create a personalized wellness plan by selecting focus areas such as anxiety, sleep, or emotional resilience. The app prompts users to complete daily mood check-ins using sliders and journal entries. Based on these inputs, MindBloom generates weekly summaries and suggests evidence-based coping strategies, mindfulness exercises, or CBT modules. Users may also schedule virtual therapy sessions with licensed professionals, with all session notes securely stored for ongoing care. In cases where the app detects warning signs of a mental health crisis (e.g., prolonged distress or severe mood dips), it offers direct access to crisis support resources and optional emergency contact alerts.",
+    "usecases": [
+      {
+        "name": "User Login",
+        "scenario": "A registered user logs into the MindBloom app using secure credentials.",
+        "actors": "['User']",
+        "preconditions": "User is registered and has valid login credentials.",
+        "steps": "1: User navigates to the MindBloom login page. 2: User enters username and password. 3: System verifies credentials and grants access upon successful verification."
+      },
+      {
+        "name": "Create Wellness Plan",
+        "scenario": "User creates a personalized wellness plan on MindBloom.",
+        "actors": "['User']",
+        "preconditions": "User is logged into the MindBloom app.",
+        "steps": "1: User selects focus areas such as anxiety, sleep, or emotional resilience. 2: System saves the selected wellness plan."
+      },
+      {
+        "name": "Mood Check-in",
+        "scenario": "User completes a daily mood check-in using sliders and journal entries.",
+        "actors": "['User']",
+        "preconditions": "User has an active wellness plan.",
+        "steps": "1: User accesses the mood check-in feature. 2: User uses sliders to indicate mood levels. 3: User writes a journal entry. 4: System records the mood and journal data."
+      },
+      {
+        "name": "Generate Weekly Summary",
+        "scenario": "MindBloom generates weekly summaries based on user inputs.",
+        "actors": "['System']",
+        "preconditions": "User has input mood data for the week.",
+        "steps": "1: System analyzes user mood data and journal entries for the week. 2: System generates a summary report and sends it to the user."
+      },
+      {
+        "name": "Suggest Coping Strategies",
+        "scenario": "MindBloom suggests coping strategies based on user data.",
+        "actors": "['System']",
+        "preconditions": "System has analyzed user mood check-ins.",
+        "steps": "1: System identifies trends or concerns in user data. 2: System suggests evidence-based coping strategies, mindfulness exercises, or CBT modules."
+      },
+      {
+        "name": "Schedule Therapy Session",
+        "scenario": "User schedules a virtual therapy session with a licensed professional.",
+        "actors": "['User']",
+        "preconditions": "User seeks therapy through MindBloom.",
+        "steps": "1: User selects a therapist and a suitable time slot. 2: System confirms the booking and schedules the session."
+      },
+      {
+        "name": "Store Session Notes",
+        "scenario": "System securely stores notes from virtual therapy sessions.",
+        "actors": "['System']",
+        "preconditions": "User has attended a virtual therapy session.",
+        "steps": "1: Therapist inputs session notes into the system. 2: System securely stores the session notes for ongoing care."
+      },
+      {
+        "name": "Detect Crisis Signs",
+        "scenario": "System detects warning signs of a mental health crisis.",
+        "actors": "['System']",
+        "preconditions": "User has mood data indicating crisis signs.",
+        "steps": "1: System analyzes mood check-ins for prolonged distress or severe mood dips. 2: System identifies potential crisis signs based on predefined criteria."
+      },
+      {
+        "name": "Access Crisis Support",
+        "scenario": "User accesses crisis support resources through MindBloom.",
+        "actors": "['User']",
+        "preconditions": "System detects a potential mental health crisis.",
+        "steps": "1: System offers direct access to crisis support resources. 2: User chooses a suitable crisis support option."
+      },
+      {
+        "name": "Activate Emergency Contacts",
+        "scenario": "MindBloom alerts emergency contacts if a crisis is detected.",
+        "actors": "['System', 'User']",
+        "preconditions": "User has enabled emergency contact alerts and a crisis is detected.",
+        "steps": "1: System detects a mental health crisis. 2: System prompts user to confirm sending an alert. 3: User agrees, and system notifies emergency contacts."
+      }
+    ]
+  }
+]
